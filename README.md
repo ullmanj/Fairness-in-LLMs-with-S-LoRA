@@ -6,8 +6,8 @@
 
 ---
 
-*Latest News*
-- A fair scheduler VTC ([paper](https://arxiv.org/abs/2401.00588)) has been integrated into S-LoRA.
+Change from initial fork:
+- The fair scheduler here VTC ([paper](https://arxiv.org/abs/2401.00588)) that was integrated into S-LoRA has been deleted and reimplemented.
   See file `slora/server/router/vtc_req_queue.py`.
 
 ---
