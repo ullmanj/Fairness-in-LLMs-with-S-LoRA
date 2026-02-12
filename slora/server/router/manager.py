@@ -23,14 +23,14 @@ from slora.models.peft.lora_adapter import get_lora_config
 from slora.server.router.profiler import AlphaModel, BetaModel
 from slora.server.router.abort_req_queue import AbortReqQueue
 from slora.server.router.cluster_req_queue import ClusterReqQueue
-from slora.server.router.vtc_req_queue import VTCReqQueue
 from slora.server.router.pets_req_queue import PETSReqQueue
 from slora.server.router.peft_req_queue import PEFTReqQueue
+from slora.server.fairness.fair_queue import FairQueue
 
 
 def get_scheduler(input_params, adapter_dirs):
     if input_params.scheduler == "vtc_fair":
-        return VTCReqQueue(input_params.max_total_token_num, input_params.batch_max_tokens,
+        return FairQueue(input_params.max_total_token_num, input_params.batch_max_tokens,
                            input_params.running_max_req_size, adapter_dirs, input_params.fair_weights)
     elif input_params.scheduler == "pets":
         return PETSReqQueue(input_params.max_total_token_num, input_params.batch_max_tokens,
@@ -144,7 +144,7 @@ class RouterManager:
         request_id: str
     ):
         req = Req(adapter_dir, request_id, prompt_ids, sampling_params)
-        self.req_queue.append(req)
+        self.req_queue.append(req) # Where our fairness logic can live
         self.send_to_detokenization.send_pyobj(req.to_req_detokenization_state())
         return
 
@@ -160,13 +160,13 @@ class RouterManager:
                 req.aborted = True
         return
 
-    async def loop_for_fwd(self,):
+    async def loop_for_fwd(self,): # The execution stream of Alg2
         counter_count = 0
         while True:
             await self._step()
             counter_count += 1
-            if self.running_batch is not None:
-                if counter_count % 50 == 0:
+            if self.running_batch is not None:  # if can add new batch — Alg2 line 17
+                if counter_count % 50 == 0:  # This is just printing logs. Instead see _step().
                     print("current batch size:", len(self.running_batch.reqs), "token used ratio:", self.running_batch.calcu_used_tokens() / self.input_params.max_total_token_num)
                     pass
                 self.stats_tool.print_stats()
@@ -174,13 +174,17 @@ class RouterManager:
             if self.running_batch is None:
                 await asyncio.sleep(0.01)  # 10ms
 
-    async def _step(self):
+    async def _step(self):  # The execution stream of Alg2
         """
         事件处理循环
         """
         # 删除所有已经 finished 的 req
         if self.running_batch is None:
+            # if can add new batch — Alg2 line 17. Except, there is no running
+            # batch so this is kind of a bootstrap path. So it doesn't do all of
+            # the things laid out in the algorithm in the first step.
             new_batch = self.req_queue.generate_new_batch(self.running_batch, self.lora_ranks)
+            # Generate a new batch using the VTC fair req queue algorithm
             if self.input_params.enable_abort and len(self.req_queue.abort_req_list) > 0:
                 self.send_to_detokenization.send_pyobj(BatchAbortReq(self.req_queue.abort_req_list))
                 self.req_queue.reset_abort_list()
@@ -211,6 +215,8 @@ class RouterManager:
             return
 
         if self.has_wait_tokens < self.max_wait_tokens:
+            # max_wait_tokens is really the min we will allow before admitting a new batch. So this does not meet our condition for "if can add new batch"
+            # However, this then means we are in the implied else statement of that "if", so we still want to forward decode, counter update, and filter on lines 29-31.
             self.stats_tool.count_output_tokens(self.running_batch)
             # prefetch
             if (not self.input_params.no_lora and
@@ -223,13 +229,13 @@ class RouterManager:
                         ret.append(self.model_rpcs[tp_rank].load_adapters(
                             next_batch.adapter_dirs, prefetch=True))
                     await asyncio.gather(*ret)
-            await self._decode_batch(self.running_batch)
-            await self._filter_runing_batch()
+            await self._decode_batch(self.running_batch)  # Alg2 line 29 (& 30 called within)
+            await self._filter_runing_batch() #Alg2 line 31
 
             self.has_wait_tokens += 1
             return
-        else:
-            new_mini_batch = self.req_queue.generate_new_batch(self.running_batch, self.lora_ranks)
+        else:  # Also "if can add new batch — Alg2 line 17"
+            new_mini_batch = self.req_queue.generate_new_batch(self.running_batch, self.lora_ranks)  # Also "Generate a new batch using the VTC fair req queue algorithm"
             if self.input_params.enable_abort and len(self.req_queue.abort_req_list) > 0:
                 self.send_to_detokenization.send_pyobj(BatchAbortReq(self.req_queue.abort_req_list))
                 self.req_queue.reset_abort_list()
@@ -242,15 +248,15 @@ class RouterManager:
                         ret.append(self.model_rpcs[tp_rank].load_adapters(new_mini_batch.adapter_dirs))
                     await asyncio.gather(*ret)
 
-                await self._prefill_batch(new_mini_batch, minibatch=True)
+                await self._prefill_batch(new_mini_batch, minibatch=True)  # Alg2 line 27
                 if not new_mini_batch.is_clear():
-                    await self._merge_batch(self.running_batch, new_mini_batch)
+                    await self._merge_batch(self.running_batch, new_mini_batch)  # Alg2 line 28
                     self.running_batch.merge(new_mini_batch)
                 self.has_wait_tokens = 0
             else:
                 self.stats_tool.count_output_tokens(self.running_batch)
-                await self._decode_batch(self.running_batch)
-                await self._filter_runing_batch()
+                await self._decode_batch(self.running_batch)  # Alg2 line 29. This also calls the update_counter(), which will carry out Alg2 line 30.
+                await self._filter_runing_batch()  # Alg2 line 31
         
 
     async def _init_batch(self, batch: Batch):
@@ -274,7 +280,8 @@ class RouterManager:
         return
 
     async def _decode_batch(self, batch:Batch):
-        self.req_queue.update_counter(batch)
+        self.req_queue.update_counter(batch)  # Alg2 line 30
+        # Alg2 line 29 carried out in the following:
         rets = [self.model_rpcs[tp_rank].decode_batch(batch.batch_id) for tp_rank in range(self.world_size)]
         ans = await asyncio.gather(*rets)
         if self.world_size != 1:
@@ -355,11 +362,11 @@ class RouterManager:
         return
 
     async def loop_for_netio_req(self):
-        while True:
+        while True: # Alg2 line 5
             recv_req = await self.recv_from_httpserver.recv_pyobj()
-            if isinstance(recv_req, tuple) and len(recv_req) == 4:
+            if isinstance(recv_req, tuple) and len(recv_req) == 4: # Alg2 line 6
                 adapter_dir, prompt_ids, sampling_params, request_id = recv_req
-                self.add_req(adapter_dir, prompt_ids, sampling_params, request_id)
+                self.add_req(adapter_dir, prompt_ids, sampling_params, request_id)  # step into here to continue alg
             elif isinstance(recv_req, AbortReq):
                 abort_req = recv_req
                 request_id = abort_req.req_id
