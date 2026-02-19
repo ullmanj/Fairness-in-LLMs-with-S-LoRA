@@ -19,7 +19,10 @@ from ..io_struct import BatchTokenIdOut, AbortReq
 from .stats import Stats
 
 from slora.server.input_params import InputParams
-from slora.models.peft.lora_adapter import get_lora_config
+try:
+    from slora.models.peft.lora_adapter import get_lora_config
+except ImportError:
+    get_lora_config = None
 from slora.server.router.profiler import AlphaModel, BetaModel
 from slora.server.router.abort_req_queue import AbortReqQueue
 from slora.server.router.cluster_req_queue import ClusterReqQueue
@@ -64,16 +67,17 @@ class RouterManager:
         self.mode = mode
         self.input_params = input_params
 
-        if self.input_params.prefetch:
+        if self.input_params.prefetch and not self.input_params.mock:
             self.prefetch_stream = torch.cuda.Stream()
         else:
             self.prefetch_stream = None
 
         # get adapter rank
         self.lora_ranks = {}
-        for lora_dir in adapter_dirs:
-            config, _ = get_lora_config(lora_dir, input_params.dummy)
-            self.lora_ranks[lora_dir] = config["r"]
+        if not self.input_params.mock:
+            for lora_dir in adapter_dirs:
+                config, _ = get_lora_config(lora_dir, input_params.dummy)
+                self.lora_ranks[lora_dir] = config["r"]
         self.lora_ranks[None] = 0
 
         self.req_queue = get_scheduler(input_params, adapter_dirs)
@@ -97,7 +101,8 @@ class RouterManager:
     async def wait_to_model_ready(self):
         self.model_rpcs: List[ModelRpcClient] = []
         for rank_id in range(self.world_size):
-            rpc_model = await start_model_process(port=self.model_rpc_ports[rank_id], world_size=self.world_size)
+            rpc_model = await start_model_process(port=self.model_rpc_ports[rank_id], world_size=self.world_size,
+                                                  mock=self.input_params.mock)
             self.model_rpcs.append(rpc_model)
 
         init_model_ret = []
@@ -202,13 +207,15 @@ class RouterManager:
                 
                 # merge adapter to base model
                 if self.input_params.scheduler == "peft":
-                    torch.cuda.synchronize()
+                    if not self.input_params.mock:
+                        torch.cuda.synchronize()
                     ret = []
                     for tp_rank in range(self.world_size):
                         ret.append(self.model_rpcs[tp_rank].merge_adapter())
                     await asyncio.gather(*ret)
-            
-                torch.cuda.synchronize()
+
+                if not self.input_params.mock:
+                    torch.cuda.synchronize()
                 await self._prefill_batch(self.running_batch)
                 await self._filter_runing_batch()
                 self.has_wait_tokens = 0
@@ -407,6 +414,7 @@ def start_router_process(args, router_port, detokenization_port, model_rpc_ports
                                bmm=args.bmm,
                                no_lora=args.no_lora,
                                fair_weights=args.fair_weights,
+                               mock=args.mock,
                               )
 
     try:
