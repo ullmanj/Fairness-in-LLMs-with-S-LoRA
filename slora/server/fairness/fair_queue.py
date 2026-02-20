@@ -1,8 +1,9 @@
+from logging import Logger
 from slora.server.router.req_queue import ReqQueue
 from slora.server.io_struct import Batch
 from slora.server.io_struct import Req
 from typing import List
-from collections import deque
+import uuid
 
 """
 Note for understanding: While the algorithm lays out the logic in "while" loops,
@@ -72,8 +73,14 @@ class FairQueue(ReqQueue):
     # This will have lines 18-26 of Alg2. See `_step` from manager.py for the
     # surrounding steps in this loop.
     def generate_new_batch(self, current_batch:Batch, lora_ranks: dict[str, int]):
-        # Create an empty batch
-        new_batch = super().generate_new_batch(current_batch, lora_ranks) #TODO: Is this correct?
+        # Not in algorithm: current batch checks and cache init. Inspired by super()
+        if current_batch is not None and len(current_batch.reqs) >= self.running_max_req_size:
+            return None
+        self._init_cache_list(current_batch, lora_ranks)
+
+        # Create an empty "batch"
+        new_batch_reqs = []
+        new_batch_total_tokens = 0
 
         # while true
         while True:
@@ -81,15 +88,25 @@ class FairQueue(ReqQueue):
             k = min(self.counters_by_client.keys(), key=lambda x: self.counters_by_client[x])
             # let r be the earlist request in the queue from client k.
             r = self._get_earliest_request_from_client(k)
+
+            # Not in algorithm: Drop the aborted requests. Inspired by super()
+            if r.aborted:
+                self.waiting_req_list.remove(r)
+                continue
+            
             # if r cannot fit into the batch, break. (because we have filled the batch maximally while staying fair)
-            if new_batch.input_tokens() + r.input_len > self.batch_max_tokens:
+            if (self._can_add_new_req(r, lora_ranks) and  # Not in algorithm: can_add_new_req check. Inspired by super()
+                new_batch_total_tokens + r.input_len <= self.batch_max_tokens):
                 break
             # update the counter for client k to be it's current value + w_p_input times the input length of r.
             self.counters_by_client[k] += self.w_p_input * r.input_len
             # Append r to the batch
-            new_batch.reqs.append(r)
+            new_batch_reqs.append(r)
+            new_batch_total_tokens += r.input_len
             # Remove r from the queue
             self.waiting_req_list.remove(r)
+        
+        new_batch = Batch(uuid.uuid4().hex, new_batch_reqs)
         return new_batch  # return the batch
 
 
@@ -119,8 +136,19 @@ class FairQueue(ReqQueue):
             if req.adapter_dir == client:
                 return req
         return None
+    
+    # ############ OVERRIDE HELPER FUNCTIONS ############
+    
+    #  _init_cache_list(self, current_batch:Batch, lora_ranks and
+    # _can_add_new_req(self, req, lora_ranks) are fine as is in super. The cache
+    # fairness logic does not rely on the caching (though maybe we could improve
+    # the caching to reflect the VTC logic for more accurate caching? I have to
+    # understand it more.
 
-
+    # ############ OVERRIDE OTHER FUNCTIONS ############
+    def next_batch(self):
+        Logger.warning("Next batch does not incorporate fairness logic in it's estimate.")
+        return super().next_batch()
 
 
 
