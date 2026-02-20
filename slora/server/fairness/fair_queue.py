@@ -29,7 +29,7 @@ class FairQueue(ReqQueue):
         
         self.adapter_dirs = adapter_dirs  # As of now, this is unnecesssary. But it was passed into the predicessor implementation that we cut out without reading, so leaving for now incase we need it in the future for implementation.
 
-        # ASSUME: 1:1 mapping between adapter_dir and client.
+        # WE ASSUME: 1:1 mapping between adapter_dir and client.
         self.counters_by_client: dict[str, int] = { adapter_dir: 0 for adapter_dir in self.adapter_dirs }  # initialize to 0 for all clients
 
         # Request queue is accessed from self.waiting_req_list in the parent class.
@@ -96,9 +96,13 @@ class FairQueue(ReqQueue):
     # Line 30 of Alg2.
     def update_counter(self, batch:Batch):
         # For each of the clients (call it k) in the the batch
+        requests_by_client = self._get_requests_by_client()
+        for client in requests_by_client.keys():
             # Find the set of requests in the batch that are from client k (call it "requests")
             # Get the length of "requests" (call it L)
+            L = len(requests_by_client[client])
             # Add to the counter for this client the product of w_q_output and L
+            self.counters_by_client[client] += self.w_q_output * L
         return
     
 
