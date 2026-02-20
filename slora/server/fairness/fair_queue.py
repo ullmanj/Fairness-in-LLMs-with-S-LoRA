@@ -12,6 +12,12 @@ loop_for_netio_req() and _stepp(). So, this queue just needs to expose the
 logic from within those loops for each of those call sites.
 """
 
+# REMAINING TODO:
+# - Check the fair weights input — I made assumptions about what shape it would be, but have to confirm.
+# - Popuplate the last_client_to_leave_Q when the client leaves the queue (maybe in making the batch?).
+# - Test and confirm functionality.
+# - Confirm the caching assumptions.
+
 class FairQueue(ReqQueue):
     """
     A version of the request queue that implements the VTC-based fairness
