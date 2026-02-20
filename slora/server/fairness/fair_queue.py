@@ -30,7 +30,6 @@ class FairQueue(ReqQueue):
         self.adapter_dirs = adapter_dirs  # As of now, this is unnecesssary. But it was passed into the predicessor implementation that we cut out without reading, so leaving for now incase we need it in the future for implementation.
 
         # ASSUME: 1:1 mapping between adapter_dir and client.
-        self.requests_by_client: dict[str, List[Req]] = { adapter_dir: [] for adapter_dir in self.adapter_dirs }
         self.counters_by_client: dict[str, int] = { adapter_dir: 0 for adapter_dir in self.adapter_dirs }  # initialize to 0 for all clients
 
         # Request queue is accessed from self.waiting_req_list in the parent class.
@@ -43,8 +42,9 @@ class FairQueue(ReqQueue):
     # This will have lines 7-14 of Alg2. See `loop_for_netio_req` from
     # manager.py for the prior steps in this loop.
     def append(self, req: Req):
+        requests_by_client = self._get_requests_by_client()
         # if another request does NOT exist in the queue from the same client
-        if len(self.requests_by_client[req.adapter_dir]) == 0:
+        if len(requests_by_client[req.adapter_dir]) == 0:
             # if the queue is empty
             if len(self.waiting_req_list) == 0:
                 # get the counter of the last client who left the Q (call it c_l)
@@ -57,13 +57,13 @@ class FairQueue(ReqQueue):
             # else
             else:
                 # Build a set "P" of all the clients who have a request in the queue
-                P = self.requests_by_client.keys()
+                P = requests_by_client.keys()
                 # Get the minimum counter for those clients in P and call it c_min
                 c_min = min(self.counters_by_client[client] for client in P)
                 # Update the counter for this request's client (call it c_u) to the max{ c_u, c_min }
                 self.counters_by_client[req.adapter_dir] = max(self.counters_by_client[req.adapter_dir], c_min)
 
-        # enqueue as normal
+        # enqueue as normal into the waiting_req_list (queue source of truth)
         super().append(req)
         return
 
@@ -80,7 +80,7 @@ class FairQueue(ReqQueue):
             # get the client (call it k) whose counter is the smallest among all of the clients in the queue.
             k = min(self.counters_by_client.keys(), key=lambda x: self.counters_by_client[x])
             # let r be the earlist request in the queue from client k.
-            r = self.requests_by_client[k][0]
+            r = self._get_earliest_request_from_client(k)
             # if r cannot fit into the batch, break. (because we have filled the batch maximally while staying fair)
             if new_batch.input_tokens() + r.input_len > self.batch_max_tokens:
                 break
@@ -89,9 +89,8 @@ class FairQueue(ReqQueue):
             # Append r to the batch
             new_batch.reqs.append(r)
             # Remove r from the queue
-            self.requests_by_client[k].pop(0)
             self.waiting_req_list.remove(r)
-        return None  # return the batch
+        return new_batch  # return the batch
 
 
     # Line 30 of Alg2.
@@ -101,6 +100,21 @@ class FairQueue(ReqQueue):
             # Get the length of "requests" (call it L)
             # Add to the counter for this client the product of w_q_output and L
         return
+    
+
+    # ############ HELPER FUNCTIONS ############
+    # Format the queue into a dictionary of requests by client.
+    def _get_requests_by_client(self) -> dict[str, List[Req]]:
+        requests_by_client = { adapter_dir: [] for adapter_dir in self.adapter_dirs }
+        for req in self.waiting_req_list:
+            requests_by_client[req.adapter_dir].append(req)
+        return requests_by_client
+    # Get the earliest request from a client.
+    def _get_earliest_request_from_client(self, client: str) -> Req:
+        for req in self.waiting_req_list:
+            if req.adapter_dir == client:
+                return req
+        return None
 
 
 
