@@ -28,9 +28,8 @@ class FairQueue(ReqQueue):
         self.w_p_input = 1  # input token weights
         self.w_q_output = 2  # output token weights
         
-        self.adapter_dirs = adapter_dirs  # As of now, this is unnecesssary. But it was passed into the predicessor implementation that we cut out without reading, so leaving for now incase we need it in the future for implementation.
-
-        # WE ASSUME: 1:1 mapping between adapter_dir and client.
+        self.adapter_dirs = adapter_dirs  # WE ASSUME: 1:1 mapping between adapter_dir and client.
+        
         self.counters_by_client: dict[str, int] = { adapter_dir: 0 for adapter_dir in self.adapter_dirs }  # initialize to 0 for all clients
 
         # Our own shadow queue whose functions will update the parent queue (self.waiting_req_list) as well.
