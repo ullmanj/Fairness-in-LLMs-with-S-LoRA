@@ -1,4 +1,3 @@
-from logging import Logger
 from slora.server.router.req_queue import ReqQueue
 from slora.server.io_struct import Batch
 from slora.server.io_struct import Req
@@ -29,7 +28,7 @@ class FairQueue(ReqQueue):
         self.w_q_output = 2  # output token weights
         
         self.adapter_dirs = adapter_dirs  # WE ASSUME: 1:1 mapping between adapter_dir and client.
-        
+
         self.counters_by_client: dict[str, int] = { adapter_dir: 0 for adapter_dir in self.adapter_dirs }  # initialize to 0 for all clients
 
         # Our own shadow queue whose functions will update the parent queue (self.waiting_req_list) as well.
@@ -87,6 +86,9 @@ class FairQueue(ReqQueue):
         while True:
             # get the client (call it k) whose counter is the smallest among all of the clients in the queue.
             clients_in_queue = self.queued_requests.get_clients_in_queue()
+            if len(clients_in_queue) == 0:
+                break
+
             k = min(clients_in_queue, key=lambda client: self.counters_by_client[client])
             # let r be the earlist request in the queue from client k.
             r = self.queued_requests.get_earliest_request_from_client(k)
@@ -135,23 +137,42 @@ class FairQueue(ReqQueue):
 
     # ############ OVERRIDE OTHER FUNCTIONS ############
     def next_batch(self):
-        Logger.warning("Next batch does not incorporate fairness logic in it's estimate.")
+        print("WARNING: Next batch does not incorporate fairness logic in it's estimate, so should not be used.")
         return super().next_batch()
+    
+
+    # ############ HELPER FUNCTIONS ############
+    def _get_requests_by_client_from(self, requests: List[Req]) -> dict[str, List[Req]]:
+        requests_by_client = { }
+        for req in requests:
+            if req.adapter_dir not in requests_by_client:
+                requests_by_client[req.adapter_dir] = [req]
+            else:
+                requests_by_client[req.adapter_dir].append(req)
+        return requests_by_client
 
 
 
 class QueuedRequests:
     def __init__(self):
-        # need to maintain an official queue because the ReqQueue official queue is accessed by other parts of the code.
-        self.queued_requests_by_client: dict[str, Req] = { }
+        # need to maintain an official queue because the ReqQueue official queue
+        # is accessed by other parts of the code.
+        # This should also stay ordered, so each list is a FIFO queue.
+        self.queued_requests_by_client: dict[str, List[Req]] = { }
         self.client_that_made_Q_empty_when_last_request_left = None
     
     def get_earliest_request_from_client(self, client: str) -> Req:
-        return self.queued_requests_by_client.get(client, None)
+        requests = self.queued_requests_by_client.get(client, None)
+        if requests is None:
+            return None
+        return requests[0]
 
     def push_request(self, request: Req, official_queue: List[Req]):
         official_queue.append(request)
-        self.queued_requests_by_client = self.queued_requests_by_client.get(request.adapter_dir, []) + [request]
+        if self.queued_requests_by_client.get(request.adapter_dir, None) is None:
+            self.queued_requests_by_client[request.adapter_dir] = [request]
+        else:
+            self.queued_requests_by_client[request.adapter_dir].append(request)
 
     def remove_request(self, request: Req, official_queue: List[Req]):
         official_queue.remove(request)
@@ -163,7 +184,7 @@ class QueuedRequests:
         if len(self.queued_requests_by_client[request.adapter_dir]) == 0:
             self.queued_requests_by_client.pop(request.adapter_dir)
         
-        if self.official_queue == []:
+        if official_queue == []:
             self.client_that_made_Q_empty_when_last_request_left = request.adapter_dir
         else:
             self.client_that_made_Q_empty_when_last_request_left = None
