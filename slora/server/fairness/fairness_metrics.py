@@ -6,13 +6,14 @@ class FairnessMetrics:
     """Evaluation metrics from Section 3/5 of the paper — service difference,
     windowed service rate, FTL, etc."""
 
-    def __init__(self, w_p=1, w_q=2, window_size=30.0):
+    def __init__(self, w_p=1, w_q=2, window_T=30.0):
         self.w_p = w_p
         self.w_q = w_q
-        self.window_size = window_size
+        self.window_T = window_T
 
         self._prompt_events = []   # (ts, client_id, input_tokens)
         self._decode_events = []   # (ts, client_id, output_tokens)
+        self._ftl_events = []      # (ts, client_id, first_token_latency)
         self._arrival_events = []  # (ts, client_id)
 
         self._start_time = time.time()
@@ -24,6 +25,9 @@ class FairnessMetrics:
 
     def record_prompt_service(self, client_id, input_tokens):
         self._prompt_events.append((time.time(), client_id, input_tokens))
+
+    def record_first_token_latency(self, client_id, ftl):
+        self._ftl_events.append((time.time(), client_id, ftl))
 
     def record_decode_service(self, client_id, output_tokens):
         self._decode_events.append((time.time(), client_id, output_tokens))
@@ -42,7 +46,7 @@ class FairnessMetrics:
         return dict(service_per_client)
 
     def _windowed_service(self, t):
-        return self._service_in_range(t - self.window_size, t + self.window_size)
+        return self._service_in_range(t - self.window_T, t + self.window_T)
 
     def _max_service_difference(self, t):
         """max |Wi(0,t) - Wj(0,t)| over all client pairs."""
@@ -51,3 +55,32 @@ class FairnessMetrics:
             return 0.0
         service_values = list(service_per_client.values())
         return max(service_values) - min(service_values)
+
+    def _service_difference_capped(self, t):
+        """min(s_high - s_low, |r_low - s_low|) using arrival count as demand proxy."""
+        service_per_client = self._service_in_range(self._start_time, t)
+        if len(service_per_client) < 2:
+            return 0.0
+
+        arrivals_per_client = defaultdict(int)
+        for timestamp, client in self._arrival_events:
+            if self._start_time <= timestamp <= t:
+                arrivals_per_client[client] += 1
+
+        total_arrivals = sum(arrivals_per_client.values()) if arrivals_per_client else 1
+        total_service = sum(service_per_client.values()) if service_per_client else 0.0
+        lowest_service = min(service_per_client.values())
+        highest_service = max(service_per_client.values())
+        lowest_service_client = min(service_per_client, key=service_per_client.get)
+        demand_proxy = (arrivals_per_client.get(lowest_service_client, 0) / total_arrivals) * total_service if total_arrivals > 0 else 0.0
+
+        return min(highest_service - lowest_service, abs(demand_proxy - lowest_service))
+
+    def _avg_ftl_in_window(self, t):
+        # ftl = first-token latency in this case
+        window_start, window_end = t - self.window_T, t + self.window_T
+        latencies_per_client = defaultdict(list)
+        for timestamp, client, latency in self._ftl_events:
+            if window_start <= timestamp <= window_end:
+                latencies_per_client[client].append(latency)
+        return { client: sum(latencies)/len(latencies) for client, latencies in latencies_per_client.items() }
