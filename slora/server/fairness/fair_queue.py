@@ -1,7 +1,8 @@
 from slora.server.router.req_queue import ReqQueue
 from slora.server.io_struct import Batch
 from slora.server.io_struct import Req
-from typing import List
+from typing import Deque, List
+from collections import deque
 import uuid
 
 """
@@ -165,7 +166,7 @@ class QueuedRequests:
         # need to maintain an official queue because the ReqQueue official queue
         # is accessed by other parts of the code.
         # This should also stay ordered, so each list is a FIFO queue.
-        self.queued_requests_by_client: dict[str, List[Req]] = { }
+        self.queued_requests_by_client: dict[str, Deque[Req]] = { }
         self.client_that_made_Q_empty_when_last_request_left = None
     
     def get_earliest_request_from_client(self, client: str) -> Req:
@@ -177,18 +178,19 @@ class QueuedRequests:
     def push_request(self, request: Req, official_queue: List[Req]):
         official_queue.append(request)
         if self.queued_requests_by_client.get(request.adapter_dir, None) is None:
-            self.queued_requests_by_client[request.adapter_dir] = [request]
+            self.queued_requests_by_client[request.adapter_dir] = deque([request])
         else:
             self.queued_requests_by_client[request.adapter_dir].append(request)
 
     def remove_request(self, request: Req, official_queue: List[Req]):
         official_queue.remove(request)
-        if self.queued_requests_by_client.get(request.adapter_dir, None) is None:
-            raise ValueError(f"Shadow queue for client {request.adapter_dir} does not exist.")
-        self.queued_requests_by_client[request.adapter_dir].remove(request)
+        requests = self.queued_requests_by_client.get(request.adapter_dir, None)
+        if requests is None:
+            raise ValueError(f"Shadow queue for client {request.adapter_dir} does not exist / is empty.")
+        requests.popleft()
 
         # remove that client from our shadow queue to reflect in the keys that there are no requests from this client in the queue.
-        if len(self.queued_requests_by_client[request.adapter_dir]) == 0:
+        if len(requests) == 0:
             self.queued_requests_by_client.pop(request.adapter_dir)
         
         if official_queue == []:
