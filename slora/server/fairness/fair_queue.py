@@ -11,11 +11,6 @@ in s-lora, these loops are already implemented by the RouterManager in
 loop_for_netio_req() and _stepp(). So, this queue just needs to expose the
 logic from within those loops for each of those call sites.
 """
-
-# REMAINING TODO:
-# - Check the fair weights input — I made assumptions about what shape it would be, but have to confirm.
-# - Test and confirm functionality.
-
 class FairQueue(ReqQueue):
     """
     A version of the request queue that implements the VTC-based fairness
@@ -37,6 +32,8 @@ class FairQueue(ReqQueue):
 
         # NOTE: This is unused. If we want to incoroprate tiered fariness, we can incorporate this in the implemenetation below.
         self.fair_weights = fair_weights
+        if len(fair_weights) > 0:
+            print("WARNING: Fair weights detected in input. These are not currently implemented in VTC algorithm, though it would be a quick fix to add them.")
 
         return
 
