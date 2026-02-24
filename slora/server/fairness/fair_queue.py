@@ -184,7 +184,11 @@ class QueuedRequests:
         requests = self.queued_requests_by_client.get(request.adapter_dir, None)
         if requests is None:
             raise ValueError(f"Shadow queue for client {request.adapter_dir} does not exist / is empty.")
-        requests.popleft()
+        if requests[0] != request:
+            requests.remove(request)
+            print(f"WARNING: Request {request.request_id} is not in the 0th position of the shadow queue as expected {request.adapter_dir}.")
+        else:
+            requests.popleft()
 
         # remove that client from our shadow queue to reflect in the keys that there are no requests from this client in the queue.
         if len(requests) == 0:
