@@ -195,6 +195,7 @@ class QueuedRequests:
     def get_clients_in_queue(self) -> List[str]:
         return list(self.queued_requests_by_client.keys())
     
+    """This is a very light sanity check. If we encounter issues, we can add more checks here."""
     def sanity_check(self, official_queue: List[Req]):
         num_requests_in_queue = sum(len(requests) for requests in self.queued_requests_by_client.values())
         if num_requests_in_queue != len(official_queue):
