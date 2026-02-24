@@ -23,7 +23,6 @@ def fair_queue(monkeypatch):
     # Keep tests focused on Algorithm 2 scheduling logic.
     monkeypatch.setattr(q, "_init_cache_list", lambda current_batch, lora_ranks: None)
     monkeypatch.setattr(q, "_can_add_new_req", lambda req, lora_ranks: True)
-    monkeypatch.setattr(q, "_sanity_check_shadow_queue", lambda: None)
     return q
 
 

@@ -111,7 +111,7 @@ class FairQueue(ReqQueue):
         if len(new_batch_reqs) == 0:
             return None
         new_batch = Batch(uuid.uuid4().hex, new_batch_reqs)
-        self._sanity_check_shadow_queue() # sanity check
+        self.queued_requests.sanity_check(self.waiting_req_list) # sanity check alignment between shadow queue and official queue
         return new_batch  # return the batch
 
 
@@ -149,13 +149,6 @@ class FairQueue(ReqQueue):
             else:
                 requests_by_client[req.adapter_dir].append(req)
         return requests_by_client
-
-    def _sanity_check_shadow_queue(self):
-        num_requests_in_queue = sum(len(requests) for requests in self.queued_requests_by_client.values())
-        if num_requests_in_queue != len(self.waiting_req_list):
-            raise ValueError(f"Number of requests in shadow queue ({num_requests_in_queue}) does not match number of requests in official queue ({len(self.waiting_req_list)}).")
-        return
-
 
 
 class QueuedRequests:
@@ -201,3 +194,9 @@ class QueuedRequests:
     
     def get_clients_in_queue(self) -> List[str]:
         return list(self.queued_requests_by_client.keys())
+    
+    def sanity_check(self, official_queue: List[Req]):
+        num_requests_in_queue = sum(len(requests) for requests in self.queued_requests_by_client.values())
+        if num_requests_in_queue != len(official_queue):
+            raise ValueError(f"Number of requests in shadow queue ({num_requests_in_queue}) does not match number of requests in official queue ({len(official_queue)}).")
+        return
