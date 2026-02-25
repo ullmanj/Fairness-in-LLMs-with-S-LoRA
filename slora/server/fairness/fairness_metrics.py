@@ -6,10 +6,11 @@ class FairnessMetrics:
     """Evaluation metrics from Section 3/5 of the paper — service difference,
     windowed service rate, FTL, etc."""
 
-    def __init__(self, w_p=1, w_q=2, window_T=30.0):
-        self.w_p = w_p
-        self.w_q = w_q
+    def __init__(self, w_p_input=1, w_q_output=2, window_T=30.0, log_interval=10):
+        self.w_p = w_p_input
+        self.w_q = w_q_output
         self.window_T = window_T
+        self.log_interval = log_interval
 
         self._prompt_events = []   # (ts, client_id, input_tokens)
         self._decode_events = []   # (ts, client_id, output_tokens)
@@ -17,6 +18,7 @@ class FairnessMetrics:
         self._arrival_events = []  # (ts, client_id)
 
         self._start_time = time.time()
+        self._last_log_time = time.time()
 
     # ############ Event recording ############
 
@@ -84,3 +86,27 @@ class FairnessMetrics:
             if window_start <= timestamp <= window_end:
                 latencies_per_client[client].append(latency)
         return { client: sum(latencies)/len(latencies) for client, latencies in latencies_per_client.items() }
+
+    # ############ Logging ############
+
+    def print_fairness_stats(self):
+        now = time.time()
+        if now - self._last_log_time < self.log_interval:
+            return
+        self._last_log_time = now
+
+        cumulative = self._service_in_range(self._start_time, now)
+        windowed = self._windowed_service(now)
+        max_diff = self._max_service_difference(now)
+        capped_diff = self._service_difference_capped(now)
+        avg_ftl = self._avg_ftl_in_window(now)
+
+        print("=" * 60)
+        print("FAIRNESS METRICS")
+        print("-" * 60)
+        print(f"  Cumulative service per client: {cumulative}")
+        print(f"  Windowed service (T={self.window_T}s):   {windowed}")
+        print(f"  Max service difference:        {max_diff:.2f}")
+        print(f"  Demand-capped service diff:    {capped_diff:.2f}")
+        print(f"  Avg FTL per client (window):   {avg_ftl}")
+        print("=" * 60)
