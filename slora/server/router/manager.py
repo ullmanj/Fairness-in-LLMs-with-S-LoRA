@@ -29,6 +29,7 @@ from slora.server.router.cluster_req_queue import ClusterReqQueue
 from slora.server.router.pets_req_queue import PETSReqQueue
 from slora.server.router.peft_req_queue import PEFTReqQueue
 from slora.server.fairness.fair_queue import FairQueue
+from slora.server.fairness.fairness_metrics import FairnessMetrics
 
 
 def get_scheduler(input_params, adapter_dirs):
@@ -78,9 +79,19 @@ class RouterManager:
             for lora_dir in adapter_dirs:
                 config, _ = get_lora_config(lora_dir, input_params.dummy)
                 self.lora_ranks[lora_dir] = config["r"]
+        else:
+            for lora_dir in adapter_dirs:
+                self.lora_ranks[lora_dir] = 0
         self.lora_ranks[None] = 0
 
         self.req_queue = get_scheduler(input_params, adapter_dirs)
+
+        # Fairness metrics (only active for vtc_fair scheduler)
+        if input_params.scheduler == "vtc_fair":
+            self.fairness_metrics = FairnessMetrics()
+            self.metrics_dump_path = "fairness_metrics_dump.json"
+        else:
+            self.fairness_metrics = None
 
         self.running_batch: Batch = None
         self.eos_id = eos_id
