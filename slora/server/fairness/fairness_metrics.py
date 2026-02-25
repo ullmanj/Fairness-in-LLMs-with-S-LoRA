@@ -5,9 +5,15 @@ import time
 from collections import defaultdict
 
 
+"""
+Note for understanding: While FairQueue implements the VTC scheduling algorithm
+(Algorithm 2 in the paper), this class implements the evaluation metrics from
+Section 3/5. The metrics here (service difference, demand-capped difference,
+windowed service rate, FTL) are what the paper uses to measure whether the
+scheduler is actually being fair — i.e. Figures 3 and 4. The RouterManager
+calls the record_* methods during request processing.
+"""
 class FairnessMetrics:
-    """Evaluation metrics from Section 3/5 of the paper — service difference,
-    windowed service rate, FTL, etc."""
 
     def __init__(self, w_p_input=1, w_q_output=2, window_T=30.0, log_interval=10):
         self.w_p = w_p_input
