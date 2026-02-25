@@ -162,6 +162,8 @@ class RouterManager:
         req = Req(adapter_dir, request_id, prompt_ids, sampling_params)
         self.req_queue.append(req) # Where our fairness logic can live
         self.send_to_detokenization.send_pyobj(req.to_req_detokenization_state())
+        if self.fairness_metrics is not None:
+            self.fairness_metrics.record_arrival(adapter_dir)
         return
 
     async def abort(self, request_id):
@@ -186,7 +188,9 @@ class RouterManager:
                     print("current batch size:", len(self.running_batch.reqs), "token used ratio:", self.running_batch.calcu_used_tokens() / self.input_params.max_total_token_num)
                     pass
                 self.stats_tool.print_stats()
-                
+                if self.fairness_metrics is not None:
+                    self.fairness_metrics.print_fairness_stats()
+
             if self.running_batch is None:
                 await asyncio.sleep(0.01)  # 10ms
 
