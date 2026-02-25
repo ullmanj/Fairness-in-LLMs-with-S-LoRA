@@ -1,3 +1,6 @@
+import json
+import os
+import tempfile
 import time
 from collections import defaultdict
 
@@ -110,3 +113,24 @@ class FairnessMetrics:
         print(f"  Demand-capped service diff:    {capped_diff:.2f}")
         print(f"  Avg FTL per client (window):   {avg_ftl}")
         print("=" * 60)
+
+    # ############ Persistence ############
+
+    def save_events(self, filepath):
+        data = {
+            "start_time": self._start_time,
+            "w_p": self.w_p, "w_q": self.w_q, "window_T": self.window_T,
+            "prompt_events": self._prompt_events,
+            "decode_events": self._decode_events,
+            "ftl_events": self._ftl_events,
+            "arrival_events": self._arrival_events,
+        }
+        dir_name = os.path.dirname(filepath) or "."
+        fd, tmp_path = tempfile.mkstemp(dir=dir_name, suffix=".tmp")
+        try:
+            with os.fdopen(fd, 'w') as f:
+                json.dump(data, f)
+            os.replace(tmp_path, filepath)
+        except:
+            os.unlink(tmp_path)
+            raise
