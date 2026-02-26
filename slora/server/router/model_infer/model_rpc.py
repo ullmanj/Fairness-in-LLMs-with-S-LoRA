@@ -1,5 +1,4 @@
 import asyncio
-import numpy as np
 import rpyc
 import torch
 import traceback
@@ -7,26 +6,29 @@ import time
 from collections import defaultdict
 
 from datetime import timedelta
-from tqdm import tqdm
 from typing import Dict, List, Tuple
-from rpyc.utils.classic import obtain
 
-from transformers.configuration_utils import PretrainedConfig
-from slora.server.router.model_infer.infer_batch import InferBatch
-
-from slora.common.configs.config import setting
-from slora.models.llama.model import LlamaTpPartModel
-from slora.models.llama2.model import Llama2TpPartModel
-from slora.models.peft.lora_adapter import LoraTpPartAdapter
-from slora.models.peft.lora_unordered_batch_infer import LoraUnorderedBatchInfer
-from slora.models.peft.lora_single_batch_infer import LoraPEFTBatchInfer
-from slora.models.bmm.lora_bmm_infer import LoraBmmInfer
-from slora.server.router.model_infer.infer_adapter import InferAdapter
-from slora.server.router.model_infer.naive_infer_adapter import NaiveInferAdapter
-from slora.utils.infer_utils import set_random_seed
-from slora.utils.infer_utils import calculate_time, mark_start, mark_end
-from slora.utils.model_utils import get_model_config
-from .post_process import sample
+try:
+    import numpy as np
+    from tqdm import tqdm
+    from rpyc.utils.classic import obtain
+    from transformers.configuration_utils import PretrainedConfig
+    from slora.server.router.model_infer.infer_batch import InferBatch
+    from slora.common.configs.config import setting
+    from slora.models.llama.model import LlamaTpPartModel
+    from slora.models.llama2.model import Llama2TpPartModel
+    from slora.models.peft.lora_adapter import LoraTpPartAdapter
+    from slora.models.peft.lora_unordered_batch_infer import LoraUnorderedBatchInfer
+    from slora.models.peft.lora_single_batch_infer import LoraPEFTBatchInfer
+    from slora.models.bmm.lora_bmm_infer import LoraBmmInfer
+    from slora.server.router.model_infer.infer_adapter import InferAdapter
+    from slora.server.router.model_infer.naive_infer_adapter import NaiveInferAdapter
+    from slora.utils.infer_utils import set_random_seed
+    from slora.utils.infer_utils import calculate_time, mark_start, mark_end
+    from slora.utils.model_utils import get_model_config
+    from slora.server.router.model_infer.post_process import sample
+except ImportError:
+    pass
 
 
 class ModelRpcServer(rpyc.Service):
@@ -505,7 +507,10 @@ def _init_env(port):
     return
 
 
-async def start_model_process(port, world_size):
+async def start_model_process(port, world_size, mock=False):
+    if mock:
+        from slora.server.router.model_infer.mock_model_rpc import MockModelRpcServer
+        return ModelRpcClient(MockModelRpcServer(), world_size)
     # 单卡时不使用 rpc
     if world_size == 1:
         return ModelRpcClient(ModelRpcServer(), world_size)

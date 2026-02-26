@@ -377,9 +377,13 @@ def main():
     parser.add_argument("--no-mem-pool", action="store_true")
     parser.add_argument("--bmm", action="store_true")
     parser.add_argument("--no-lora", action="store_true")
+    parser.add_argument("--mock", action="store_true")
     ''' end of slora arguments '''
 
     args = parser.parse_args()
+
+    if args.mock:
+        args.dummy = True
 
     assert args.max_req_input_len < args.max_req_total_len
     setting["max_req_total_len"] = args.max_req_total_len
@@ -455,7 +459,8 @@ def main():
 
     assert proc_router.is_alive() and proc_detoken.is_alive()
 
-    print_mem_stats(args)
+    if not args.mock:
+        print_mem_stats(args)
 
     uvicorn.run(
         app,
