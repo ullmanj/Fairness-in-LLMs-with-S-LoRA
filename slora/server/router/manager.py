@@ -190,8 +190,12 @@ class RouterManager:
                 self.stats_tool.print_stats()
                 if self.fairness_metrics is not None:
                     self.fairness_metrics.print_fairness_stats()
+                    if counter_count % 100 == 0:
+                        self.fairness_metrics.save_events(self.metrics_dump_path)
 
             if self.running_batch is None:
+                if self.fairness_metrics is not None:
+                    self.fairness_metrics.save_events(self.metrics_dump_path)
                 await asyncio.sleep(0.01)  # 10ms
 
     async def _step(self):  # The execution stream of Alg2
