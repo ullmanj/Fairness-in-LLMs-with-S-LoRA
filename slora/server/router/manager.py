@@ -298,6 +298,15 @@ class RouterManager:
         self._add_token_id_to_req(batch, req_to_out_token_id)
         has_new_finished_req = batch.mark_finished_req(self.eos_id)
         self._send_to_detokenization_proc(batch, req_to_out_token_id)
+
+        # Record fairness metrics after prefill
+        if self.fairness_metrics is not None:
+            now = time.time()
+            for req in batch.reqs:
+                self.fairness_metrics.record_prompt_service(req.adapter_dir, req.input_len)
+                ftl = now - req.arrival_time
+                self.fairness_metrics.record_first_token_latency(req.adapter_dir, ftl)
+
         await self._handle_finish_req(batch, has_new_finished_req, minibatch=True)
         return
 
@@ -313,6 +322,12 @@ class RouterManager:
         self._add_token_id_to_req(batch, req_to_out_token_id)
         has_new_finished_req = batch.mark_finished_req(self.eos_id)
         self._send_to_detokenization_proc(batch, req_to_out_token_id)
+
+        # Record fairness metrics after decode
+        if self.fairness_metrics is not None:
+            for req in batch.reqs:
+                self.fairness_metrics.record_decode_service(req.adapter_dir, 1)
+
         await self._handle_finish_req(batch, has_new_finished_req)
         return
 
