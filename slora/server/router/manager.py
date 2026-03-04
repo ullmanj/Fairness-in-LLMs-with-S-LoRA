@@ -29,6 +29,7 @@ from slora.server.router.cluster_req_queue import ClusterReqQueue
 from slora.server.router.pets_req_queue import PETSReqQueue
 from slora.server.router.peft_req_queue import PEFTReqQueue
 from slora.server.fairness.fair_queue import FairQueue
+from slora.server.fairness.fairness_metrics import FairnessMetrics
 
 
 def get_scheduler(input_params, adapter_dirs):
@@ -78,9 +79,19 @@ class RouterManager:
             for lora_dir in adapter_dirs:
                 config, _ = get_lora_config(lora_dir, input_params.dummy)
                 self.lora_ranks[lora_dir] = config["r"]
+        else:
+            for lora_dir in adapter_dirs:
+                self.lora_ranks[lora_dir] = 0
         self.lora_ranks[None] = 0
 
         self.req_queue = get_scheduler(input_params, adapter_dirs)
+
+        # Fairness metrics (only active for vtc_fair scheduler)
+        if input_params.scheduler == "vtc_fair":
+            self.fairness_metrics = FairnessMetrics()
+            self.metrics_dump_path = "fairness_metrics_dump.json"
+        else:
+            self.fairness_metrics = None
 
         self.running_batch: Batch = None
         self.eos_id = eos_id
@@ -151,6 +162,8 @@ class RouterManager:
         req = Req(adapter_dir, request_id, prompt_ids, sampling_params)
         self.req_queue.append(req) # Where our fairness logic can live
         self.send_to_detokenization.send_pyobj(req.to_req_detokenization_state())
+        if self.fairness_metrics is not None:
+            self.fairness_metrics.record_arrival(adapter_dir)
         return
 
     async def abort(self, request_id):
@@ -175,8 +188,14 @@ class RouterManager:
                     print("current batch size:", len(self.running_batch.reqs), "token used ratio:", self.running_batch.calcu_used_tokens() / self.input_params.max_total_token_num)
                     pass
                 self.stats_tool.print_stats()
-                
+                if self.fairness_metrics is not None:
+                    self.fairness_metrics.print_fairness_stats()
+                    if counter_count % 100 == 0:
+                        self.fairness_metrics.save_events(self.metrics_dump_path)
+
             if self.running_batch is None:
+                if self.fairness_metrics is not None:
+                    self.fairness_metrics.save_events(self.metrics_dump_path)
                 await asyncio.sleep(0.01)  # 10ms
 
     async def _step(self):  # The execution stream of Alg2
@@ -283,6 +302,15 @@ class RouterManager:
         self._add_token_id_to_req(batch, req_to_out_token_id)
         has_new_finished_req = batch.mark_finished_req(self.eos_id)
         self._send_to_detokenization_proc(batch, req_to_out_token_id)
+
+        # Record fairness metrics after prefill
+        if self.fairness_metrics is not None:
+            now = time.time()
+            for req in batch.reqs:
+                self.fairness_metrics.record_prompt_service(req.adapter_dir, req.input_len)
+                ftl = now - req.arrival_time
+                self.fairness_metrics.record_first_token_latency(req.adapter_dir, ftl)
+
         await self._handle_finish_req(batch, has_new_finished_req, minibatch=True)
         return
 
@@ -298,6 +326,12 @@ class RouterManager:
         self._add_token_id_to_req(batch, req_to_out_token_id)
         has_new_finished_req = batch.mark_finished_req(self.eos_id)
         self._send_to_detokenization_proc(batch, req_to_out_token_id)
+
+        # Record fairness metrics after decode
+        if self.fairness_metrics is not None:
+            for req in batch.reqs:
+                self.fairness_metrics.record_decode_service(req.adapter_dir, 1)
+
         await self._handle_finish_req(batch, has_new_finished_req)
         return
 
