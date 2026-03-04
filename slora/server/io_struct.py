@@ -1,6 +1,7 @@
 from .sampling_params import SamplingParams
 from typing import Dict, List, Optional, Tuple
 import asyncio
+import time
 
 
 class Req:
@@ -11,6 +12,7 @@ class Req:
         self.input_len = len(prompt_ids)
         self.max_output_len = sample_params.max_new_tokens
         self.sample_params = sample_params
+        self.arrival_time = time.time()
         self.output_ids = []
         self.output_metadata_list = []
         self.has_generate_finished = False
