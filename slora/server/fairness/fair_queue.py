@@ -5,6 +5,13 @@ from typing import Deque, List
 from collections import deque
 import uuid
 
+# number of input tokens at which the high tier cost applies
+HIGH_TIER_START = 2000
+# multiplier applied to base weights when in 'high' tier of tiered scheduling
+HIGH_TIER_MULTIPLIER = 2
+# number to divide base weight by for 2nd-degree term in quadratic cost function
+QUADRATIC_DIVISOR = 1000 
+
 """
 Note for understanding: While the algorithm lays out the logic in "while" loops,
 in s-lora, these loops are already implemented by the RouterManager in
@@ -16,10 +23,14 @@ class FairQueue(ReqQueue):
     A version of the request queue that implements the VTC-based fairness
     scheduler. The outline for this is in Algorithm 2 in the paper.
     """
-
-    def __init__(self, max_total_tokens, batch_max_tokens, running_max_req_size, adapter_dirs, fair_weights):
+    # 'service_def' is a string argument that takes on one of three string values: "linear", "tiered", and "quadratic".
+    # "linear" corresponds to the original algorithm in VTC, "tiered" uses a service definition based on modern, large-context
+    # pricing models where input & output tokens cost 2x more if the # of input tokens is more than 2k, and "quadratic"
+    # uses a quadratic function to most accurately estimate the system resources of a given job.
+    def __init__(self, max_total_tokens, batch_max_tokens, running_max_req_size, adapter_dirs, fair_weights, service_def):
         super().__init__(max_total_tokens, batch_max_tokens, running_max_req_size)
-        
+
+        self.service_def = service_def
         self.w_p_input = 1  # input token weights
         self.w_q_output = 2  # output token weights
         
@@ -101,7 +112,12 @@ class FairQueue(ReqQueue):
                 new_batch_total_tokens + r.input_len <= self.batch_max_tokens):
                 break
             # update the counter for client k to be it's current value + w_p_input times the input length of r.
-            self.counters_by_client[k] += self.w_p_input * r.input_len
+            if self.service_def == "linear":
+                self.counters_by_client[k] += self.w_p_input * r.input_len
+            elif self.service_def == "tiered":
+                self.counters_by_client[k] += 2 * self.w_p_input * r.input_len if r.input_len >= HIGH_TIER_START else self.w_p_input * r.input_len
+            elif self.service_def == "quadratic":
+                self.counters_by_client[k] += self.w_p_input * r.input_len + (self.w_p_input * r.input_len * r.input_len / QUADRATIC_DIVISOR)
             # Append r to the batch
             new_batch_reqs.append(r)
             new_batch_total_tokens += r.input_len
@@ -118,14 +134,22 @@ class FairQueue(ReqQueue):
     # Line 30 of Alg2.
     def update_counter(self, batch:Batch):
         # For each of the clients (call it k) in the the batch
-        requests_by_client = self._get_requests_by_client_from(batch.reqs)
-        for client in requests_by_client.keys():
-            # Find the set of requests in the batch that are from client k (call it "requests")
-            # Get the length of "requests" (call it L)
-            L = len(requests_by_client[client])
-            # Add to the counter for this client the product of w_q_output and L
-            self.counters_by_client[client] += self.w_q_output * L
-        return
+        if self.service_def == "linear":
+            requests_by_client = self._get_requests_by_client_from(batch.reqs)
+            for client in requests_by_client.keys():
+                # Find the set of requests in the batch that are from client k (call it "requests")
+                # Get the length of "requests" (call it L)
+                L = len(requests_by_client[client])
+                # Add to the counter for this client the product of w_q_output and L
+                self.counters_by_client[client] += self.w_q_output * L
+            return
+        elif self.service_def == "tiered":
+            for req in batch.reqs:
+                self.counters_by_client[req.adapter_dir] += 2 * self.w_q_output if req.input_len >= HIGH_TIER_START else self.w_q_output
+        elif self.service_def == "quadratic":
+            for req in batch.reqs:
+                req.output_len += 1
+                self.counters_by_client[req.adapter_dir] += self.w_q_output + (self.w_q_output * req.output_len / QUADRATIC_DIVISOR)
     
     # ############ OVERRIDE HELPER FUNCTIONS ############
     

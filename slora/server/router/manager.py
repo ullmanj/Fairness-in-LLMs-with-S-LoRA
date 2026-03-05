@@ -35,7 +35,13 @@ from slora.server.fairness.fairness_metrics import FairnessMetrics
 def get_scheduler(input_params, adapter_dirs):
     if input_params.scheduler == "vtc_fair":
         return FairQueue(input_params.max_total_token_num, input_params.batch_max_tokens,
-                           input_params.running_max_req_size, adapter_dirs, input_params.fair_weights)
+                           input_params.running_max_req_size, adapter_dirs, input_params.fair_weights, "linear")
+    elif input_params.scheduler == "vtc_fair_tiered":
+        return FairQueue(input_params.max_total_token_num, input_params.batch_max_tokens,
+                           input_params.running_max_req_size, adapter_dirs, input_params.fair_weights, "tiered")
+    elif input_params.scheduler == "vtc_fair_quadratic":
+        return FairQueue(input_params.max_total_token_num, input_params.batch_max_tokens,
+                           input_params.running_max_req_size, adapter_dirs, input_params.fair_weights, "quadratic")
     elif input_params.scheduler == "pets":
         return PETSReqQueue(input_params.max_total_token_num, input_params.batch_max_tokens,
                             input_params.running_max_req_size)
