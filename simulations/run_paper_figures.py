@@ -37,11 +37,16 @@ FIGURE4_CLIENTS = {
     "client3": {"req_rate": 1.5,  "input_len": 256, "output_len": 256},
 }
 
-EXP_1 = {  # simple exp to find the capacity of the hardware
+EXP_0 = {  # simple exp to find the capacity of the hardware
         'client1': {'req_rate': 100.0, 'input_len': 1, 'output_len': 1},
         'client2': {'req_rate': 100.0, 'input_len': 1, 'output_len': 1},
         'client3': {'req_rate': 100.0, 'input_len': 1, 'output_len': 1},
         'client4': {'req_rate': 100.0, 'input_len': 1, 'output_len': 1},
+}
+
+EXP_1 = {  # exp to test difference in service for long output length
+         'client1': {'req_rate': 2.0, 'input_len': 1, 'output_len': 256},
+         'client2': {'req_rate': 2.0 / 16.0, 'input_len': 1, 'output_len': 4096},
 }
 
 EXPERIMENTS = [EXP_1, None, None, FIGURE3_CLIENTS, FIGURE4_CLIENTS]
