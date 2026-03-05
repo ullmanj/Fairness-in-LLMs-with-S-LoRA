@@ -25,8 +25,8 @@ import numpy as np
 
 # Figure 3: 2 clients, equal weight, equal request rate
 FIGURE3_CLIENTS = {
-    "client1": {"req_rate": 2.0, "input_len": 128, "output_len": 64},
-    "client2": {"req_rate": 2.0, "input_len": 128, "output_len": 64},
+    "client1": {"req_rate": 1.5, "input_len": 256, "output_len": 256},
+    "client2": {"req_rate": 3.0, "input_len": 256, "output_len": 256},
 }
 
 # Figure 4: 3 clients — paper specifies 15, 30, 90 req/min = 0.25, 0.5, 1.5 req/s
