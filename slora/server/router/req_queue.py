@@ -13,8 +13,17 @@ class ReqQueue:
         assert batch_max_tokens is not None
         self.batch_max_tokens = batch_max_tokens
         self.running_max_req_size = running_max_req_size
-        self.waiting_req_list: List[Req] = []
-        
+        self._waiting_req_list: List[Req] = []
+
+    # Turn this into a property so we can override it for the fair_queue.py implementation.
+    @property
+    def waiting_req_list(self) -> List[Req]:
+        return self._waiting_req_list
+
+    @waiting_req_list.setter
+    def waiting_req_list(self, value: List[Req]):
+        self._waiting_req_list = value
+
     def append(self, req):
         self.waiting_req_list.append(req)
         return
