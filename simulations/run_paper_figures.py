@@ -49,7 +49,21 @@ EXP_1 = {  # exp to test difference in service for long output length
          'client2': {'req_rate': 2.0 / 16.0, 'input_len': 1, 'output_len': 4096},
 }
 
-EXPERIMENTS = [EXP_1, None, None, FIGURE3_CLIENTS, FIGURE4_CLIENTS]
+# experiment 10: 2 clients, equal amount of requested service, but client2 has much larger-size queries
+EXP_10 = {
+    "client1": {"req_rate": 3, "input_len": 256, "output_len": 256, }, 
+    "client2": {"req_rate": 0.375, "input_len": 2048, "output_len": 2048}, # 2047 since 
+}
+
+# experiment 11: 2 clients, equal amount of requested service, but client2 has much larger-size queries
+# and client1 has much smaller queries
+EXP_11 = {
+    "client1": {"req_rate": 48, "input_len": 16, "output_len": 16},
+    "client2": {"req_rate": 0.375, "input_len": 2048, "output_len": 2048},
+}
+
+EXPERIMENTS = [EXP_0, EXP_1, None, FIGURE3_CLIENTS, FIGURE4_CLIENTS, None, None, None, None, None,
+               EXP_10, EXP_11]
 
 # Plot types: "svc_diff", "svc_rate", "resp_time"
 PLOT_CONFIGS = [
@@ -58,6 +72,13 @@ PLOT_CONFIGS = [
     None,                       # (index 2)
     ["svc_diff", "svc_rate"],   # Figure 3 (index 3)
     ["svc_rate", "resp_time"],  # Figure 4 (index 4)
+    None,                       # (index 5)
+    None,                       # (index 6)
+    None,                       # (index 7)
+    None,                       # (index 8)
+    None,                       # (index 9)
+    ["svc_diff", "svc_rate"],   # Experiment 10 (index 10)
+    ["svc_diff", "svc_rate"]    # Experiment 11 (index 11)
 ]
 
 SERVER_URL = "http://127.0.0.1:8000"
