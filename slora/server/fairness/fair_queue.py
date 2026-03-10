@@ -38,7 +38,7 @@ class FairQueue(ReqQueue):
 
         self.counters_by_client: dict[str, int] = { adapter_dir: 0 for adapter_dir in self.adapter_dirs }  # initialize to 0 for all clients
 
-        # Our own shadow queue whose functions will update the parent queue (self.waiting_req_list) as well.
+        # Fair Queue uses it's own custom queue, as opposed to the parent `waiting_req_list`.
         self.queued_requests = QueuedRequests()
 
         # NOTE: This is unused. If we want to incoroprate tiered fariness, we can incorporate this in the implemenetation below.
@@ -48,6 +48,16 @@ class FairQueue(ReqQueue):
 
         return
 
+    # Add these getters so that we can pretend to still have waiting_req_list, as an interface.
+    @property
+    def waiting_req_list(self) -> List[Req]:
+        # This is O(N), but is only called in the abort case, so doesn't matter. Just flatten the per-client queues. Order doesn't matter.
+        return [request for client_requests in self.queued_requests.queued_requests_by_client.values() for request in client_requests]
+
+    @waiting_req_list.setter
+    def waiting_req_list(self, value):
+        raise RuntimeError("ERROR: waiting_req_list is not used in FairQueue. It's setter should not be called.")
+
     #  ############# Monitoring stream (i.e. new request comes in? Append it. ) #############
 
     # This will have lines 7-14 of Alg2. See `loop_for_netio_req` from
@@ -56,7 +66,7 @@ class FairQueue(ReqQueue):
         # if another request does NOT exist in the queue from the same client
         if self.queued_requests.get_earliest_request_from_client(req.adapter_dir) is None:
             # if the queue is empty
-            if len(self.waiting_req_list) == 0:
+            if self.queued_requests.is_empty():
                 # get the counter of the last client who left the Q (call it c_l)
                 c_l = 0
                 if self.queued_requests.client_that_made_Q_empty_when_last_request_left is not None:
@@ -74,7 +84,7 @@ class FairQueue(ReqQueue):
                 self.counters_by_client[req.adapter_dir] = max(self.counters_by_client[req.adapter_dir], c_min)
 
         # enqueue as normal
-        self.queued_requests.push_request(req, self.waiting_req_list)
+        self.queued_requests.push_request(req)
         return
 
     # ############# With Execution stream (i.e. whose turn is it next? Build a batch.) #############
@@ -104,7 +114,7 @@ class FairQueue(ReqQueue):
 
             # Not in algorithm: Drop the aborted requests. Inspired by super()
             if r.aborted:
-                self.queued_requests.remove_request(r, self.waiting_req_list)
+                self.queued_requests.remove_request(r)
                 continue
             
             # if r cannot fit into the batch, break. (because we have filled the batch maximally while staying fair)
@@ -122,12 +132,11 @@ class FairQueue(ReqQueue):
             new_batch_reqs.append(r)
             new_batch_total_tokens += r.input_len
             # Remove r from the queue
-            self.queued_requests.remove_request(r, self.waiting_req_list)
+            self.queued_requests.remove_request(r)
         
         if len(new_batch_reqs) == 0:
             return None
         new_batch = Batch(uuid.uuid4().hex, new_batch_reqs)
-        self.queued_requests.sanity_check(self.waiting_req_list) # sanity check alignment between shadow queue and official queue
         return new_batch  # return the batch
 
 
@@ -177,9 +186,8 @@ class FairQueue(ReqQueue):
 
 class QueuedRequests:
     def __init__(self):
-        # need to maintain an official queue because the ReqQueue official queue
-        # is accessed by other parts of the code.
-        # This should also stay ordered, so each list is a FIFO queue.
+        # We maintain per-client FIFO queues for efficient access at the high
+        # level of requests that are needed to reach capacity on GPUs today.
         self.queued_requests_by_client: dict[str, Deque[Req]] = { }
         self.client_that_made_Q_empty_when_last_request_left = None
     
@@ -189,29 +197,31 @@ class QueuedRequests:
             return None
         return requests[0]
 
-    def push_request(self, request: Req, official_queue: List[Req]):
-        official_queue.append(request)
+    def is_empty(self) -> bool:
+        # This works because we remove clients from the queue when they have no requests left.
+        return len(self.queued_requests_by_client) == 0
+
+    def push_request(self, request: Req):
         if self.queued_requests_by_client.get(request.adapter_dir, None) is None:
             self.queued_requests_by_client[request.adapter_dir] = deque([request])
         else:
             self.queued_requests_by_client[request.adapter_dir].append(request)
 
-    def remove_request(self, request: Req, official_queue: List[Req]):
-        official_queue.remove(request)
+    def remove_request(self, request: Req):
         requests = self.queued_requests_by_client.get(request.adapter_dir, None)
         if requests is None:
-            raise ValueError(f"Shadow queue for client {request.adapter_dir} does not exist / is empty.")
+            raise ValueError(f"Queue for client {request.adapter_dir} does not exist / is empty.")
         if requests[0] != request:
             requests.remove(request)
-            print(f"WARNING: Request {request.request_id} is not in the 0th position of the shadow queue as expected {request.adapter_dir}.")
+            print(f"WARNING: Request {request.request_id} is not in the 0th position of the client's queue as expected {request.adapter_dir}.")
         else:
             requests.popleft()
 
-        # remove that client from our shadow queue to reflect in the keys that there are no requests from this client in the queue.
+        # remove that client from our queue to reflect in the keys that there are no requests from this client in the queue.
         if len(requests) == 0:
             self.queued_requests_by_client.pop(request.adapter_dir)
         
-        if official_queue == []:
+        if self.is_empty():
             self.client_that_made_Q_empty_when_last_request_left = request.adapter_dir
         else:
             self.client_that_made_Q_empty_when_last_request_left = None
@@ -219,9 +229,3 @@ class QueuedRequests:
     def get_clients_in_queue(self) -> List[str]:
         return list(self.queued_requests_by_client.keys())
     
-    """This is a very light sanity check. If we encounter issues, we can add more checks here."""
-    def sanity_check(self, official_queue: List[Req]):
-        num_requests_in_queue = sum(len(requests) for requests in self.queued_requests_by_client.values())
-        if num_requests_in_queue != len(official_queue):
-            raise ValueError(f"Number of requests in shadow queue ({num_requests_in_queue}) does not match number of requests in official queue ({len(official_queue)}).")
-        return
