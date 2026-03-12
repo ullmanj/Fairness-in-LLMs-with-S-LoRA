@@ -1,0 +1,7472 @@
+[
+  {
+    "client": "client1",
+    "req_id": 0,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 5.731870174407959,
+    "first_token_latency": 0.3853611946105957,
+    "timestamp": 7.3909759521484375e-06
+  },
+  {
+    "client": "client1",
+    "req_id": 1,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 5.268305063247681,
+    "first_token_latency": 0.06920695304870605,
+    "timestamp": 0.5670139789581299
+  },
+  {
+    "client": "client1",
+    "req_id": 2,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 5.2448694705963135,
+    "first_token_latency": 0.05974221229553223,
+    "timestamp": 0.6944460868835449
+  },
+  {
+    "client": "client1",
+    "req_id": 3,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 5.234296798706055,
+    "first_token_latency": 0.061563730239868164,
+    "timestamp": 0.9892787933349609
+  },
+  {
+    "client": "client1",
+    "req_id": 4,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 5.226598024368286,
+    "first_token_latency": 0.06134200096130371,
+    "timestamp": 1.1544687747955322
+  },
+  {
+    "client": "client1",
+    "req_id": 5,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 5.2326436042785645,
+    "first_token_latency": 0.07493948936462402,
+    "timestamp": 1.506072998046875
+  },
+  {
+    "client": "client1",
+    "req_id": 7,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 5.23145318031311,
+    "first_token_latency": 0.07727861404418945,
+    "timestamp": 1.574676275253296
+  },
+  {
+    "client": "client1",
+    "req_id": 6,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 5.2337188720703125,
+    "first_token_latency": 0.07931637763977051,
+    "timestamp": 1.5726137161254883
+  },
+  {
+    "client": "client1",
+    "req_id": 8,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 5.230211019515991,
+    "first_token_latency": 0.0672607421875,
+    "timestamp": 1.9628806114196777
+  },
+  {
+    "client": "client1",
+    "req_id": 9,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 5.301816463470459,
+    "first_token_latency": 0.06295347213745117,
+    "timestamp": 2.0533292293548584
+  },
+  {
+    "client": "client1",
+    "req_id": 10,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 5.309786081314087,
+    "first_token_latency": 0.05789446830749512,
+    "timestamp": 2.400811195373535
+  },
+  {
+    "client": "client1",
+    "req_id": 11,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 5.3233277797698975,
+    "first_token_latency": 0.06638836860656738,
+    "timestamp": 2.4448063373565674
+  },
+  {
+    "client": "client1",
+    "req_id": 12,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 5.2112486362457275,
+    "first_token_latency": 0.0711665153503418,
+    "timestamp": 2.8799855709075928
+  },
+  {
+    "client": "client1",
+    "req_id": 13,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 5.184567213058472,
+    "first_token_latency": 0.06991314888000488,
+    "timestamp": 3.3344123363494873
+  },
+  {
+    "client": "client1",
+    "req_id": 14,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 7.356525897979736,
+    "first_token_latency": 2.2212653160095215,
+    "timestamp": 3.5283968448638916
+  },
+  {
+    "client": "client1",
+    "req_id": 15,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 7.274396181106567,
+    "first_token_latency": 2.1291143894195557,
+    "timestamp": 3.724958658218384
+  },
+  {
+    "client": "client1",
+    "req_id": 16,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 7.397727012634277,
+    "first_token_latency": 2.1821563243865967,
+    "timestamp": 3.7760725021362305
+  },
+  {
+    "client": "client1",
+    "req_id": 17,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 6.560275554656982,
+    "first_token_latency": 1.3360722064971924,
+    "timestamp": 4.906944513320923
+  },
+  {
+    "client": "client1",
+    "req_id": 18,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 6.563320159912109,
+    "first_token_latency": 1.3351266384124756,
+    "timestamp": 5.066029071807861
+  },
+  {
+    "client": "client1",
+    "req_id": 19,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 6.619122743606567,
+    "first_token_latency": 1.3816332817077637,
+    "timestamp": 5.377028226852417
+  },
+  {
+    "client": "client1",
+    "req_id": 20,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 6.607215642929077,
+    "first_token_latency": 1.381000280380249,
+    "timestamp": 5.456892251968384
+  },
+  {
+    "client": "client1",
+    "req_id": 21,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 6.439393997192383,
+    "first_token_latency": 1.2129707336425781,
+    "timestamp": 5.624900817871094
+  },
+  {
+    "client": "client1",
+    "req_id": 22,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 6.429855585098267,
+    "first_token_latency": 1.2901039123535156,
+    "timestamp": 6.083111524581909
+  },
+  {
+    "client": "client1",
+    "req_id": 23,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 6.180211305618286,
+    "first_token_latency": 1.0547218322753906,
+    "timestamp": 6.679889678955078
+  },
+  {
+    "client": "client1",
+    "req_id": 24,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 6.068063497543335,
+    "first_token_latency": 0.9455890655517578,
+    "timestamp": 6.842040777206421
+  },
+  {
+    "client": "client1",
+    "req_id": 25,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 6.087158679962158,
+    "first_token_latency": 0.9647634029388428,
+    "timestamp": 7.15033483505249
+  },
+  {
+    "client": "client1",
+    "req_id": 26,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 6.229809522628784,
+    "first_token_latency": 1.0952301025390625,
+    "timestamp": 7.447042226791382
+  },
+  {
+    "client": "client1",
+    "req_id": 27,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 8.316227197647095,
+    "first_token_latency": 3.08526873588562,
+    "timestamp": 7.815783739089966
+  },
+  {
+    "client": "client1",
+    "req_id": 28,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 8.169641733169556,
+    "first_token_latency": 2.9723801612854004,
+    "timestamp": 8.218726873397827
+  },
+  {
+    "client": "client1",
+    "req_id": 29,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 8.472187995910645,
+    "first_token_latency": 3.264821767807007,
+    "timestamp": 8.220253705978394
+  },
+  {
+    "client": "client1",
+    "req_id": 30,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 8.63090443611145,
+    "first_token_latency": 3.4187369346618652,
+    "timestamp": 8.228743076324463
+  },
+  {
+    "client": "client1",
+    "req_id": 31,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 8.694172620773315,
+    "first_token_latency": 3.4666006565093994,
+    "timestamp": 8.547436714172363
+  },
+  {
+    "client": "client1",
+    "req_id": 32,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 8.297650575637817,
+    "first_token_latency": 3.0788066387176514,
+    "timestamp": 9.014178037643433
+  },
+  {
+    "client": "client1",
+    "req_id": 33,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 8.208099126815796,
+    "first_token_latency": 2.989077568054199,
+    "timestamp": 9.103931665420532
+  },
+  {
+    "client": "client1",
+    "req_id": 34,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 8.350415706634521,
+    "first_token_latency": 3.105570077896118,
+    "timestamp": 9.426980257034302
+  },
+  {
+    "client": "client1",
+    "req_id": 35,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 8.622231245040894,
+    "first_token_latency": 3.3643109798431396,
+    "timestamp": 9.515381336212158
+  },
+  {
+    "client": "client1",
+    "req_id": 36,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 8.576705694198608,
+    "first_token_latency": 3.3187248706817627,
+    "timestamp": 9.61147665977478
+  },
+  {
+    "client": "client1",
+    "req_id": 37,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 8.651045083999634,
+    "first_token_latency": 3.380502939224243,
+    "timestamp": 9.877323627471924
+  },
+  {
+    "client": "client1",
+    "req_id": 38,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 8.898132801055908,
+    "first_token_latency": 3.610464572906494,
+    "timestamp": 10.086788892745972
+  },
+  {
+    "client": "client1",
+    "req_id": 39,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 11.583827495574951,
+    "first_token_latency": 6.084737300872803,
+    "timestamp": 10.316530704498291
+  },
+  {
+    "client": "client1",
+    "req_id": 40,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 11.74437952041626,
+    "first_token_latency": 6.22466254234314,
+    "timestamp": 10.481409788131714
+  },
+  {
+    "client": "client1",
+    "req_id": 41,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 11.871843338012695,
+    "first_token_latency": 6.364294528961182,
+    "timestamp": 10.509815216064453
+  },
+  {
+    "client": "client1",
+    "req_id": 42,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 12.253601789474487,
+    "first_token_latency": 6.729676246643066,
+    "timestamp": 10.526050567626953
+  },
+  {
+    "client": "client1",
+    "req_id": 44,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 11.295017719268799,
+    "first_token_latency": 5.807835340499878,
+    "timestamp": 11.52842116355896
+  },
+  {
+    "client": "client1",
+    "req_id": 43,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 12.143651723861694,
+    "first_token_latency": 6.656442403793335,
+    "timestamp": 10.679836750030518
+  },
+  {
+    "client": "client1",
+    "req_id": 45,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 11.579824447631836,
+    "first_token_latency": 6.099813461303711,
+    "timestamp": 11.692904949188232
+  },
+  {
+    "client": "client1",
+    "req_id": 46,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 9.940645217895508,
+    "first_token_latency": 4.459853887557983,
+    "timestamp": 13.693020582199097
+  },
+  {
+    "client": "client1",
+    "req_id": 47,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 9.857161521911621,
+    "first_token_latency": 4.382786273956299,
+    "timestamp": 13.821913480758667
+  },
+  {
+    "client": "client1",
+    "req_id": 48,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 10.038591861724854,
+    "first_token_latency": 4.550981521606445,
+    "timestamp": 13.993680000305176
+  },
+  {
+    "client": "client1",
+    "req_id": 49,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 13.849361896514893,
+    "first_token_latency": 7.836323022842407,
+    "timestamp": 14.064199447631836
+  },
+  {
+    "client": "client1",
+    "req_id": 50,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 13.73635721206665,
+    "first_token_latency": 7.638152122497559,
+    "timestamp": 14.587730884552002
+  },
+  {
+    "client": "client1",
+    "req_id": 51,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 13.068319320678711,
+    "first_token_latency": 6.922785758972168,
+    "timestamp": 15.45894479751587
+  },
+  {
+    "client": "client1",
+    "req_id": 52,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 12.862269401550293,
+    "first_token_latency": 6.597365856170654,
+    "timestamp": 16.18238377571106
+  },
+  {
+    "client": "client1",
+    "req_id": 53,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 11.965118408203125,
+    "first_token_latency": 5.687856912612915,
+    "timestamp": 17.135677814483643
+  },
+  {
+    "client": "client1",
+    "req_id": 54,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 11.838263750076294,
+    "first_token_latency": 5.560663223266602,
+    "timestamp": 17.26289129257202
+  },
+  {
+    "client": "client1",
+    "req_id": 55,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 12.293562650680542,
+    "first_token_latency": 5.87145209312439,
+    "timestamp": 17.401317834854126
+  },
+  {
+    "client": "client1",
+    "req_id": 56,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 12.00143551826477,
+    "first_token_latency": 5.480106353759766,
+    "timestamp": 18.158045053482056
+  },
+  {
+    "client": "client1",
+    "req_id": 57,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 11.901763200759888,
+    "first_token_latency": 5.4083802700042725,
+    "timestamp": 18.281809091567993
+  },
+  {
+    "client": "client1",
+    "req_id": 58,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 12.073856830596924,
+    "first_token_latency": 5.518522024154663,
+    "timestamp": 18.525647401809692
+  },
+  {
+    "client": "client1",
+    "req_id": 59,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 17.324298620224,
+    "first_token_latency": 9.683976888656616,
+    "timestamp": 18.640549421310425
+  },
+  {
+    "client": "client1",
+    "req_id": 60,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 17.314961433410645,
+    "first_token_latency": 9.623438835144043,
+    "timestamp": 18.904115438461304
+  },
+  {
+    "client": "client1",
+    "req_id": 61,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 17.603904962539673,
+    "first_token_latency": 9.78330683708191,
+    "timestamp": 19.261417388916016
+  },
+  {
+    "client": "client1",
+    "req_id": 62,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 16.971964597702026,
+    "first_token_latency": 9.13658332824707,
+    "timestamp": 19.964797496795654
+  },
+  {
+    "client": "client1",
+    "req_id": 63,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 16.9204158782959,
+    "first_token_latency": 9.084987163543701,
+    "timestamp": 20.016379356384277
+  },
+  {
+    "client": "client1",
+    "req_id": 64,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 17.169034242630005,
+    "first_token_latency": 9.175470352172852,
+    "timestamp": 20.51953911781311
+  },
+  {
+    "client": "client1",
+    "req_id": 65,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 17.516379833221436,
+    "first_token_latency": 9.402722835540771,
+    "timestamp": 20.75682759284973
+  },
+  {
+    "client": "client1",
+    "req_id": 66,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 17.51135802268982,
+    "first_token_latency": 9.387052059173584,
+    "timestamp": 20.79658842086792
+  },
+  {
+    "client": "client1",
+    "req_id": 67,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 17.900453805923462,
+    "first_token_latency": 9.655590534210205,
+    "timestamp": 20.944411754608154
+  },
+  {
+    "client": "client1",
+    "req_id": 68,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 24.006629705429077,
+    "first_token_latency": 14.505801677703857,
+    "timestamp": 21.459150552749634
+  },
+  {
+    "client": "client1",
+    "req_id": 69,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 23.663158655166626,
+    "first_token_latency": 14.110154867172241,
+    "timestamp": 22.10902214050293
+  },
+  {
+    "client": "client1",
+    "req_id": 70,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 24.423048496246338,
+    "first_token_latency": 14.733279705047607,
+    "timestamp": 22.13212776184082
+  },
+  {
+    "client": "client1",
+    "req_id": 71,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 24.403748035430908,
+    "first_token_latency": 14.699165105819702,
+    "timestamp": 22.237989902496338
+  },
+  {
+    "client": "client1",
+    "req_id": 72,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 23.82618808746338,
+    "first_token_latency": 14.12154483795166,
+    "timestamp": 22.815617561340332
+  },
+  {
+    "client": "client1",
+    "req_id": 73,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 24.379507780075073,
+    "first_token_latency": 14.499281167984009,
+    "timestamp": 23.18939709663391
+  },
+  {
+    "client": "client1",
+    "req_id": 74,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 24.981369733810425,
+    "first_token_latency": 14.958418369293213,
+    "timestamp": 23.34961771965027
+  },
+  {
+    "client": "client1",
+    "req_id": 75,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 25.5523202419281,
+    "first_token_latency": 15.387420177459717,
+    "timestamp": 23.45749831199646
+  },
+  {
+    "client": "client2",
+    "req_id": 0,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 56.36117506027222,
+    "first_token_latency": 0.5377821922302246,
+    "timestamp": 2.6226043701171875e-06
+  },
+  {
+    "client": "client1",
+    "req_id": 76,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 33.403095960617065,
+    "first_token_latency": 21.901665687561035,
+    "timestamp": 23.564276933670044
+  },
+  {
+    "client": "client1",
+    "req_id": 77,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 33.387481689453125,
+    "first_token_latency": 21.891483783721924,
+    "timestamp": 23.880818605422974
+  },
+  {
+    "client": "client1",
+    "req_id": 78,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 34.1238911151886,
+    "first_token_latency": 22.645637035369873,
+    "timestamp": 23.910041093826294
+  },
+  {
+    "client": "client1",
+    "req_id": 80,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 33.08349251747131,
+    "first_token_latency": 21.606730222702026,
+    "timestamp": 25.035263776779175
+  },
+  {
+    "client": "client1",
+    "req_id": 79,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 33.62279963493347,
+    "first_token_latency": 22.145684242248535,
+    "timestamp": 24.496324062347412
+  },
+  {
+    "client": "client1",
+    "req_id": 81,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 33.82315516471863,
+    "first_token_latency": 22.360862016677856,
+    "timestamp": 25.20820665359497
+  },
+  {
+    "client": "client1",
+    "req_id": 82,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 32.58487606048584,
+    "first_token_latency": 21.133225202560425,
+    "timestamp": 27.197890043258667
+  },
+  {
+    "client": "client2",
+    "req_id": 1,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 57.634796142578125,
+    "first_token_latency": 0.14867806434631348,
+    "timestamp": 2.478813648223877
+  },
+  {
+    "client": "client1",
+    "req_id": 83,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 32.94791078567505,
+    "first_token_latency": 21.577554941177368,
+    "timestamp": 27.432353973388672
+  },
+  {
+    "client": "client1",
+    "req_id": 84,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 38.68470358848572,
+    "first_token_latency": 28.631510734558105,
+    "timestamp": 27.729867696762085
+  },
+  {
+    "client": "client1",
+    "req_id": 85,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 39.230215549468994,
+    "first_token_latency": 29.178715467453003,
+    "timestamp": 27.78875207901001
+  },
+  {
+    "client": "client1",
+    "req_id": 86,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 39.502849817276,
+    "first_token_latency": 29.45452046394348,
+    "timestamp": 27.814292669296265
+  },
+  {
+    "client": "client1",
+    "req_id": 87,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 38.64145302772522,
+    "first_token_latency": 28.590713262557983,
+    "timestamp": 29.443322896957397
+  },
+  {
+    "client": "client1",
+    "req_id": 88,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 38.70729064941406,
+    "first_token_latency": 28.65805411338806,
+    "timestamp": 29.461278676986694
+  },
+  {
+    "client": "client1",
+    "req_id": 89,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 38.14238500595093,
+    "first_token_latency": 28.092963695526123,
+    "timestamp": 30.026395082473755
+  },
+  {
+    "client": "client1",
+    "req_id": 90,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 38.77946186065674,
+    "first_token_latency": 28.75210976600647,
+    "timestamp": 30.279309034347534
+  },
+  {
+    "client": "client2",
+    "req_id": 2,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 65.79299712181091,
+    "first_token_latency": 3.854423761367798,
+    "timestamp": 3.426373243331909
+  },
+  {
+    "client": "client1",
+    "req_id": 91,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 38.23761439323425,
+    "first_token_latency": 28.34757375717163,
+    "timestamp": 31.435245752334595
+  },
+  {
+    "client": "client1",
+    "req_id": 92,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 37.97084665298462,
+    "first_token_latency": 28.16165018081665,
+    "timestamp": 32.21866822242737
+  },
+  {
+    "client": "client1",
+    "req_id": 93,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 43.795247077941895,
+    "first_token_latency": 34.16805601119995,
+    "timestamp": 32.24670624732971
+  },
+  {
+    "client": "client2",
+    "req_id": 3,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 72.15735387802124,
+    "first_token_latency": 7.072703838348389,
+    "timestamp": 4.009016990661621
+  },
+  {
+    "client": "client1",
+    "req_id": 94,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 43.84689688682556,
+    "first_token_latency": 34.3314425945282,
+    "timestamp": 32.687681913375854
+  },
+  {
+    "client": "client1",
+    "req_id": 95,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 43.79681706428528,
+    "first_token_latency": 34.346781969070435,
+    "timestamp": 32.97086787223816
+  },
+  {
+    "client": "client1",
+    "req_id": 96,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 44.20710587501526,
+    "first_token_latency": 34.929142236709595,
+    "timestamp": 33.15599274635315
+  },
+  {
+    "client": "client1",
+    "req_id": 97,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 44.2417356967926,
+    "first_token_latency": 34.98159599304199,
+    "timestamp": 33.18736267089844
+  },
+  {
+    "client": "client1",
+    "req_id": 98,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 43.66422629356384,
+    "first_token_latency": 34.4039249420166,
+    "timestamp": 33.76500654220581
+  },
+  {
+    "client": "client1",
+    "req_id": 99,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 44.23677086830139,
+    "first_token_latency": 35.175007820129395,
+    "timestamp": 33.88391947746277
+  },
+  {
+    "client": "client1",
+    "req_id": 100,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 44.01971101760864,
+    "first_token_latency": 34.99361753463745,
+    "timestamp": 34.22601366043091
+  },
+  {
+    "client": "client1",
+    "req_id": 101,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 44.43785262107849,
+    "first_token_latency": 35.43230724334717,
+    "timestamp": 34.24067687988281
+  },
+  {
+    "client": "client1",
+    "req_id": 102,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 44.71420359611511,
+    "first_token_latency": 35.73065209388733,
+    "timestamp": 34.458905935287476
+  },
+  {
+    "client": "client2",
+    "req_id": 4,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 75.99669742584229,
+    "first_token_latency": 7.543243408203125,
+    "timestamp": 8.667295932769775
+  },
+  {
+    "client": "client1",
+    "req_id": 103,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 50.10026144981384,
+    "first_token_latency": 41.446945667266846,
+    "timestamp": 34.59539246559143
+  },
+  {
+    "client": "client1",
+    "req_id": 104,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 50.46285915374756,
+    "first_token_latency": 41.862807273864746,
+    "timestamp": 34.671942710876465
+  },
+  {
+    "client": "client1",
+    "req_id": 105,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 50.32070326805115,
+    "first_token_latency": 41.735376834869385,
+    "timestamp": 35.032360315322876
+  },
+  {
+    "client": "client1",
+    "req_id": 106,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 50.83801198005676,
+    "first_token_latency": 42.292134284973145,
+    "timestamp": 35.0713312625885
+  },
+  {
+    "client": "client1",
+    "req_id": 108,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 50.18285870552063,
+    "first_token_latency": 41.642334938049316,
+    "timestamp": 35.78698706626892
+  },
+  {
+    "client": "client1",
+    "req_id": 107,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 50.67504096031189,
+    "first_token_latency": 42.134284019470215,
+    "timestamp": 35.29501986503601
+  },
+  {
+    "client": "client1",
+    "req_id": 109,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 50.730406284332275,
+    "first_token_latency": 42.24061322212219,
+    "timestamp": 35.88022804260254
+  },
+  {
+    "client": "client1",
+    "req_id": 110,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 49.4838650226593,
+    "first_token_latency": 41.00412154197693,
+    "timestamp": 37.241979360580444
+  },
+  {
+    "client": "client1",
+    "req_id": 111,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 49.63318729400635,
+    "first_token_latency": 41.185911893844604,
+    "timestamp": 37.49274468421936
+  },
+  {
+    "client": "client1",
+    "req_id": 112,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 49.72369837760925,
+    "first_token_latency": 41.318618297576904,
+    "timestamp": 37.85486149787903
+  },
+  {
+    "client": "client2",
+    "req_id": 5,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 76.9810516834259,
+    "first_token_latency": 7.644542217254639,
+    "timestamp": 11.422038555145264
+  },
+  {
+    "client": "client1",
+    "req_id": 113,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 53.537628173828125,
+    "first_token_latency": 46.56813049316406,
+    "timestamp": 38.09599161148071
+  },
+  {
+    "client": "client1",
+    "req_id": 114,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 52.95423746109009,
+    "first_token_latency": 45.9875111579895,
+    "timestamp": 38.708232164382935
+  },
+  {
+    "client": "client1",
+    "req_id": 115,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 53.174338817596436,
+    "first_token_latency": 46.25397825241089,
+    "timestamp": 38.88086915016174
+  },
+  {
+    "client": "client1",
+    "req_id": 116,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 53.8000853061676,
+    "first_token_latency": 46.94931221008301,
+    "timestamp": 38.96012616157532
+  },
+  {
+    "client": "client1",
+    "req_id": 117,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 53.64254546165466,
+    "first_token_latency": 46.796448945999146,
+    "timestamp": 39.17379832267761
+  },
+  {
+    "client": "client1",
+    "req_id": 118,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 53.55519080162048,
+    "first_token_latency": 46.70907425880432,
+    "timestamp": 39.26118564605713
+  },
+  {
+    "client": "client1",
+    "req_id": 119,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 53.542399168014526,
+    "first_token_latency": 46.746830224990845,
+    "timestamp": 39.8639132976532
+  },
+  {
+    "client": "client1",
+    "req_id": 120,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 53.52741765975952,
+    "first_token_latency": 46.74106740951538,
+    "timestamp": 39.98498558998108
+  },
+  {
+    "client": "client1",
+    "req_id": 121,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 52.893550634384155,
+    "first_token_latency": 46.14021372795105,
+    "timestamp": 40.98583245277405
+  },
+  {
+    "client": "client1",
+    "req_id": 122,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 52.35697555541992,
+    "first_token_latency": 45.63365459442139,
+    "timestamp": 41.94500732421875
+  },
+  {
+    "client": "client1",
+    "req_id": 123,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 51.84627938270569,
+    "first_token_latency": 45.17240858078003,
+    "timestamp": 43.23079991340637
+  },
+  {
+    "client": "client1",
+    "req_id": 124,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 55.141871213912964,
+    "first_token_latency": 47.76714777946472,
+    "timestamp": 43.86673378944397
+  },
+  {
+    "client": "client1",
+    "req_id": 125,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 54.92480111122131,
+    "first_token_latency": 47.54418611526489,
+    "timestamp": 44.11855721473694
+  },
+  {
+    "client": "client2",
+    "req_id": 6,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 86.58619570732117,
+    "first_token_latency": 15.221197605133057,
+    "timestamp": 12.692506551742554
+  },
+  {
+    "client": "client1",
+    "req_id": 126,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 54.80931091308594,
+    "first_token_latency": 47.40972018241882,
+    "timestamp": 44.64559364318848
+  },
+  {
+    "client": "client1",
+    "req_id": 127,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 54.92643141746521,
+    "first_token_latency": 47.608919620513916,
+    "timestamp": 45.20764231681824
+  },
+  {
+    "client": "client1",
+    "req_id": 128,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 54.66000175476074,
+    "first_token_latency": 47.342469930648804,
+    "timestamp": 45.47410464286804
+  },
+  {
+    "client": "client1",
+    "req_id": 129,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 55.01876425743103,
+    "first_token_latency": 47.75446152687073,
+    "timestamp": 45.65193748474121
+  },
+  {
+    "client": "client1",
+    "req_id": 130,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 54.97252583503723,
+    "first_token_latency": 47.71702170372009,
+    "timestamp": 45.79546523094177
+  },
+  {
+    "client": "client1",
+    "req_id": 131,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 55.20226812362671,
+    "first_token_latency": 47.98095226287842,
+    "timestamp": 45.89852952957153
+  },
+  {
+    "client": "client1",
+    "req_id": 132,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 55.252403259277344,
+    "first_token_latency": 48.07476782798767,
+    "timestamp": 46.227261543273926
+  },
+  {
+    "client": "client1",
+    "req_id": 133,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 55.44137907028198,
+    "first_token_latency": 48.338260650634766,
+    "timestamp": 46.73886203765869
+  },
+  {
+    "client": "client1",
+    "req_id": 134,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 58.853564977645874,
+    "first_token_latency": 52.042054414749146,
+    "timestamp": 46.96664595603943
+  },
+  {
+    "client": "client1",
+    "req_id": 135,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 58.22909164428711,
+    "first_token_latency": 51.42038083076477,
+    "timestamp": 47.62312126159668
+  },
+  {
+    "client": "client1",
+    "req_id": 136,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 58.35120487213135,
+    "first_token_latency": 51.560778856277466,
+    "timestamp": 47.71817636489868
+  },
+  {
+    "client": "client1",
+    "req_id": 137,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 58.51993250846863,
+    "first_token_latency": 51.69317150115967,
+    "timestamp": 47.76225709915161
+  },
+  {
+    "client": "client1",
+    "req_id": 138,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 59.20999550819397,
+    "first_token_latency": 52.2368106842041,
+    "timestamp": 47.89750528335571
+  },
+  {
+    "client": "client1",
+    "req_id": 139,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 58.95591402053833,
+    "first_token_latency": 51.98254942893982,
+    "timestamp": 48.15173864364624
+  },
+  {
+    "client": "client1",
+    "req_id": 140,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 59.547311544418335,
+    "first_token_latency": 52.42677354812622,
+    "timestamp": 48.34127974510193
+  },
+  {
+    "client": "client1",
+    "req_id": 141,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 59.92639994621277,
+    "first_token_latency": 52.71180510520935,
+    "timestamp": 48.38903737068176
+  },
+  {
+    "client": "client2",
+    "req_id": 7,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 94.19026851654053,
+    "first_token_latency": 23.967218160629272,
+    "timestamp": 14.306022882461548
+  },
+  {
+    "client": "client1",
+    "req_id": 142,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 59.563549280166626,
+    "first_token_latency": 52.32513451576233,
+    "timestamp": 49.15459680557251
+  },
+  {
+    "client": "client1",
+    "req_id": 143,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 59.95950675010681,
+    "first_token_latency": 52.77152371406555,
+    "timestamp": 49.409061670303345
+  },
+  {
+    "client": "client1",
+    "req_id": 144,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 63.28996467590332,
+    "first_token_latency": 56.34787154197693,
+    "timestamp": 49.47246789932251
+  },
+  {
+    "client": "client1",
+    "req_id": 145,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 62.90205192565918,
+    "first_token_latency": 55.96233868598938,
+    "timestamp": 49.89002251625061
+  },
+  {
+    "client": "client1",
+    "req_id": 146,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 62.823206424713135,
+    "first_token_latency": 55.899664878845215,
+    "timestamp": 50.170238733291626
+  },
+  {
+    "client": "client1",
+    "req_id": 147,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 62.45412540435791,
+    "first_token_latency": 55.542999029159546,
+    "timestamp": 50.73937273025513
+  },
+  {
+    "client": "client1",
+    "req_id": 148,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 63.028650999069214,
+    "first_token_latency": 56.17497777938843,
+    "timestamp": 50.932776927948
+  },
+  {
+    "client": "client1",
+    "req_id": 149,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 62.11894488334656,
+    "first_token_latency": 55.26514959335327,
+    "timestamp": 51.84262156486511
+  },
+  {
+    "client": "client1",
+    "req_id": 150,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 62.69651460647583,
+    "first_token_latency": 55.89209723472595,
+    "timestamp": 51.996604442596436
+  },
+  {
+    "client": "client1",
+    "req_id": 151,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 63.02901744842529,
+    "first_token_latency": 56.26070427894592,
+    "timestamp": 52.23581099510193
+  },
+  {
+    "client": "client1",
+    "req_id": 152,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 62.980857849121094,
+    "first_token_latency": 56.15188455581665,
+    "timestamp": 52.566330671310425
+  },
+  {
+    "client": "client1",
+    "req_id": 153,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 63.566845417022705,
+    "first_token_latency": 56.567084074020386,
+    "timestamp": 52.80157494544983
+  },
+  {
+    "client": "client1",
+    "req_id": 154,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 67.06076002120972,
+    "first_token_latency": 59.267502546310425,
+    "timestamp": 53.49511766433716
+  },
+  {
+    "client": "client1",
+    "req_id": 155,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 67.07115459442139,
+    "first_token_latency": 59.27119159698486,
+    "timestamp": 53.52106165885925
+  },
+  {
+    "client": "client1",
+    "req_id": 156,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 65.82409334182739,
+    "first_token_latency": 57.979108572006226,
+    "timestamp": 55.0148491859436
+  },
+  {
+    "client": "client1",
+    "req_id": 157,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 65.14704775810242,
+    "first_token_latency": 57.26040196418762,
+    "timestamp": 55.93326282501221
+  },
+  {
+    "client": "client1",
+    "req_id": 158,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 66.06552910804749,
+    "first_token_latency": 58.01253914833069,
+    "timestamp": 55.94915270805359
+  },
+  {
+    "client": "client1",
+    "req_id": 159,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 65.385666847229,
+    "first_token_latency": 57.33265542984009,
+    "timestamp": 56.62906813621521
+  },
+  {
+    "client": "client1",
+    "req_id": 160,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 65.96517825126648,
+    "first_token_latency": 57.76540946960449,
+    "timestamp": 56.92822885513306
+  },
+  {
+    "client": "client1",
+    "req_id": 161,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 66.64283871650696,
+    "first_token_latency": 58.327057123184204,
+    "timestamp": 56.937918186187744
+  },
+  {
+    "client": "client2",
+    "req_id": 8,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 109.15084600448608,
+    "first_token_latency": 45.37639236450195,
+    "timestamp": 14.737305402755737
+  },
+  {
+    "client": "client1",
+    "req_id": 162,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 66.86114501953125,
+    "first_token_latency": 58.493714332580566,
+    "timestamp": 57.05358648300171
+  },
+  {
+    "client": "client1",
+    "req_id": 163,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 71.4106194972992,
+    "first_token_latency": 63.260008573532104,
+    "timestamp": 57.295976638793945
+  },
+  {
+    "client": "client1",
+    "req_id": 164,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 71.24693608283997,
+    "first_token_latency": 63.09764862060547,
+    "timestamp": 57.49466681480408
+  },
+  {
+    "client": "client1",
+    "req_id": 165,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 71.42160367965698,
+    "first_token_latency": 63.28205847740173,
+    "timestamp": 57.55695343017578
+  },
+  {
+    "client": "client1",
+    "req_id": 166,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 71.42715668678284,
+    "first_token_latency": 63.29396724700928,
+    "timestamp": 57.78664302825928
+  },
+  {
+    "client": "client1",
+    "req_id": 168,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 71.6919686794281,
+    "first_token_latency": 63.58841633796692,
+    "timestamp": 58.42647337913513
+  },
+  {
+    "client": "client1",
+    "req_id": 167,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 71.70041728019714,
+    "first_token_latency": 63.59635806083679,
+    "timestamp": 58.41851544380188
+  },
+  {
+    "client": "client1",
+    "req_id": 169,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 72.26086235046387,
+    "first_token_latency": 64.17717695236206,
+    "timestamp": 58.716381788253784
+  },
+  {
+    "client": "client1",
+    "req_id": 170,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 72.6683669090271,
+    "first_token_latency": 64.601327419281,
+    "timestamp": 58.97954201698303
+  },
+  {
+    "client": "client1",
+    "req_id": 171,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 72.51426649093628,
+    "first_token_latency": 64.45316791534424,
+    "timestamp": 59.435179471969604
+  },
+  {
+    "client": "client1",
+    "req_id": 172,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 72.40964555740356,
+    "first_token_latency": 64.34219455718994,
+    "timestamp": 59.57260727882385
+  },
+  {
+    "client": "client1",
+    "req_id": 173,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 78.10149478912354,
+    "first_token_latency": 69.07640624046326,
+    "timestamp": 59.63074469566345
+  },
+  {
+    "client": "client1",
+    "req_id": 174,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 78.06302571296692,
+    "first_token_latency": 69.03095579147339,
+    "timestamp": 59.71072864532471
+  },
+  {
+    "client": "client1",
+    "req_id": 175,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 78.32218503952026,
+    "first_token_latency": 69.24956512451172,
+    "timestamp": 59.72912573814392
+  },
+  {
+    "client": "client2",
+    "req_id": 9,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 111.68911266326904,
+    "first_token_latency": 49.686068296432495,
+    "timestamp": 26.480665922164917
+  },
+  {
+    "client": "client1",
+    "req_id": 177,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 78.24264621734619,
+    "first_token_latency": 69.1884241104126,
+    "timestamp": 60.930665016174316
+  },
+  {
+    "client": "client1",
+    "req_id": 176,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 78.8717451095581,
+    "first_token_latency": 69.81743669509888,
+    "timestamp": 60.30161809921265
+  },
+  {
+    "client": "client1",
+    "req_id": 178,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 79.0574300289154,
+    "first_token_latency": 70.03247117996216,
+    "timestamp": 60.94493770599365
+  },
+  {
+    "client": "client1",
+    "req_id": 179,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 79.30071806907654,
+    "first_token_latency": 70.30538821220398,
+    "timestamp": 61.34261345863342
+  },
+  {
+    "client": "client1",
+    "req_id": 180,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 79.26167011260986,
+    "first_token_latency": 70.27842164039612,
+    "timestamp": 61.67111682891846
+  },
+  {
+    "client": "client1",
+    "req_id": 181,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 79.23669838905334,
+    "first_token_latency": 70.25475883483887,
+    "timestamp": 61.72767734527588
+  },
+  {
+    "client": "client1",
+    "req_id": 182,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 84.56511211395264,
+    "first_token_latency": 75.71166658401489,
+    "timestamp": 62.02065324783325
+  },
+  {
+    "client": "client1",
+    "req_id": 183,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 84.17037630081177,
+    "first_token_latency": 75.31730341911316,
+    "timestamp": 62.45657157897949
+  },
+  {
+    "client": "client1",
+    "req_id": 184,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 84.23214483261108,
+    "first_token_latency": 75.38275218009949,
+    "timestamp": 62.66880512237549
+  },
+  {
+    "client": "client1",
+    "req_id": 185,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 84.06152725219727,
+    "first_token_latency": 75.21534061431885,
+    "timestamp": 62.95461559295654
+  },
+  {
+    "client": "client2",
+    "req_id": 10,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 119.64284539222717,
+    "first_token_latency": 57.292901039123535,
+    "timestamp": 28.06016755104065
+  },
+  {
+    "client": "client1",
+    "req_id": 186,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 83.81641411781311,
+    "first_token_latency": 74.88710021972656,
+    "timestamp": 64.2864887714386
+  },
+  {
+    "client": "client1",
+    "req_id": 187,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 82.08102250099182,
+    "first_token_latency": 73.15170955657959,
+    "timestamp": 66.02191352844238
+  },
+  {
+    "client": "client1",
+    "req_id": 188,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 82.5132987499237,
+    "first_token_latency": 73.63399863243103,
+    "timestamp": 66.3684241771698
+  },
+  {
+    "client": "client1",
+    "req_id": 189,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 82.99807691574097,
+    "first_token_latency": 74.14734292030334,
+    "timestamp": 66.49610328674316
+  },
+  {
+    "client": "client1",
+    "req_id": 190,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 83.14803338050842,
+    "first_token_latency": 74.31578302383423,
+    "timestamp": 66.6488344669342
+  },
+  {
+    "client": "client1",
+    "req_id": 191,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 88.5270128250122,
+    "first_token_latency": 79.84266304969788,
+    "timestamp": 66.74325489997864
+  },
+  {
+    "client": "client1",
+    "req_id": 192,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 88.11488699913025,
+    "first_token_latency": 79.43201470375061,
+    "timestamp": 67.19532299041748
+  },
+  {
+    "client": "client1",
+    "req_id": 193,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 88.32428479194641,
+    "first_token_latency": 79.64700937271118,
+    "timestamp": 67.25401902198792
+  },
+  {
+    "client": "client1",
+    "req_id": 194,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 88.11813259124756,
+    "first_token_latency": 79.44383478164673,
+    "timestamp": 67.57251811027527
+  },
+  {
+    "client": "client1",
+    "req_id": 195,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 88.15971302986145,
+    "first_token_latency": 79.50739073753357,
+    "timestamp": 68.1960678100586
+  },
+  {
+    "client": "client1",
+    "req_id": 196,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 88.24500393867493,
+    "first_token_latency": 79.50862765312195,
+    "timestamp": 68.59462642669678
+  },
+  {
+    "client": "client1",
+    "req_id": 197,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 87.57101202011108,
+    "first_token_latency": 78.83454132080078,
+    "timestamp": 69.26872634887695
+  },
+  {
+    "client": "client2",
+    "req_id": 11,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 126.92885112762451,
+    "first_token_latency": 62.6711847782135,
+    "timestamp": 30.089028358459473
+  },
+  {
+    "client": "client1",
+    "req_id": 198,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 87.82671093940735,
+    "first_token_latency": 79.10373020172119,
+    "timestamp": 69.77811551094055
+  },
+  {
+    "client": "client1",
+    "req_id": 199,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 88.0461893081665,
+    "first_token_latency": 79.36453247070312,
+    "timestamp": 70.12977004051208
+  },
+  {
+    "client": "client1",
+    "req_id": 200,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 88.08686399459839,
+    "first_token_latency": 79.42126178741455,
+    "timestamp": 70.37576127052307
+  },
+  {
+    "client": "client1",
+    "req_id": 201,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 93.0745198726654,
+    "first_token_latency": 84.79842734336853,
+    "timestamp": 70.51192307472229
+  },
+  {
+    "client": "client1",
+    "req_id": 202,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 93.23957562446594,
+    "first_token_latency": 84.97091031074524,
+    "timestamp": 70.60758972167969
+  },
+  {
+    "client": "client1",
+    "req_id": 203,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 93.25897216796875,
+    "first_token_latency": 84.99469113349915,
+    "timestamp": 70.69634366035461
+  },
+  {
+    "client": "client1",
+    "req_id": 204,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 93.39346218109131,
+    "first_token_latency": 85.14420557022095,
+    "timestamp": 71.21180629730225
+  },
+  {
+    "client": "client1",
+    "req_id": 206,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 93.59442687034607,
+    "first_token_latency": 85.3619019985199,
+    "timestamp": 71.47813773155212
+  },
+  {
+    "client": "client1",
+    "req_id": 205,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 93.69688367843628,
+    "first_token_latency": 85.46429920196533,
+    "timestamp": 71.37575459480286
+  },
+  {
+    "client": "client1",
+    "req_id": 207,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 93.48815059661865,
+    "first_token_latency": 85.26323699951172,
+    "timestamp": 71.75509142875671
+  },
+  {
+    "client": "client1",
+    "req_id": 208,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 93.60832691192627,
+    "first_token_latency": 85.26226615905762,
+    "timestamp": 72.34271335601807
+  },
+  {
+    "client": "client2",
+    "req_id": 12,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 135.91523814201355,
+    "first_token_latency": 70.53458333015442,
+    "timestamp": 30.136115550994873
+  },
+  {
+    "client": "client1",
+    "req_id": 209,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 93.69987463951111,
+    "first_token_latency": 85.3845465183258,
+    "timestamp": 72.7915735244751
+  },
+  {
+    "client": "client1",
+    "req_id": 210,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 93.8099799156189,
+    "first_token_latency": 85.5241961479187,
+    "timestamp": 72.93858647346497
+  },
+  {
+    "client": "client1",
+    "req_id": 211,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 98.13729524612427,
+    "first_token_latency": 90.20811200141907,
+    "timestamp": 73.37838554382324
+  },
+  {
+    "client": "client1",
+    "req_id": 212,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 98.36537647247314,
+    "first_token_latency": 90.45136308670044,
+    "timestamp": 73.39584565162659
+  },
+  {
+    "client": "client1",
+    "req_id": 213,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 97.68639492988586,
+    "first_token_latency": 89.77772879600525,
+    "timestamp": 74.17769503593445
+  },
+  {
+    "client": "client1",
+    "req_id": 215,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 97.54903101921082,
+    "first_token_latency": 89.69700527191162,
+    "timestamp": 75.37578392028809
+  },
+  {
+    "client": "client1",
+    "req_id": 214,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 97.74752140045166,
+    "first_token_latency": 89.89522981643677,
+    "timestamp": 75.17753601074219
+  },
+  {
+    "client": "client1",
+    "req_id": 216,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 97.21474838256836,
+    "first_token_latency": 89.36572074890137,
+    "timestamp": 75.87760400772095
+  },
+  {
+    "client": "client1",
+    "req_id": 217,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 97.75548815727234,
+    "first_token_latency": 89.92474246025085,
+    "timestamp": 76.02656292915344
+  },
+  {
+    "client": "client1",
+    "req_id": 218,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 96.43104839324951,
+    "first_token_latency": 88.60325932502747,
+    "timestamp": 77.44842028617859
+  },
+  {
+    "client": "client1",
+    "req_id": 219,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 96.4093873500824,
+    "first_token_latency": 88.47663497924805,
+    "timestamp": 78.0149040222168
+  },
+  {
+    "client": "client2",
+    "req_id": 13,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 134.38120245933533,
+    "first_token_latency": 68.24051403999329,
+    "timestamp": 40.07497048377991
+  },
+  {
+    "client": "client1",
+    "req_id": 220,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 96.60223269462585,
+    "first_token_latency": 88.68188047409058,
+    "timestamp": 78.06678485870361
+  },
+  {
+    "client": "client1",
+    "req_id": 221,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 100.9649031162262,
+    "first_token_latency": 93.36482787132263,
+    "timestamp": 78.1509382724762
+  },
+  {
+    "client": "client1",
+    "req_id": 222,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 100.8154788017273,
+    "first_token_latency": 93.23304986953735,
+    "timestamp": 78.52824902534485
+  },
+  {
+    "client": "client1",
+    "req_id": 223,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 100.505774974823,
+    "first_token_latency": 92.92971396446228,
+    "timestamp": 78.93447136878967
+  },
+  {
+    "client": "client1",
+    "req_id": 225,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 101.43637108802795,
+    "first_token_latency": 93.9245982170105,
+    "timestamp": 79.00063419342041
+  },
+  {
+    "client": "client1",
+    "req_id": 224,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 101.49254035949707,
+    "first_token_latency": 93.98057675361633,
+    "timestamp": 78.94467949867249
+  },
+  {
+    "client": "client1",
+    "req_id": 226,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 101.50966429710388,
+    "first_token_latency": 94.01257419586182,
+    "timestamp": 79.07986402511597
+  },
+  {
+    "client": "client1",
+    "req_id": 227,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 101.72533345222473,
+    "first_token_latency": 94.28570199012756,
+    "timestamp": 79.59402751922607
+  },
+  {
+    "client": "client1",
+    "req_id": 228,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 102.25072884559631,
+    "first_token_latency": 94.82519769668579,
+    "timestamp": 79.59918141365051
+  },
+  {
+    "client": "client1",
+    "req_id": 229,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 101.75281405448914,
+    "first_token_latency": 94.32819318771362,
+    "timestamp": 80.12811207771301
+  },
+  {
+    "client": "client1",
+    "req_id": 230,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 101.92426204681396,
+    "first_token_latency": 94.44267773628235,
+    "timestamp": 80.22639155387878
+  },
+  {
+    "client": "client2",
+    "req_id": 14,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 141.83757638931274,
+    "first_token_latency": 74.96560215950012,
+    "timestamp": 41.40282368659973
+  },
+  {
+    "client": "client1",
+    "req_id": 231,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 104.94488453865051,
+    "first_token_latency": 97.50598406791687,
+    "timestamp": 81.61011672019958
+  },
+  {
+    "client": "client1",
+    "req_id": 232,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 105.0176932811737,
+    "first_token_latency": 97.59557247161865,
+    "timestamp": 81.7482442855835
+  },
+  {
+    "client": "client1",
+    "req_id": 233,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 103.80787897109985,
+    "first_token_latency": 96.39412760734558,
+    "timestamp": 83.04617643356323
+  },
+  {
+    "client": "client1",
+    "req_id": 235,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 104.33952283859253,
+    "first_token_latency": 96.99906754493713,
+    "timestamp": 83.43836522102356
+  },
+  {
+    "client": "client1",
+    "req_id": 234,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 104.60707354545593,
+    "first_token_latency": 97.26626515388489,
+    "timestamp": 83.17119145393372
+  },
+  {
+    "client": "client1",
+    "req_id": 236,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 104.19749426841736,
+    "first_token_latency": 96.8647108078003,
+    "timestamp": 83.72489762306213
+  },
+  {
+    "client": "client1",
+    "req_id": 237,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 104.1366536617279,
+    "first_token_latency": 96.84532880783081,
+    "timestamp": 84.47437453269958
+  },
+  {
+    "client": "client1",
+    "req_id": 238,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 103.9118549823761,
+    "first_token_latency": 96.65506672859192,
+    "timestamp": 85.194899559021
+  },
+  {
+    "client": "client1",
+    "req_id": 239,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 103.45013165473938,
+    "first_token_latency": 96.20492959022522,
+    "timestamp": 85.9457619190216
+  },
+  {
+    "client": "client1",
+    "req_id": 240,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 104.2938756942749,
+    "first_token_latency": 97.07543635368347,
+    "timestamp": 86.16515159606934
+  },
+  {
+    "client": "client1",
+    "req_id": 241,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 108.20539879798889,
+    "first_token_latency": 100.20227456092834,
+    "timestamp": 86.35277342796326
+  },
+  {
+    "client": "client1",
+    "req_id": 242,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 108.46216201782227,
+    "first_token_latency": 100.41146469116211,
+    "timestamp": 86.35486102104187
+  },
+  {
+    "client": "client1",
+    "req_id": 243,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 108.13912630081177,
+    "first_token_latency": 100.06799745559692,
+    "timestamp": 86.78622007369995
+  },
+  {
+    "client": "client2",
+    "req_id": 15,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 153.5591733455658,
+    "first_token_latency": 87.4560112953186,
+    "timestamp": 41.75791144371033
+  },
+  {
+    "client": "client1",
+    "req_id": 245,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 107.80628943443298,
+    "first_token_latency": 99.70246529579163,
+    "timestamp": 88.07593727111816
+  },
+  {
+    "client": "client1",
+    "req_id": 244,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 108.60974979400635,
+    "first_token_latency": 100.50581359863281,
+    "timestamp": 87.2725555896759
+  },
+  {
+    "client": "client1",
+    "req_id": 246,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 107.60434103012085,
+    "first_token_latency": 99.50940084457397,
+    "timestamp": 88.41331720352173
+  },
+  {
+    "client": "client1",
+    "req_id": 247,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 108.24622464179993,
+    "first_token_latency": 100.19581890106201,
+    "timestamp": 88.41547060012817
+  },
+  {
+    "client": "client1",
+    "req_id": 248,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 108.61421179771423,
+    "first_token_latency": 100.59729218482971,
+    "timestamp": 88.50950646400452
+  },
+  {
+    "client": "client1",
+    "req_id": 249,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 108.68802809715271,
+    "first_token_latency": 100.68860149383545,
+    "timestamp": 88.7073814868927
+  },
+  {
+    "client": "client1",
+    "req_id": 250,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 109.63322257995605,
+    "first_token_latency": 101.70549035072327,
+    "timestamp": 88.75358438491821
+  },
+  {
+    "client": "client1",
+    "req_id": 251,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 113.2156593799591,
+    "first_token_latency": 105.5274109840393,
+    "timestamp": 89.28976440429688
+  },
+  {
+    "client": "client1",
+    "req_id": 252,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 113.08516931533813,
+    "first_token_latency": 105.40073609352112,
+    "timestamp": 89.5250334739685
+  },
+  {
+    "client": "client1",
+    "req_id": 253,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 113.40651845932007,
+    "first_token_latency": 105.73256945610046,
+    "timestamp": 89.58465075492859
+  },
+  {
+    "client": "client1",
+    "req_id": 255,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 113.74551177024841,
+    "first_token_latency": 105.94565320014954,
+    "timestamp": 89.93689942359924
+  },
+  {
+    "client": "client1",
+    "req_id": 254,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 114.05807042121887,
+    "first_token_latency": 106.25799059867859,
+    "timestamp": 89.62457227706909
+  },
+  {
+    "client": "client1",
+    "req_id": 256,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 113.7521321773529,
+    "first_token_latency": 105.92101860046387,
+    "timestamp": 90.0967104434967
+  },
+  {
+    "client": "client1",
+    "req_id": 257,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 114.42303895950317,
+    "first_token_latency": 106.44341659545898,
+    "timestamp": 90.21839332580566
+  },
+  {
+    "client": "client1",
+    "req_id": 258,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 114.79889178276062,
+    "first_token_latency": 106.71588945388794,
+    "timestamp": 90.4079065322876
+  },
+  {
+    "client": "client1",
+    "req_id": 259,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 115.12517356872559,
+    "first_token_latency": 106.98118758201599,
+    "timestamp": 90.41429424285889
+  },
+  {
+    "client": "client2",
+    "req_id": 16,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 159.36569333076477,
+    "first_token_latency": 94.56039261817932,
+    "timestamp": 46.37236666679382
+  },
+  {
+    "client": "client1",
+    "req_id": 260,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 116.0285952091217,
+    "first_token_latency": 107.91139531135559,
+    "timestamp": 90.47551012039185
+  },
+  {
+    "client": "client1",
+    "req_id": 261,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 119.71370077133179,
+    "first_token_latency": 111.8774561882019,
+    "timestamp": 90.62822699546814
+  },
+  {
+    "client": "client1",
+    "req_id": 262,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 119.80232405662537,
+    "first_token_latency": 111.98466753959656,
+    "timestamp": 91.00654697418213
+  },
+  {
+    "client": "client1",
+    "req_id": 264,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 120.13698768615723,
+    "first_token_latency": 112.337651014328,
+    "timestamp": 91.34507703781128
+  },
+  {
+    "client": "client1",
+    "req_id": 263,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 120.26546335220337,
+    "first_token_latency": 112.46589684486389,
+    "timestamp": 91.21683859825134
+  },
+  {
+    "client": "client1",
+    "req_id": 265,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 120.2927758693695,
+    "first_token_latency": 112.49947166442871,
+    "timestamp": 91.34946250915527
+  },
+  {
+    "client": "client1",
+    "req_id": 266,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 120.87236976623535,
+    "first_token_latency": 113.10075974464417,
+    "timestamp": 91.54079484939575
+  },
+  {
+    "client": "client1",
+    "req_id": 267,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 121.08506226539612,
+    "first_token_latency": 113.32546067237854,
+    "timestamp": 91.88140153884888
+  },
+  {
+    "client": "client1",
+    "req_id": 268,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 120.65891480445862,
+    "first_token_latency": 112.90749859809875,
+    "timestamp": 92.63201332092285
+  },
+  {
+    "client": "client1",
+    "req_id": 269,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 120.36413145065308,
+    "first_token_latency": 112.61886978149414,
+    "timestamp": 93.11940455436707
+  },
+  {
+    "client": "client1",
+    "req_id": 270,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 120.13674855232239,
+    "first_token_latency": 112.19521641731262,
+    "timestamp": 94.30914044380188
+  },
+  {
+    "client": "client2",
+    "req_id": 17,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 172.12400770187378,
+    "first_token_latency": 108.34282088279724,
+    "timestamp": 46.92751932144165
+  },
+  {
+    "client": "client1",
+    "req_id": 271,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 124.52361989021301,
+    "first_token_latency": 115.78203010559082,
+    "timestamp": 94.55997037887573
+  },
+  {
+    "client": "client1",
+    "req_id": 272,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 124.46331858634949,
+    "first_token_latency": 115.74939727783203,
+    "timestamp": 95.05956816673279
+  },
+  {
+    "client": "client1",
+    "req_id": 273,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 124.89138531684875,
+    "first_token_latency": 116.22649025917053,
+    "timestamp": 95.25586247444153
+  },
+  {
+    "client": "client1",
+    "req_id": 274,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 123.90487384796143,
+    "first_token_latency": 115.23996424674988,
+    "timestamp": 96.24239659309387
+  },
+  {
+    "client": "client1",
+    "req_id": 275,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 123.96808648109436,
+    "first_token_latency": 115.34096360206604,
+    "timestamp": 97.07245588302612
+  },
+  {
+    "client": "client1",
+    "req_id": 276,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 124.47399425506592,
+    "first_token_latency": 115.87193894386292,
+    "timestamp": 97.09477400779724
+  },
+  {
+    "client": "client1",
+    "req_id": 277,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 124.65101647377014,
+    "first_token_latency": 116.06153225898743,
+    "timestamp": 97.2296211719513
+  },
+  {
+    "client": "client1",
+    "req_id": 278,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 124.76458072662354,
+    "first_token_latency": 116.1835560798645,
+    "timestamp": 97.30004668235779
+  },
+  {
+    "client": "client1",
+    "req_id": 279,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 125.65353536605835,
+    "first_token_latency": 117.11319255828857,
+    "timestamp": 97.33277320861816
+  },
+  {
+    "client": "client1",
+    "req_id": 280,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 129.80967259407043,
+    "first_token_latency": 121.4148736000061,
+    "timestamp": 97.6369526386261
+  },
+  {
+    "client": "client1",
+    "req_id": 281,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 129.55917644500732,
+    "first_token_latency": 121.15859055519104,
+    "timestamp": 97.9250659942627
+  },
+  {
+    "client": "client1",
+    "req_id": 282,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 130.04875326156616,
+    "first_token_latency": 121.5618097782135,
+    "timestamp": 97.96116805076599
+  },
+  {
+    "client": "client2",
+    "req_id": 18,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 180.37696647644043,
+    "first_token_latency": 116.4515311717987,
+    "timestamp": 48.15374517440796
+  },
+  {
+    "client": "client1",
+    "req_id": 283,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 130.64213395118713,
+    "first_token_latency": 122.08296346664429,
+    "timestamp": 98.06453323364258
+  },
+  {
+    "client": "client1",
+    "req_id": 284,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 130.4871609210968,
+    "first_token_latency": 121.9277617931366,
+    "timestamp": 98.2197425365448
+  },
+  {
+    "client": "client1",
+    "req_id": 285,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 131.117990732193,
+    "first_token_latency": 122.63101577758789,
+    "timestamp": 98.40958499908447
+  },
+  {
+    "client": "client1",
+    "req_id": 286,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 131.4885277748108,
+    "first_token_latency": 123.04061007499695,
+    "timestamp": 98.52820754051208
+  },
+  {
+    "client": "client1",
+    "req_id": 287,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 131.14214706420898,
+    "first_token_latency": 122.71768975257874,
+    "timestamp": 99.16318655014038
+  },
+  {
+    "client": "client1",
+    "req_id": 288,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 130.60598635673523,
+    "first_token_latency": 122.1959753036499,
+    "timestamp": 99.86874079704285
+  },
+  {
+    "client": "client1",
+    "req_id": 289,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 135.4530520439148,
+    "first_token_latency": 127.30027842521667,
+    "timestamp": 100.14642643928528
+  },
+  {
+    "client": "client1",
+    "req_id": 290,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 135.30109977722168,
+    "first_token_latency": 127.1491117477417,
+    "timestamp": 100.33538031578064
+  },
+  {
+    "client": "client1",
+    "req_id": 291,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 135.68617391586304,
+    "first_token_latency": 127.55032134056091,
+    "timestamp": 100.45965027809143
+  },
+  {
+    "client": "client1",
+    "req_id": 292,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 136.07537055015564,
+    "first_token_latency": 127.9528534412384,
+    "timestamp": 100.57801604270935
+  },
+  {
+    "client": "client1",
+    "req_id": 293,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 136.2456865310669,
+    "first_token_latency": 128.08833503723145,
+    "timestamp": 100.61862206459045
+  },
+  {
+    "client": "client1",
+    "req_id": 294,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 136.04382133483887,
+    "first_token_latency": 127.8863914012909,
+    "timestamp": 100.82057452201843
+  },
+  {
+    "client": "client1",
+    "req_id": 295,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 136.93690848350525,
+    "first_token_latency": 128.60158252716064,
+    "timestamp": 100.92609882354736
+  },
+  {
+    "client": "client2",
+    "req_id": 19,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 189.5731019973755,
+    "first_token_latency": 125.35297584533691,
+    "timestamp": 48.42907738685608
+  },
+  {
+    "client": "client1",
+    "req_id": 296,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 136.4517912864685,
+    "first_token_latency": 128.1193699836731,
+    "timestamp": 101.89742755889893
+  },
+  {
+    "client": "client1",
+    "req_id": 297,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 136.6961510181427,
+    "first_token_latency": 128.38791728019714,
+    "timestamp": 101.91766500473022
+  },
+  {
+    "client": "client1",
+    "req_id": 298,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 136.3445053100586,
+    "first_token_latency": 128.04920196533203,
+    "timestamp": 102.4256284236908
+  },
+  {
+    "client": "client1",
+    "req_id": 299,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 140.79047441482544,
+    "first_token_latency": 132.8484697341919,
+    "timestamp": 102.75126528739929
+  },
+  {
+    "client": "client1",
+    "req_id": 300,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 140.641206741333,
+    "first_token_latency": 132.72197365760803,
+    "timestamp": 103.42410564422607
+  },
+  {
+    "client": "client1",
+    "req_id": 301,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 140.31252193450928,
+    "first_token_latency": 132.4163510799408,
+    "timestamp": 104.23714065551758
+  },
+  {
+    "client": "client1",
+    "req_id": 303,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 139.00621795654297,
+    "first_token_latency": 131.11513495445251,
+    "timestamp": 105.74954533576965
+  },
+  {
+    "client": "client1",
+    "req_id": 302,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 139.13927793502808,
+    "first_token_latency": 131.24775886535645,
+    "timestamp": 105.61694097518921
+  },
+  {
+    "client": "client1",
+    "req_id": 304,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 139.77454686164856,
+    "first_token_latency": 131.9175248146057,
+    "timestamp": 105.94555997848511
+  },
+  {
+    "client": "client1",
+    "req_id": 305,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 139.55608797073364,
+    "first_token_latency": 131.704815864563,
+    "timestamp": 106.29753613471985
+  },
+  {
+    "client": "client1",
+    "req_id": 306,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 139.97600650787354,
+    "first_token_latency": 132.04238080978394,
+    "timestamp": 106.30689740180969
+  },
+  {
+    "client": "client2",
+    "req_id": 20,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 198.06112718582153,
+    "first_token_latency": 133.3985435962677,
+    "timestamp": 48.48240327835083
+  },
+  {
+    "client": "client1",
+    "req_id": 307,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 140.0529408454895,
+    "first_token_latency": 132.07444882392883,
+    "timestamp": 106.53942489624023
+  },
+  {
+    "client": "client1",
+    "req_id": 308,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 140.05789065361023,
+    "first_token_latency": 132.09262776374817,
+    "timestamp": 106.6777560710907
+  },
+  {
+    "client": "client1",
+    "req_id": 309,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 144.21948409080505,
+    "first_token_latency": 136.5920214653015,
+    "timestamp": 106.94976472854614
+  },
+  {
+    "client": "client1",
+    "req_id": 310,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 144.67375016212463,
+    "first_token_latency": 137.07799744606018,
+    "timestamp": 106.98769783973694
+  },
+  {
+    "client": "client1",
+    "req_id": 311,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 145.04358673095703,
+    "first_token_latency": 137.47450923919678,
+    "timestamp": 107.07536792755127
+  },
+  {
+    "client": "client1",
+    "req_id": 312,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 145.0004186630249,
+    "first_token_latency": 137.44472670555115,
+    "timestamp": 107.311678647995
+  },
+  {
+    "client": "client1",
+    "req_id": 313,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 145.75151228904724,
+    "first_token_latency": 138.2239809036255,
+    "timestamp": 107.49628233909607
+  },
+  {
+    "client": "client1",
+    "req_id": 314,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 144.5012571811676,
+    "first_token_latency": 136.97745537757874,
+    "timestamp": 108.87674045562744
+  },
+  {
+    "client": "client1",
+    "req_id": 315,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 144.45685410499573,
+    "first_token_latency": 136.94974875450134,
+    "timestamp": 109.33368349075317
+  },
+  {
+    "client": "client1",
+    "req_id": 316,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 144.41841888427734,
+    "first_token_latency": 136.91699981689453,
+    "timestamp": 109.62675714492798
+  },
+  {
+    "client": "client1",
+    "req_id": 317,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 144.29181146621704,
+    "first_token_latency": 136.7780728340149,
+    "timestamp": 109.81480836868286
+  },
+  {
+    "client": "client1",
+    "req_id": 318,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 144.34814405441284,
+    "first_token_latency": 136.79789280891418,
+    "timestamp": 109.93784976005554
+  },
+  {
+    "client": "client1",
+    "req_id": 319,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 149.61371421813965,
+    "first_token_latency": 141.09709548950195,
+    "timestamp": 110.07230591773987
+  },
+  {
+    "client": "client2",
+    "req_id": 21,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 210.01134371757507,
+    "first_token_latency": 144.8448874950409,
+    "timestamp": 49.713324546813965
+  },
+  {
+    "client": "client1",
+    "req_id": 320,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 149.77197122573853,
+    "first_token_latency": 141.2713098526001,
+    "timestamp": 110.39026999473572
+  },
+  {
+    "client": "client1",
+    "req_id": 321,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 150.12099838256836,
+    "first_token_latency": 141.64233660697937,
+    "timestamp": 110.47679281234741
+  },
+  {
+    "client": "client1",
+    "req_id": 322,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 150.2436535358429,
+    "first_token_latency": 141.77496552467346,
+    "timestamp": 110.53762817382812
+  },
+  {
+    "client": "client1",
+    "req_id": 323,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 150.92596197128296,
+    "first_token_latency": 142.50761127471924,
+    "timestamp": 110.74025201797485
+  },
+  {
+    "client": "client1",
+    "req_id": 324,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 150.50917077064514,
+    "first_token_latency": 142.09767889976501,
+    "timestamp": 111.28048300743103
+  },
+  {
+    "client": "client1",
+    "req_id": 325,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 149.55577874183655,
+    "first_token_latency": 141.16583728790283,
+    "timestamp": 112.62484645843506
+  },
+  {
+    "client": "client1",
+    "req_id": 326,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 149.80010724067688,
+    "first_token_latency": 141.42947220802307,
+    "timestamp": 112.67721843719482
+  },
+  {
+    "client": "client1",
+    "req_id": 327,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 149.64109134674072,
+    "first_token_latency": 141.2709665298462,
+    "timestamp": 113.01512098312378
+  },
+  {
+    "client": "client1",
+    "req_id": 328,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 154.86792516708374,
+    "first_token_latency": 146.6279559135437,
+    "timestamp": 113.05835127830505
+  },
+  {
+    "client": "client1",
+    "req_id": 329,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 154.88857793807983,
+    "first_token_latency": 146.64828038215637,
+    "timestamp": 113.07651615142822
+  },
+  {
+    "client": "client2",
+    "req_id": 22,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 217.68693900108337,
+    "first_token_latency": 151.96230340003967,
+    "timestamp": 50.648093461990356
+  },
+  {
+    "client": "client1",
+    "req_id": 330,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 155.21110773086548,
+    "first_token_latency": 146.9222128391266,
+    "timestamp": 113.24011516571045
+  },
+  {
+    "client": "client1",
+    "req_id": 331,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 154.4810824394226,
+    "first_token_latency": 146.2264323234558,
+    "timestamp": 114.37150764465332
+  },
+  {
+    "client": "client1",
+    "req_id": 332,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 154.14998054504395,
+    "first_token_latency": 145.9099681377411,
+    "timestamp": 114.87143731117249
+  },
+  {
+    "client": "client1",
+    "req_id": 333,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 154.7429974079132,
+    "first_token_latency": 146.56861567497253,
+    "timestamp": 115.09802103042603
+  },
+  {
+    "client": "client1",
+    "req_id": 334,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 154.82826924324036,
+    "first_token_latency": 146.66221642494202,
+    "timestamp": 115.12755036354065
+  },
+  {
+    "client": "client1",
+    "req_id": 335,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 154.262615442276,
+    "first_token_latency": 146.12358736991882,
+    "timestamp": 116.05725264549255
+  },
+  {
+    "client": "client1",
+    "req_id": 336,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 154.4984142780304,
+    "first_token_latency": 146.37856936454773,
+    "timestamp": 116.09879279136658
+  },
+  {
+    "client": "client1",
+    "req_id": 337,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 154.28109526634216,
+    "first_token_latency": 146.17800498008728,
+    "timestamp": 116.47846674919128
+  },
+  {
+    "client": "client1",
+    "req_id": 338,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 158.9084177017212,
+    "first_token_latency": 151.17871975898743,
+    "timestamp": 116.78650784492493
+  },
+  {
+    "client": "client1",
+    "req_id": 339,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 159.17617321014404,
+    "first_token_latency": 151.45819330215454,
+    "timestamp": 116.87700819969177
+  },
+  {
+    "client": "client1",
+    "req_id": 340,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 158.96853137016296,
+    "first_token_latency": 151.225594997406,
+    "timestamp": 117.22579431533813
+  },
+  {
+    "client": "client1",
+    "req_id": 341,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 159.0865912437439,
+    "first_token_latency": 151.25737929344177,
+    "timestamp": 117.59537839889526
+  },
+  {
+    "client": "client1",
+    "req_id": 342,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 159.27049040794373,
+    "first_token_latency": 151.40526151657104,
+    "timestamp": 117.6162281036377
+  },
+  {
+    "client": "client2",
+    "req_id": 23,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 223.4983410835266,
+    "first_token_latency": 157.84983563423157,
+    "timestamp": 53.79237389564514
+  },
+  {
+    "client": "client1",
+    "req_id": 343,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 158.8897933959961,
+    "first_token_latency": 150.98639488220215,
+    "timestamp": 118.85518217086792
+  },
+  {
+    "client": "client1",
+    "req_id": 344,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 157.99586153030396,
+    "first_token_latency": 150.10164046287537,
+    "timestamp": 119.85435700416565
+  },
+  {
+    "client": "client1",
+    "req_id": 345,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 158.31512308120728,
+    "first_token_latency": 150.4490225315094,
+    "timestamp": 119.87094783782959
+  },
+  {
+    "client": "client1",
+    "req_id": 346,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 156.84823203086853,
+    "first_token_latency": 149.00414967536926,
+    "timestamp": 121.59317469596863
+  },
+  {
+    "client": "client1",
+    "req_id": 347,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 156.93399286270142,
+    "first_token_latency": 149.1024158000946,
+    "timestamp": 121.65723204612732
+  },
+  {
+    "client": "client1",
+    "req_id": 348,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 161.06222438812256,
+    "first_token_latency": 153.49172687530518,
+    "timestamp": 122.20334959030151
+  },
+  {
+    "client": "client1",
+    "req_id": 349,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 161.07104754447937,
+    "first_token_latency": 153.51691818237305,
+    "timestamp": 122.53635597229004
+  },
+  {
+    "client": "client1",
+    "req_id": 350,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 161.60699033737183,
+    "first_token_latency": 154.06816792488098,
+    "timestamp": 122.61390519142151
+  },
+  {
+    "client": "client1",
+    "req_id": 351,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 160.81078720092773,
+    "first_token_latency": 153.27888536453247,
+    "timestamp": 123.60801124572754
+  },
+  {
+    "client": "client1",
+    "req_id": 352,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 160.914470911026,
+    "first_token_latency": 153.38843512535095,
+    "timestamp": 123.90251231193542
+  },
+  {
+    "client": "client1",
+    "req_id": 353,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 161.1917645931244,
+    "first_token_latency": 153.55452251434326,
+    "timestamp": 124.19059109687805
+  },
+  {
+    "client": "client1",
+    "req_id": 354,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 161.27605152130127,
+    "first_token_latency": 153.61360335350037,
+    "timestamp": 124.23711919784546
+  },
+  {
+    "client": "client1",
+    "req_id": 355,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 160.32475996017456,
+    "first_token_latency": 152.57871627807617,
+    "timestamp": 125.60748600959778
+  },
+  {
+    "client": "client1",
+    "req_id": 356,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 160.596529006958,
+    "first_token_latency": 152.78562569618225,
+    "timestamp": 125.65589427947998
+  },
+  {
+    "client": "client1",
+    "req_id": 357,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 160.6770601272583,
+    "first_token_latency": 152.8265733718872,
+    "timestamp": 125.76477074623108
+  },
+  {
+    "client": "client2",
+    "req_id": 24,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 233.3982605934143,
+    "first_token_latency": 168.76489448547363,
+    "timestamp": 54.221609354019165
+  },
+  {
+    "client": "client1",
+    "req_id": 358,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 164.77561736106873,
+    "first_token_latency": 156.91317415237427,
+    "timestamp": 126.35248565673828
+  },
+  {
+    "client": "client1",
+    "req_id": 359,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 165.0694875717163,
+    "first_token_latency": 157.22830510139465,
+    "timestamp": 126.37923097610474
+  },
+  {
+    "client": "client1",
+    "req_id": 360,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 165.618323802948,
+    "first_token_latency": 157.81545567512512,
+    "timestamp": 126.40556383132935
+  },
+  {
+    "client": "client1",
+    "req_id": 361,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 165.58863711357117,
+    "first_token_latency": 157.78869485855103,
+    "timestamp": 126.6302502155304
+  },
+  {
+    "client": "client1",
+    "req_id": 362,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 166.06125712394714,
+    "first_token_latency": 158.31695771217346,
+    "timestamp": 127.06550550460815
+  },
+  {
+    "client": "client1",
+    "req_id": 363,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 166.1126308441162,
+    "first_token_latency": 158.3727524280548,
+    "timestamp": 127.14050149917603
+  },
+  {
+    "client": "client1",
+    "req_id": 364,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 166.46786952018738,
+    "first_token_latency": 158.74204277992249,
+    "timestamp": 127.19029808044434
+  },
+  {
+    "client": "client1",
+    "req_id": 365,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 166.71049904823303,
+    "first_token_latency": 158.9976634979248,
+    "timestamp": 127.25488758087158
+  },
+  {
+    "client": "client1",
+    "req_id": 366,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 166.7234697341919,
+    "first_token_latency": 159.01940393447876,
+    "timestamp": 127.4225811958313
+  },
+  {
+    "client": "client1",
+    "req_id": 367,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 167.76084446907043,
+    "first_token_latency": 160.11271476745605,
+    "timestamp": 127.50740098953247
+  },
+  {
+    "client": "client1",
+    "req_id": 368,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 171.31912994384766,
+    "first_token_latency": 162.96931958198547,
+    "timestamp": 128.15887117385864
+  },
+  {
+    "client": "client2",
+    "req_id": 25,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 245.0804967880249,
+    "first_token_latency": 180.97505021095276,
+    "timestamp": 54.66162657737732
+  },
+  {
+    "client": "client1",
+    "req_id": 369,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 171.25407099723816,
+    "first_token_latency": 162.8719220161438,
+    "timestamp": 128.57736563682556
+  },
+  {
+    "client": "client1",
+    "req_id": 370,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 170.31731128692627,
+    "first_token_latency": 161.9815583229065,
+    "timestamp": 130.0428786277771
+  },
+  {
+    "client": "client1",
+    "req_id": 371,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 170.29480051994324,
+    "first_token_latency": 161.97910284996033,
+    "timestamp": 130.2403483390808
+  },
+  {
+    "client": "client1",
+    "req_id": 372,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 171.0150225162506,
+    "first_token_latency": 162.75762844085693,
+    "timestamp": 130.36928606033325
+  },
+  {
+    "client": "client1",
+    "req_id": 373,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 171.1027488708496,
+    "first_token_latency": 162.85413527488708,
+    "timestamp": 130.39906859397888
+  },
+  {
+    "client": "client1",
+    "req_id": 374,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 170.50494766235352,
+    "first_token_latency": 162.2824308872223,
+    "timestamp": 131.37583112716675
+  },
+  {
+    "client": "client1",
+    "req_id": 375,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 170.76897549629211,
+    "first_token_latency": 162.5733962059021,
+    "timestamp": 131.5727255344391
+  },
+  {
+    "client": "client1",
+    "req_id": 376,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 171.28545904159546,
+    "first_token_latency": 163.12778306007385,
+    "timestamp": 132.14101147651672
+  },
+  {
+    "client": "client1",
+    "req_id": 377,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 175.2598009109497,
+    "first_token_latency": 167.22434186935425,
+    "timestamp": 132.25378465652466
+  },
+  {
+    "client": "client1",
+    "req_id": 378,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 175.44781804084778,
+    "first_token_latency": 167.4207901954651,
+    "timestamp": 132.32152891159058
+  },
+  {
+    "client": "client1",
+    "req_id": 379,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 175.28790259361267,
+    "first_token_latency": 167.24351835250854,
+    "timestamp": 132.58846378326416
+  },
+  {
+    "client": "client1",
+    "req_id": 380,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 175.79985523223877,
+    "first_token_latency": 167.6477496623993,
+    "timestamp": 132.71253395080566
+  },
+  {
+    "client": "client1",
+    "req_id": 381,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 175.8409218788147,
+    "first_token_latency": 167.65181756019592,
+    "timestamp": 132.8834638595581
+  },
+  {
+    "client": "client2",
+    "req_id": 26,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 253.93270993232727,
+    "first_token_latency": 189.72169876098633,
+    "timestamp": 55.034656047821045
+  },
+  {
+    "client": "client1",
+    "req_id": 382,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 176.12884140014648,
+    "first_token_latency": 167.94533586502075,
+    "timestamp": 133.43908977508545
+  },
+  {
+    "client": "client1",
+    "req_id": 383,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 175.64660120010376,
+    "first_token_latency": 167.47319102287292,
+    "timestamp": 134.02890014648438
+  },
+  {
+    "client": "client1",
+    "req_id": 384,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 175.8696677684784,
+    "first_token_latency": 167.7302951812744,
+    "timestamp": 134.15056729316711
+  },
+  {
+    "client": "client1",
+    "req_id": 385,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 176.13457798957825,
+    "first_token_latency": 168.03349494934082,
+    "timestamp": 134.3087592124939
+  },
+  {
+    "client": "client1",
+    "req_id": 386,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 176.78130316734314,
+    "first_token_latency": 168.75896096229553,
+    "timestamp": 134.6675944328308
+  },
+  {
+    "client": "client1",
+    "req_id": 387,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 180.2241714000702,
+    "first_token_latency": 172.4838342666626,
+    "timestamp": 135.28563499450684
+  },
+  {
+    "client": "client1",
+    "req_id": 388,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 180.069762468338,
+    "first_token_latency": 172.3309302330017,
+    "timestamp": 135.54550671577454
+  },
+  {
+    "client": "client1",
+    "req_id": 389,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 180.41435170173645,
+    "first_token_latency": 172.68976640701294,
+    "timestamp": 135.8227162361145
+  },
+  {
+    "client": "client1",
+    "req_id": 390,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 180.4326148033142,
+    "first_token_latency": 172.71225810050964,
+    "timestamp": 136.01238346099854
+  },
+  {
+    "client": "client1",
+    "req_id": 391,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 179.9902913570404,
+    "first_token_latency": 172.27577996253967,
+    "timestamp": 136.6917209625244
+  },
+  {
+    "client": "client1",
+    "req_id": 392,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 180.6383626461029,
+    "first_token_latency": 172.78167581558228,
+    "timestamp": 136.78634643554688
+  },
+  {
+    "client": "client1",
+    "req_id": 393,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 180.58890986442566,
+    "first_token_latency": 172.70444989204407,
+    "timestamp": 136.97130727767944
+  },
+  {
+    "client": "client1",
+    "req_id": 394,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 180.88623189926147,
+    "first_token_latency": 172.9119040966034,
+    "timestamp": 137.10838723182678
+  },
+  {
+    "client": "client2",
+    "req_id": 27,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 262.365926027298,
+    "first_token_latency": 197.91833806037903,
+    "timestamp": 56.12696933746338
+  },
+  {
+    "client": "client1",
+    "req_id": 395,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 180.557443857193,
+    "first_token_latency": 172.48222064971924,
+    "timestamp": 137.96119213104248
+  },
+  {
+    "client": "client1",
+    "req_id": 396,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 180.59675884246826,
+    "first_token_latency": 172.5885248184204,
+    "timestamp": 138.86063885688782
+  },
+  {
+    "client": "client1",
+    "req_id": 397,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 183.09642124176025,
+    "first_token_latency": 175.327960729599,
+    "timestamp": 140.18186926841736
+  },
+  {
+    "client": "client1",
+    "req_id": 398,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 183.03927087783813,
+    "first_token_latency": 175.27615642547607,
+    "timestamp": 140.3393430709839
+  },
+  {
+    "client": "client1",
+    "req_id": 399,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 183.41320896148682,
+    "first_token_latency": 175.69593143463135,
+    "timestamp": 140.74915599822998
+  },
+  {
+    "client": "client1",
+    "req_id": 400,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 182.9485728740692,
+    "first_token_latency": 175.23850083351135,
+    "timestamp": 141.4436800479889
+  },
+  {
+    "client": "client1",
+    "req_id": 401,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 183.46637773513794,
+    "first_token_latency": 175.77813458442688,
+    "timestamp": 141.6467089653015
+  },
+  {
+    "client": "client1",
+    "req_id": 402,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 183.40687155723572,
+    "first_token_latency": 175.72323489189148,
+    "timestamp": 141.8371081352234
+  },
+  {
+    "client": "client1",
+    "req_id": 403,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 183.5940260887146,
+    "first_token_latency": 175.92865657806396,
+    "timestamp": 142.0661449432373
+  },
+  {
+    "client": "client1",
+    "req_id": 404,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 183.9904978275299,
+    "first_token_latency": 176.34301900863647,
+    "timestamp": 142.1503345966339
+  },
+  {
+    "client": "client1",
+    "req_id": 405,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 183.4391806125641,
+    "first_token_latency": 175.78541111946106,
+    "timestamp": 142.7333700656891
+  },
+  {
+    "client": "client1",
+    "req_id": 406,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 184.19014358520508,
+    "first_token_latency": 176.30100417137146,
+    "timestamp": 143.15664982795715
+  },
+  {
+    "client": "client2",
+    "req_id": 28,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 272.9425632953644,
+    "first_token_latency": 208.93274092674255,
+    "timestamp": 58.993935346603394
+  },
+  {
+    "client": "client1",
+    "req_id": 407,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 188.57114505767822,
+    "first_token_latency": 179.88168025016785,
+    "timestamp": 143.39697194099426
+  },
+  {
+    "client": "client1",
+    "req_id": 408,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 188.62028408050537,
+    "first_token_latency": 179.9369375705719,
+    "timestamp": 143.4417634010315
+  },
+  {
+    "client": "client1",
+    "req_id": 409,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 189.17173194885254,
+    "first_token_latency": 180.53203320503235,
+    "timestamp": 143.6304488182068
+  },
+  {
+    "client": "client1",
+    "req_id": 410,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 189.2697434425354,
+    "first_token_latency": 180.64476823806763,
+    "timestamp": 143.74754762649536
+  },
+  {
+    "client": "client1",
+    "req_id": 411,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 189.84509325027466,
+    "first_token_latency": 181.26672840118408,
+    "timestamp": 143.84662103652954
+  },
+  {
+    "client": "client1",
+    "req_id": 412,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 190.32515573501587,
+    "first_token_latency": 181.76837992668152,
+    "timestamp": 143.89190864562988
+  },
+  {
+    "client": "client1",
+    "req_id": 413,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 190.44435119628906,
+    "first_token_latency": 181.90033864974976,
+    "timestamp": 144.2406415939331
+  },
+  {
+    "client": "client1",
+    "req_id": 414,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 190.4216010570526,
+    "first_token_latency": 181.878835439682,
+    "timestamp": 144.29382920265198
+  },
+  {
+    "client": "client1",
+    "req_id": 415,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 191.45904517173767,
+    "first_token_latency": 182.96099495887756,
+    "timestamp": 144.38583493232727
+  },
+  {
+    "client": "client1",
+    "req_id": 416,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 195.6038589477539,
+    "first_token_latency": 187.21997690200806,
+    "timestamp": 144.7166564464569
+  },
+  {
+    "client": "client1",
+    "req_id": 417,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 194.79571557044983,
+    "first_token_latency": 186.40514874458313,
+    "timestamp": 145.56324458122253
+  },
+  {
+    "client": "client1",
+    "req_id": 418,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 194.8784098625183,
+    "first_token_latency": 186.46914649009705,
+    "timestamp": 145.59295749664307
+  },
+  {
+    "client": "client2",
+    "req_id": 29,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 276.2818214893341,
+    "first_token_latency": 211.6003384590149,
+    "timestamp": 64.59399223327637
+  },
+  {
+    "client": "client1",
+    "req_id": 419,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 195.23841881752014,
+    "first_token_latency": 186.78672242164612,
+    "timestamp": 146.0157437324524
+  },
+  {
+    "client": "client1",
+    "req_id": 420,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 195.35586786270142,
+    "first_token_latency": 186.91913485527039,
+    "timestamp": 146.09841799736023
+  },
+  {
+    "client": "client1",
+    "req_id": 421,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 195.95415806770325,
+    "first_token_latency": 187.56560230255127,
+    "timestamp": 146.12617087364197
+  },
+  {
+    "client": "client1",
+    "req_id": 422,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 195.94982075691223,
+    "first_token_latency": 187.60133528709412,
+    "timestamp": 146.6160261631012
+  },
+  {
+    "client": "client1",
+    "req_id": 423,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 195.9583661556244,
+    "first_token_latency": 187.6486256122589,
+    "timestamp": 147.03646755218506
+  },
+  {
+    "client": "client1",
+    "req_id": 424,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 195.1036093235016,
+    "first_token_latency": 186.79546689987183,
+    "timestamp": 147.92002844810486
+  },
+  {
+    "client": "client1",
+    "req_id": 425,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 195.40080189704895,
+    "first_token_latency": 187.17710900306702,
+    "timestamp": 148.6678283214569
+  },
+  {
+    "client": "client1",
+    "req_id": 426,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 199.55376267433167,
+    "first_token_latency": 191.65607142448425,
+    "timestamp": 148.7031409740448
+  },
+  {
+    "client": "client1",
+    "req_id": 427,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 199.4621455669403,
+    "first_token_latency": 191.5685272216797,
+    "timestamp": 148.90295243263245
+  },
+  {
+    "client": "client1",
+    "req_id": 428,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 199.71792674064636,
+    "first_token_latency": 191.8398723602295,
+    "timestamp": 149.03610563278198
+  },
+  {
+    "client": "client1",
+    "req_id": 429,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 200.15777683258057,
+    "first_token_latency": 192.20145511627197,
+    "timestamp": 149.05277490615845
+  },
+  {
+    "client": "client1",
+    "req_id": 430,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 200.1652374267578,
+    "first_token_latency": 192.16720032691956,
+    "timestamp": 149.28719282150269
+  },
+  {
+    "client": "client2",
+    "req_id": 30,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 284.66550612449646,
+    "first_token_latency": 219.62071776390076,
+    "timestamp": 65.1963517665863
+  },
+  {
+    "client": "client1",
+    "req_id": 431,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 200.78433537483215,
+    "first_token_latency": 192.7341194152832,
+    "timestamp": 149.34626245498657
+  },
+  {
+    "client": "client1",
+    "req_id": 432,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 199.36416912078857,
+    "first_token_latency": 191.34482264518738,
+    "timestamp": 151.22110629081726
+  },
+  {
+    "client": "client1",
+    "req_id": 433,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 199.64544939994812,
+    "first_token_latency": 191.65600848197937,
+    "timestamp": 151.33910083770752
+  },
+  {
+    "client": "client1",
+    "req_id": 434,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 199.42722463607788,
+    "first_token_latency": 191.44000840187073,
+    "timestamp": 151.5836944580078
+  },
+  {
+    "client": "client1",
+    "req_id": 435,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 200.28042912483215,
+    "first_token_latency": 192.36404728889465,
+    "timestamp": 151.70466470718384
+  },
+  {
+    "client": "client1",
+    "req_id": 436,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 203.7189965248108,
+    "first_token_latency": 196.03807282447815,
+    "timestamp": 152.32712841033936
+  },
+  {
+    "client": "client1",
+    "req_id": 437,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 204.04294729232788,
+    "first_token_latency": 196.36963629722595,
+    "timestamp": 152.38448929786682
+  },
+  {
+    "client": "client1",
+    "req_id": 438,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 204.1070077419281,
+    "first_token_latency": 196.44864559173584,
+    "timestamp": 152.7619616985321
+  },
+  {
+    "client": "client1",
+    "req_id": 439,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 204.0159249305725,
+    "first_token_latency": 196.36558318138123,
+    "timestamp": 153.08710837364197
+  },
+  {
+    "client": "client1",
+    "req_id": 440,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 204.16287970542908,
+    "first_token_latency": 196.52381229400635,
+    "timestamp": 153.33821082115173
+  },
+  {
+    "client": "client1",
+    "req_id": 441,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 204.28600215911865,
+    "first_token_latency": 196.5882453918457,
+    "timestamp": 153.5424177646637
+  },
+  {
+    "client": "client1",
+    "req_id": 442,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 204.21767139434814,
+    "first_token_latency": 196.422194480896,
+    "timestamp": 154.16318655014038
+  },
+  {
+    "client": "client1",
+    "req_id": 443,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 204.62519192695618,
+    "first_token_latency": 196.74265265464783,
+    "timestamp": 154.241934299469
+  },
+  {
+    "client": "client1",
+    "req_id": 444,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 204.4752037525177,
+    "first_token_latency": 196.58637809753418,
+    "timestamp": 154.4245924949646
+  },
+  {
+    "client": "client2",
+    "req_id": 31,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 293.63856768608093,
+    "first_token_latency": 228.67287588119507,
+    "timestamp": 65.29261565208435
+  },
+  {
+    "client": "client1",
+    "req_id": 445,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 205.2281448841095,
+    "first_token_latency": 197.4232370853424,
+    "timestamp": 154.56192135810852
+  },
+  {
+    "client": "client1",
+    "req_id": 446,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 208.69753193855286,
+    "first_token_latency": 201.16321897506714,
+    "timestamp": 154.88295531272888
+  },
+  {
+    "client": "client1",
+    "req_id": 447,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 208.9578378200531,
+    "first_token_latency": 201.4478497505188,
+    "timestamp": 154.97966933250427
+  },
+  {
+    "client": "client1",
+    "req_id": 448,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 207.51327538490295,
+    "first_token_latency": 200.0279324054718,
+    "timestamp": 156.84116625785828
+  },
+  {
+    "client": "client1",
+    "req_id": 449,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 207.05741906166077,
+    "first_token_latency": 199.59718990325928,
+    "timestamp": 157.90421319007874
+  },
+  {
+    "client": "client1",
+    "req_id": 450,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 207.09368515014648,
+    "first_token_latency": 199.64229273796082,
+    "timestamp": 158.18622756004333
+  },
+  {
+    "client": "client1",
+    "req_id": 451,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 207.3763406276703,
+    "first_token_latency": 199.9384355545044,
+    "timestamp": 158.44261384010315
+  },
+  {
+    "client": "client1",
+    "req_id": 452,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 206.78904366493225,
+    "first_token_latency": 199.3579707145691,
+    "timestamp": 159.50928902626038
+  },
+  {
+    "client": "client1",
+    "req_id": 453,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 206.7943353652954,
+    "first_token_latency": 199.36479783058167,
+    "timestamp": 159.53511333465576
+  },
+  {
+    "client": "client1",
+    "req_id": 454,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 206.62315225601196,
+    "first_token_latency": 199.194438457489,
+    "timestamp": 159.73692083358765
+  },
+  {
+    "client": "client1",
+    "req_id": 455,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 207.61770868301392,
+    "first_token_latency": 199.9595787525177,
+    "timestamp": 159.83067297935486
+  },
+  {
+    "client": "client2",
+    "req_id": 32,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 305.2306604385376,
+    "first_token_latency": 240.803955078125,
+    "timestamp": 66.70961380004883
+  },
+  {
+    "client": "client1",
+    "req_id": 456,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 211.99075889587402,
+    "first_token_latency": 203.53917956352234,
+    "timestamp": 160.04141569137573
+  },
+  {
+    "client": "client1",
+    "req_id": 457,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 211.71231174468994,
+    "first_token_latency": 203.28677129745483,
+    "timestamp": 160.65089416503906
+  },
+  {
+    "client": "client1",
+    "req_id": 458,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 212.00501203536987,
+    "first_token_latency": 203.60716462135315,
+    "timestamp": 160.7473967075348
+  },
+  {
+    "client": "client1",
+    "req_id": 459,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 212.54152703285217,
+    "first_token_latency": 204.18263506889343,
+    "timestamp": 160.77917981147766
+  },
+  {
+    "client": "client1",
+    "req_id": 460,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 212.598623752594,
+    "first_token_latency": 204.25853753089905,
+    "timestamp": 161.0214822292328
+  },
+  {
+    "client": "client1",
+    "req_id": 461,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 213.34815406799316,
+    "first_token_latency": 205.0710141658783,
+    "timestamp": 161.22751355171204
+  },
+  {
+    "client": "client1",
+    "req_id": 462,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 212.70881128311157,
+    "first_token_latency": 204.43224501609802,
+    "timestamp": 161.89734148979187
+  },
+  {
+    "client": "client1",
+    "req_id": 463,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 212.05528807640076,
+    "first_token_latency": 203.7797679901123,
+    "timestamp": 162.58040285110474
+  },
+  {
+    "client": "client1",
+    "req_id": 464,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 212.39765906333923,
+    "first_token_latency": 204.1583149433136,
+    "timestamp": 163.29058742523193
+  },
+  {
+    "client": "client1",
+    "req_id": 465,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 216.60973572731018,
+    "first_token_latency": 208.52452969551086,
+    "timestamp": 163.41591548919678
+  },
+  {
+    "client": "client1",
+    "req_id": 466,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 216.416002035141,
+    "first_token_latency": 208.3102593421936,
+    "timestamp": 163.72203755378723
+  },
+  {
+    "client": "client1",
+    "req_id": 467,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 216.32165575027466,
+    "first_token_latency": 208.1440863609314,
+    "timestamp": 164.21944618225098
+  },
+  {
+    "client": "client1",
+    "req_id": 468,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 215.86759090423584,
+    "first_token_latency": 207.6066119670868,
+    "timestamp": 165.14586806297302
+  },
+  {
+    "client": "client2",
+    "req_id": 33,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 308.37561202049255,
+    "first_token_latency": 243.56381464004517,
+    "timestamp": 72.67332768440247
+  },
+  {
+    "client": "client1",
+    "req_id": 469,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 216.38579607009888,
+    "first_token_latency": 208.15692949295044,
+    "timestamp": 165.16395139694214
+  },
+  {
+    "client": "client1",
+    "req_id": 470,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 216.46464657783508,
+    "first_token_latency": 208.25740242004395,
+    "timestamp": 165.36282563209534
+  },
+  {
+    "client": "client1",
+    "req_id": 471,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 216.98719954490662,
+    "first_token_latency": 208.83924674987793,
+    "timestamp": 165.73658680915833
+  },
+  {
+    "client": "client1",
+    "req_id": 472,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 216.7430567741394,
+    "first_token_latency": 208.597642660141,
+    "timestamp": 166.00862455368042
+  },
+  {
+    "client": "client1",
+    "req_id": 473,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 215.71551632881165,
+    "first_token_latency": 207.5721399784088,
+    "timestamp": 167.06369423866272
+  },
+  {
+    "client": "client1",
+    "req_id": 474,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 216.19584798812866,
+    "first_token_latency": 208.12744212150574,
+    "timestamp": 167.56131196022034
+  },
+  {
+    "client": "client1",
+    "req_id": 475,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 220.36022520065308,
+    "first_token_latency": 212.5685019493103,
+    "timestamp": 167.5696189403534
+  },
+  {
+    "client": "client1",
+    "req_id": 476,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 219.83585476875305,
+    "first_token_latency": 212.05931115150452,
+    "timestamp": 168.4818720817566
+  },
+  {
+    "client": "client1",
+    "req_id": 477,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 220.03381848335266,
+    "first_token_latency": 212.2731351852417,
+    "timestamp": 168.74039459228516
+  },
+  {
+    "client": "client1",
+    "req_id": 478,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 219.67625641822815,
+    "first_token_latency": 211.916766166687,
+    "timestamp": 169.13230848312378
+  },
+  {
+    "client": "client1",
+    "req_id": 479,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 220.19683980941772,
+    "first_token_latency": 212.3302402496338,
+    "timestamp": 169.21966910362244
+  },
+  {
+    "client": "client1",
+    "req_id": 480,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 220.40199208259583,
+    "first_token_latency": 212.47441864013672,
+    "timestamp": 169.35315322875977
+  },
+  {
+    "client": "client2",
+    "req_id": 34,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 315.9609899520874,
+    "first_token_latency": 251.08240485191345,
+    "timestamp": 74.16162276268005
+  },
+  {
+    "client": "client1",
+    "req_id": 481,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 221.28207683563232,
+    "first_token_latency": 213.3315451145172,
+    "timestamp": 169.39237308502197
+  },
+  {
+    "client": "client1",
+    "req_id": 482,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 220.97006940841675,
+    "first_token_latency": 213.0218060016632,
+    "timestamp": 169.73037767410278
+  },
+  {
+    "client": "client1",
+    "req_id": 483,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 220.84975743293762,
+    "first_token_latency": 212.90370774269104,
+    "timestamp": 169.87571811676025
+  },
+  {
+    "client": "client1",
+    "req_id": 484,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 221.55840802192688,
+    "first_token_latency": 213.68656492233276,
+    "timestamp": 170.07071685791016
+  },
+  {
+    "client": "client1",
+    "req_id": 485,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 225.77715754508972,
+    "first_token_latency": 218.20484495162964,
+    "timestamp": 170.11299514770508
+  },
+  {
+    "client": "client1",
+    "req_id": 486,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 225.5963625907898,
+    "first_token_latency": 218.03819251060486,
+    "timestamp": 170.73614048957825
+  },
+  {
+    "client": "client1",
+    "req_id": 487,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 225.471333026886,
+    "first_token_latency": 217.91365313529968,
+    "timestamp": 170.89507961273193
+  },
+  {
+    "client": "client1",
+    "req_id": 488,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 225.97737908363342,
+    "first_token_latency": 218.4342381954193,
+    "timestamp": 170.9823408126831
+  },
+  {
+    "client": "client1",
+    "req_id": 489,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 225.79404759407043,
+    "first_token_latency": 218.2587034702301,
+    "timestamp": 171.49653434753418
+  },
+  {
+    "client": "client1",
+    "req_id": 490,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 224.93229460716248,
+    "first_token_latency": 217.40407848358154,
+    "timestamp": 172.7187671661377
+  },
+  {
+    "client": "client1",
+    "req_id": 491,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 225.60304069519043,
+    "first_token_latency": 217.94553589820862,
+    "timestamp": 172.72908091545105
+  },
+  {
+    "client": "client1",
+    "req_id": 492,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 224.77217054367065,
+    "first_token_latency": 217.108167886734,
+    "timestamp": 173.5924801826477
+  },
+  {
+    "client": "client1",
+    "req_id": 493,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 224.79038214683533,
+    "first_token_latency": 217.12009954452515,
+    "timestamp": 173.60562944412231
+  },
+  {
+    "client": "client1",
+    "req_id": 494,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 225.63693523406982,
+    "first_token_latency": 217.73946809768677,
+    "timestamp": 173.8898367881775
+  },
+  {
+    "client": "client2",
+    "req_id": 35,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 328.45333909988403,
+    "first_token_latency": 264.3867974281311,
+    "timestamp": 75.93381810188293
+  },
+  {
+    "client": "client1",
+    "req_id": 495,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 230.40483474731445,
+    "first_token_latency": 221.64992475509644,
+    "timestamp": 174.24038171768188
+  },
+  {
+    "client": "client1",
+    "req_id": 496,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 230.3148491382599,
+    "first_token_latency": 221.58424520492554,
+    "timestamp": 174.74838614463806
+  },
+  {
+    "client": "client1",
+    "req_id": 497,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 230.00939464569092,
+    "first_token_latency": 221.27997207641602,
+    "timestamp": 175.08650970458984
+  },
+  {
+    "client": "client1",
+    "req_id": 498,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 230.87162709236145,
+    "first_token_latency": 222.18901133537292,
+    "timestamp": 175.10167360305786
+  },
+  {
+    "client": "client1",
+    "req_id": 499,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 231.00616812705994,
+    "first_token_latency": 222.33690857887268,
+    "timestamp": 175.31429839134216
+  },
+  {
+    "client": "client1",
+    "req_id": 500,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 231.3664162158966,
+    "first_token_latency": 222.71686172485352,
+    "timestamp": 175.6154100894928
+  },
+  {
+    "client": "client1",
+    "req_id": 501,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 231.24916434288025,
+    "first_token_latency": 222.6013479232788,
+    "timestamp": 175.7634813785553
+  },
+  {
+    "client": "client1",
+    "req_id": 502,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 231.23361134529114,
+    "first_token_latency": 222.5870680809021,
+    "timestamp": 175.8090317249298
+  },
+  {
+    "client": "client1",
+    "req_id": 503,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 232.2576596736908,
+    "first_token_latency": 223.64785289764404,
+    "timestamp": 175.87906742095947
+  },
+  {
+    "client": "client1",
+    "req_id": 504,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 236.8760154247284,
+    "first_token_latency": 228.40712118148804,
+    "timestamp": 175.98018503189087
+  },
+  {
+    "client": "client2",
+    "req_id": 36,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 335.19015073776245,
+    "first_token_latency": 270.5529510974884,
+    "timestamp": 77.7041528224945
+  },
+  {
+    "client": "client1",
+    "req_id": 505,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 237.01531100273132,
+    "first_token_latency": 228.5551037788391,
+    "timestamp": 176.09026741981506
+  },
+  {
+    "client": "client1",
+    "req_id": 506,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 237.2653510570526,
+    "first_token_latency": 228.8360321521759,
+    "timestamp": 176.2276575565338
+  },
+  {
+    "client": "client1",
+    "req_id": 507,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 236.55386567115784,
+    "first_token_latency": 228.12704753875732,
+    "timestamp": 176.96900844573975
+  },
+  {
+    "client": "client1",
+    "req_id": 508,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 237.01413655281067,
+    "first_token_latency": 228.63946533203125,
+    "timestamp": 177.33392000198364
+  },
+  {
+    "client": "client1",
+    "req_id": 509,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 237.14352798461914,
+    "first_token_latency": 228.79204106330872,
+    "timestamp": 177.52850699424744
+  },
+  {
+    "client": "client1",
+    "req_id": 510,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 237.13558673858643,
+    "first_token_latency": 228.82934713363647,
+    "timestamp": 178.15260314941406
+  },
+  {
+    "client": "client1",
+    "req_id": 511,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 236.7668116092682,
+    "first_token_latency": 228.46222949028015,
+    "timestamp": 178.55058979988098
+  },
+  {
+    "client": "client1",
+    "req_id": 512,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 236.7565438747406,
+    "first_token_latency": 228.45359778404236,
+    "timestamp": 178.58925986289978
+  },
+  {
+    "client": "client1",
+    "req_id": 513,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 242.1293807029724,
+    "first_token_latency": 234.0734257698059,
+    "timestamp": 178.78284740447998
+  },
+  {
+    "client": "client1",
+    "req_id": 514,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 241.78150153160095,
+    "first_token_latency": 233.72659587860107,
+    "timestamp": 179.1683051586151
+  },
+  {
+    "client": "client1",
+    "req_id": 515,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 241.7823429107666,
+    "first_token_latency": 233.68353962898254,
+    "timestamp": 179.4221510887146
+  },
+  {
+    "client": "client1",
+    "req_id": 516,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 242.116530418396,
+    "first_token_latency": 233.9387981891632,
+    "timestamp": 179.55440306663513
+  },
+  {
+    "client": "client1",
+    "req_id": 517,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 241.93837141990662,
+    "first_token_latency": 233.75500774383545,
+    "timestamp": 179.7680037021637
+  },
+  {
+    "client": "client2",
+    "req_id": 37,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 339.9952132701874,
+    "first_token_latency": 274.94213676452637,
+    "timestamp": 82.1613302230835
+  },
+  {
+    "client": "client1",
+    "req_id": 518,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 241.93046164512634,
+    "first_token_latency": 233.70990633964539,
+    "timestamp": 180.63835644721985
+  },
+  {
+    "client": "client1",
+    "req_id": 519,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 242.11005473136902,
+    "first_token_latency": 233.9177544116974,
+    "timestamp": 180.75440955162048
+  },
+  {
+    "client": "client1",
+    "req_id": 520,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 242.4775950908661,
+    "first_token_latency": 234.33460021018982,
+    "timestamp": 180.95382165908813
+  },
+  {
+    "client": "client1",
+    "req_id": 521,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 242.46419739723206,
+    "first_token_latency": 234.32413411140442,
+    "timestamp": 180.99338698387146
+  },
+  {
+    "client": "client1",
+    "req_id": 522,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 242.48506045341492,
+    "first_token_latency": 234.34760570526123,
+    "timestamp": 180.998544216156
+  },
+  {
+    "client": "client1",
+    "req_id": 523,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 247.67687964439392,
+    "first_token_latency": 239.94571566581726,
+    "timestamp": 181.00419974327087
+  },
+  {
+    "client": "client1",
+    "req_id": 524,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 247.25235319137573,
+    "first_token_latency": 239.5324981212616,
+    "timestamp": 181.67206859588623
+  },
+  {
+    "client": "client1",
+    "req_id": 525,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 247.63716292381287,
+    "first_token_latency": 239.93291664123535,
+    "timestamp": 181.73806285858154
+  },
+  {
+    "client": "client1",
+    "req_id": 526,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 247.48439526557922,
+    "first_token_latency": 239.7811713218689,
+    "timestamp": 181.92524003982544
+  },
+  {
+    "client": "client1",
+    "req_id": 527,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 247.66845798492432,
+    "first_token_latency": 239.98109030723572,
+    "timestamp": 182.17580008506775
+  },
+  {
+    "client": "client1",
+    "req_id": 528,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 247.8365786075592,
+    "first_token_latency": 240.06109070777893,
+    "timestamp": 182.5080487728119
+  },
+  {
+    "client": "client1",
+    "req_id": 529,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 248.02057719230652,
+    "first_token_latency": 240.17727971076965,
+    "timestamp": 182.68732023239136
+  },
+  {
+    "client": "client2",
+    "req_id": 38,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 348.46892189979553,
+    "first_token_latency": 283.1505105495453,
+    "timestamp": 82.6688883304596
+  },
+  {
+    "client": "client1",
+    "req_id": 530,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 248.61089301109314,
+    "first_token_latency": 240.70132517814636,
+    "timestamp": 182.73024153709412
+  },
+  {
+    "client": "client1",
+    "req_id": 531,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 248.5399990081787,
+    "first_token_latency": 240.63230562210083,
+    "timestamp": 182.82589721679688
+  },
+  {
+    "client": "client1",
+    "req_id": 532,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 247.70339393615723,
+    "first_token_latency": 239.7975459098816,
+    "timestamp": 183.68620085716248
+  },
+  {
+    "client": "client1",
+    "req_id": 533,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 252.0184805393219,
+    "first_token_latency": 244.44436478614807,
+    "timestamp": 184.2371735572815
+  },
+  {
+    "client": "client1",
+    "req_id": 534,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 251.3562936782837,
+    "first_token_latency": 243.79283213615417,
+    "timestamp": 185.13209056854248
+  },
+  {
+    "client": "client1",
+    "req_id": 535,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 251.15304732322693,
+    "first_token_latency": 243.61188912391663,
+    "timestamp": 185.76353454589844
+  },
+  {
+    "client": "client1",
+    "req_id": 536,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 251.52850484848022,
+    "first_token_latency": 243.9972939491272,
+    "timestamp": 185.8470959663391
+  },
+  {
+    "client": "client1",
+    "req_id": 537,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 251.56844520568848,
+    "first_token_latency": 244.04779243469238,
+    "timestamp": 186.2969193458557
+  },
+  {
+    "client": "client1",
+    "req_id": 538,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 251.85754203796387,
+    "first_token_latency": 244.34202790260315,
+    "timestamp": 186.3659908771515
+  },
+  {
+    "client": "client1",
+    "req_id": 539,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 252.27193212509155,
+    "first_token_latency": 244.76862978935242,
+    "timestamp": 186.36935901641846
+  },
+  {
+    "client": "client1",
+    "req_id": 540,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 252.02297282218933,
+    "first_token_latency": 244.4678909778595,
+    "timestamp": 186.8733263015747
+  },
+  {
+    "client": "client1",
+    "req_id": 541,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 251.84407138824463,
+    "first_token_latency": 244.2828724384308,
+    "timestamp": 187.08315229415894
+  },
+  {
+    "client": "client1",
+    "req_id": 542,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 251.83075428009033,
+    "first_token_latency": 244.26306319236755,
+    "timestamp": 187.1266782283783
+  },
+  {
+    "client": "client1",
+    "req_id": 543,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 257.5047392845154,
+    "first_token_latency": 248.82813143730164,
+    "timestamp": 187.4276614189148
+  },
+  {
+    "client": "client2",
+    "req_id": 39,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 357.0868785381317,
+    "first_token_latency": 292.18016815185547,
+    "timestamp": 87.84557723999023
+  },
+  {
+    "client": "client1",
+    "req_id": 544,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 257.3578259944916,
+    "first_token_latency": 248.69592332839966,
+    "timestamp": 187.7925145626068
+  },
+  {
+    "client": "client1",
+    "req_id": 545,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 257.41659235954285,
+    "first_token_latency": 248.78165912628174,
+    "timestamp": 188.134996175766
+  },
+  {
+    "client": "client1",
+    "req_id": 546,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 257.8177695274353,
+    "first_token_latency": 249.21426105499268,
+    "timestamp": 188.16149759292603
+  },
+  {
+    "client": "client1",
+    "req_id": 547,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 257.98355507850647,
+    "first_token_latency": 249.4100058078766,
+    "timestamp": 188.45547080039978
+  },
+  {
+    "client": "client1",
+    "req_id": 548,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 258.23356223106384,
+    "first_token_latency": 249.6838002204895,
+    "timestamp": 188.5398449897766
+  },
+  {
+    "client": "client1",
+    "req_id": 549,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 258.71652579307556,
+    "first_token_latency": 250.20074462890625,
+    "timestamp": 188.69562482833862
+  },
+  {
+    "client": "client1",
+    "req_id": 550,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 258.2048637866974,
+    "first_token_latency": 249.68995070457458,
+    "timestamp": 189.23743557929993
+  },
+  {
+    "client": "client1",
+    "req_id": 551,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 257.9832465648651,
+    "first_token_latency": 249.46940970420837,
+    "timestamp": 189.48816418647766
+  },
+  {
+    "client": "client1",
+    "req_id": 553,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 263.49431824684143,
+    "first_token_latency": 255.2068932056427,
+    "timestamp": 189.72575163841248
+  },
+  {
+    "client": "client1",
+    "req_id": 552,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 263.60049080848694,
+    "first_token_latency": 255.3129391670227,
+    "timestamp": 189.61972188949585
+  },
+  {
+    "client": "client2",
+    "req_id": 40,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 364.18575716018677,
+    "first_token_latency": 298.78397703170776,
+    "timestamp": 89.14594674110413
+  },
+  {
+    "client": "client1",
+    "req_id": 554,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 263.641154050827,
+    "first_token_latency": 255.34442710876465,
+    "timestamp": 189.8064727783203
+  },
+  {
+    "client": "client1",
+    "req_id": 555,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 263.84068059921265,
+    "first_token_latency": 255.57382607460022,
+    "timestamp": 189.97787642478943
+  },
+  {
+    "client": "client1",
+    "req_id": 556,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 264.0653100013733,
+    "first_token_latency": 255.82932353019714,
+    "timestamp": 190.15011715888977
+  },
+  {
+    "client": "client1",
+    "req_id": 557,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 262.9014804363251,
+    "first_token_latency": 254.70181107521057,
+    "timestamp": 191.7377896308899
+  },
+  {
+    "client": "client1",
+    "req_id": 558,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 263.1470048427582,
+    "first_token_latency": 254.9707064628601,
+    "timestamp": 191.80285024642944
+  },
+  {
+    "client": "client1",
+    "req_id": 559,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 263.37506771087646,
+    "first_token_latency": 255.24631428718567,
+    "timestamp": 192.1659393310547
+  },
+  {
+    "client": "client1",
+    "req_id": 560,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 263.1337339878082,
+    "first_token_latency": 255.0074920654297,
+    "timestamp": 192.43490028381348
+  },
+  {
+    "client": "client1",
+    "req_id": 561,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 263.1215887069702,
+    "first_token_latency": 254.99702715873718,
+    "timestamp": 192.47450828552246
+  },
+  {
+    "client": "client1",
+    "req_id": 562,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 267.8095679283142,
+    "first_token_latency": 260.08473348617554,
+    "timestamp": 193.1356325149536
+  },
+  {
+    "client": "client1",
+    "req_id": 563,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 267.7532784938812,
+    "first_token_latency": 260.03329944610596,
+    "timestamp": 193.29896759986877
+  },
+  {
+    "client": "client1",
+    "req_id": 564,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 267.77791953086853,
+    "first_token_latency": 260.03494811058044,
+    "timestamp": 193.413170337677
+  },
+  {
+    "client": "client1",
+    "req_id": 565,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 268.18003368377686,
+    "first_token_latency": 260.35856318473816,
+    "timestamp": 193.46016836166382
+  },
+  {
+    "client": "client1",
+    "req_id": 566,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 268.61131024360657,
+    "first_token_latency": 260.70784425735474,
+    "timestamp": 193.50768160820007
+  },
+  {
+    "client": "client2",
+    "req_id": 41,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 373.2266147136688,
+    "first_token_latency": 307.65857315063477,
+    "timestamp": 89.30123853683472
+  },
+  {
+    "client": "client1",
+    "req_id": 567,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 268.4250338077545,
+    "first_token_latency": 260.4584813117981,
+    "timestamp": 194.1813006401062
+  },
+  {
+    "client": "client1",
+    "req_id": 568,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 268.2716975212097,
+    "first_token_latency": 260.33247351646423,
+    "timestamp": 194.61749053001404
+  },
+  {
+    "client": "client1",
+    "req_id": 569,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 268.7559449672699,
+    "first_token_latency": 260.8675892353058,
+    "timestamp": 194.67352986335754
+  },
+  {
+    "client": "client1",
+    "req_id": 570,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 268.6471586227417,
+    "first_token_latency": 260.76078033447266,
+    "timestamp": 194.80837678909302
+  },
+  {
+    "client": "client1",
+    "req_id": 571,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 268.37503695487976,
+    "first_token_latency": 260.4911105632782,
+    "timestamp": 195.10511350631714
+  },
+  {
+    "client": "client1",
+    "req_id": 572,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 273.17054986953735,
+    "first_token_latency": 265.6660554409027,
+    "timestamp": 195.38623428344727
+  },
+  {
+    "client": "client1",
+    "req_id": 573,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 273.1571888923645,
+    "first_token_latency": 265.6560125350952,
+    "timestamp": 195.53512859344482
+  },
+  {
+    "client": "client1",
+    "req_id": 574,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 272.686660528183,
+    "first_token_latency": 265.2002272605896,
+    "timestamp": 196.4401891231537
+  },
+  {
+    "client": "client1",
+    "req_id": 575,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 272.75287675857544,
+    "first_token_latency": 265.27996039390564,
+    "timestamp": 196.83914160728455
+  },
+  {
+    "client": "client1",
+    "req_id": 576,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 273.1084051132202,
+    "first_token_latency": 265.643328666687,
+    "timestamp": 196.88468766212463
+  },
+  {
+    "client": "client1",
+    "req_id": 577,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 272.9595956802368,
+    "first_token_latency": 265.4806191921234,
+    "timestamp": 197.1259982585907
+  },
+  {
+    "client": "client1",
+    "req_id": 578,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 272.78471398353577,
+    "first_token_latency": 265.2364401817322,
+    "timestamp": 197.65287327766418
+  },
+  {
+    "client": "client1",
+    "req_id": 579,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 273.4221398830414,
+    "first_token_latency": 265.74313616752625,
+    "timestamp": 197.68640851974487
+  },
+  {
+    "client": "client1",
+    "req_id": 580,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 273.03235602378845,
+    "first_token_latency": 265.3476998806,
+    "timestamp": 198.1079831123352
+  },
+  {
+    "client": "client1",
+    "req_id": 581,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 272.86488699913025,
+    "first_token_latency": 265.1741666793823,
+    "timestamp": 198.3061330318451
+  },
+  {
+    "client": "client2",
+    "req_id": 42,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 380.73377323150635,
+    "first_token_latency": 316.35812735557556,
+    "timestamp": 91.77861833572388
+  },
+  {
+    "client": "client1",
+    "req_id": 582,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 277.9224076271057,
+    "first_token_latency": 270.17444586753845,
+    "timestamp": 198.3829107284546
+  },
+  {
+    "client": "client1",
+    "req_id": 583,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 277.7699553966522,
+    "first_token_latency": 270.0291304588318,
+    "timestamp": 198.6633381843567
+  },
+  {
+    "client": "client1",
+    "req_id": 584,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 278.14730763435364,
+    "first_token_latency": 270.4315376281738,
+    "timestamp": 198.69551134109497
+  },
+  {
+    "client": "client1",
+    "req_id": 585,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 278.8556890487671,
+    "first_token_latency": 271.18122363090515,
+    "timestamp": 198.81199407577515
+  },
+  {
+    "client": "client1",
+    "req_id": 586,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 278.7990367412567,
+    "first_token_latency": 271.1239879131317,
+    "timestamp": 198.96176505088806
+  },
+  {
+    "client": "client1",
+    "req_id": 587,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 278.7675235271454,
+    "first_token_latency": 271.10537123680115,
+    "timestamp": 199.3323278427124
+  },
+  {
+    "client": "client1",
+    "req_id": 588,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 279.27029848098755,
+    "first_token_latency": 271.62949991226196,
+    "timestamp": 199.4791877269745
+  },
+  {
+    "client": "client1",
+    "req_id": 589,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 279.25054836273193,
+    "first_token_latency": 271.61085844039917,
+    "timestamp": 199.52956318855286
+  },
+  {
+    "client": "client1",
+    "req_id": 590,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 279.01752829551697,
+    "first_token_latency": 271.37850689888,
+    "timestamp": 199.79264378547668
+  },
+  {
+    "client": "client1",
+    "req_id": 591,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 280.1428360939026,
+    "first_token_latency": 272.5485692024231,
+    "timestamp": 199.96444964408875
+  },
+  {
+    "client": "client1",
+    "req_id": 592,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 284.4760468006134,
+    "first_token_latency": 276.10490226745605,
+    "timestamp": 200.2009460926056
+  },
+  {
+    "client": "client2",
+    "req_id": 43,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 392.43403458595276,
+    "first_token_latency": 328.55483293533325,
+    "timestamp": 92.35739612579346
+  },
+  {
+    "client": "client1",
+    "req_id": 593,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 283.9364769458771,
+    "first_token_latency": 275.54821515083313,
+    "timestamp": 200.8852677345276
+  },
+  {
+    "client": "client1",
+    "req_id": 594,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 283.0328412055969,
+    "first_token_latency": 274.6708273887634,
+    "timestamp": 202.1720745563507
+  },
+  {
+    "client": "client1",
+    "req_id": 595,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 283.24746227264404,
+    "first_token_latency": 274.94478273391724,
+    "timestamp": 202.72300457954407
+  },
+  {
+    "client": "client1",
+    "req_id": 596,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 283.2758574485779,
+    "first_token_latency": 274.977730512619,
+    "timestamp": 202.7831392288208
+  },
+  {
+    "client": "client1",
+    "req_id": 597,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 283.53295826911926,
+    "first_token_latency": 275.25621366500854,
+    "timestamp": 202.8438332080841
+  },
+  {
+    "client": "client1",
+    "req_id": 598,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 283.87025022506714,
+    "first_token_latency": 275.63823795318604,
+    "timestamp": 203.1420075893402
+  },
+  {
+    "client": "client1",
+    "req_id": 599,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 283.3667299747467,
+    "first_token_latency": 275.13597869873047,
+    "timestamp": 203.6743025779724
+  },
+  {
+    "client": "client1",
+    "req_id": 600,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 284.57473373413086,
+    "first_token_latency": 276.3965504169464,
+    "timestamp": 203.71085023880005
+  },
+  {
+    "client": "client1",
+    "req_id": 601,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 288.8003673553467,
+    "first_token_latency": 280.78190422058105,
+    "timestamp": 203.89522862434387
+  },
+  {
+    "client": "client1",
+    "req_id": 602,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 288.84581112861633,
+    "first_token_latency": 280.831613779068,
+    "timestamp": 203.96003890037537
+  },
+  {
+    "client": "client1",
+    "req_id": 603,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 288.850745677948,
+    "first_token_latency": 280.8307423591614,
+    "timestamp": 203.9910786151886
+  },
+  {
+    "client": "client1",
+    "req_id": 604,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 289.14836978912354,
+    "first_token_latency": 281.0522494316101,
+    "timestamp": 204.15280199050903
+  },
+  {
+    "client": "client2",
+    "req_id": 44,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 388.1398034095764,
+    "first_token_latency": 323.9686863422394,
+    "timestamp": 105.44099879264832
+  },
+  {
+    "client": "client1",
+    "req_id": 605,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 289.5188400745392,
+    "first_token_latency": 281.4108233451843,
+    "timestamp": 204.56015062332153
+  },
+  {
+    "client": "client1",
+    "req_id": 606,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 289.1568777561188,
+    "first_token_latency": 281.0547606945038,
+    "timestamp": 205.00442457199097
+  },
+  {
+    "client": "client1",
+    "req_id": 607,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 289.401789188385,
+    "first_token_latency": 281.32379055023193,
+    "timestamp": 205.05314826965332
+  },
+  {
+    "client": "client1",
+    "req_id": 608,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 289.50069403648376,
+    "first_token_latency": 281.46775007247925,
+    "timestamp": 205.5446195602417
+  },
+  {
+    "client": "client1",
+    "req_id": 609,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 289.3017840385437,
+    "first_token_latency": 281.27096128463745,
+    "timestamp": 205.77017164230347
+  },
+  {
+    "client": "client1",
+    "req_id": 610,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 289.9998049736023,
+    "first_token_latency": 282.05372405052185,
+    "timestamp": 206.2324788570404
+  },
+  {
+    "client": "client1",
+    "req_id": 611,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 293.8685233592987,
+    "first_token_latency": 286.18393182754517,
+    "timestamp": 206.62208652496338
+  },
+  {
+    "client": "client1",
+    "req_id": 612,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 292.73320722579956,
+    "first_token_latency": 285.04913783073425,
+    "timestamp": 207.7928605079651
+  },
+  {
+    "client": "client1",
+    "req_id": 613,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 292.73122692108154,
+    "first_token_latency": 285.05882453918457,
+    "timestamp": 208.24243807792664
+  },
+  {
+    "client": "client1",
+    "req_id": 614,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 292.30544924736023,
+    "first_token_latency": 284.6410012245178,
+    "timestamp": 208.9404149055481
+  },
+  {
+    "client": "client1",
+    "req_id": 615,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 292.86020016670227,
+    "first_token_latency": 285.07787251472473,
+    "timestamp": 209.0016553401947
+  },
+  {
+    "client": "client1",
+    "req_id": 616,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 292.4235932826996,
+    "first_token_latency": 284.6219108104706,
+    "timestamp": 209.53949809074402
+  },
+  {
+    "client": "client1",
+    "req_id": 617,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 292.63037753105164,
+    "first_token_latency": 284.75926399230957,
+    "timestamp": 209.69576454162598
+  },
+  {
+    "client": "client2",
+    "req_id": 45,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 397.02450251579285,
+    "first_token_latency": 332.66473722457886,
+    "timestamp": 105.97666478157043
+  },
+  {
+    "client": "client1",
+    "req_id": 618,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 291.9700765609741,
+    "first_token_latency": 283.97756147384644,
+    "timestamp": 211.0678870677948
+  },
+  {
+    "client": "client1",
+    "req_id": 619,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 291.862877368927,
+    "first_token_latency": 283.8721995353699,
+    "timestamp": 211.19983577728271
+  },
+  {
+    "client": "client1",
+    "req_id": 620,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 292.87886095046997,
+    "first_token_latency": 284.9775540828705,
+    "timestamp": 211.2549204826355
+  },
+  {
+    "client": "client1",
+    "req_id": 621,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 296.79330468177795,
+    "first_token_latency": 289.1395831108093,
+    "timestamp": 211.35154628753662
+  },
+  {
+    "client": "client1",
+    "req_id": 622,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 297.19809317588806,
+    "first_token_latency": 289.5568747520447,
+    "timestamp": 211.41691374778748
+  },
+  {
+    "client": "client1",
+    "req_id": 623,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 297.37057995796204,
+    "first_token_latency": 289.734911441803,
+    "timestamp": 211.51147603988647
+  },
+  {
+    "client": "client1",
+    "req_id": 624,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 297.7592191696167,
+    "first_token_latency": 290.14687943458557,
+    "timestamp": 211.71505641937256
+  },
+  {
+    "client": "client1",
+    "req_id": 625,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 297.78902864456177,
+    "first_token_latency": 290.17793130874634,
+    "timestamp": 211.7853193283081
+  },
+  {
+    "client": "client1",
+    "req_id": 626,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 297.9731123447418,
+    "first_token_latency": 290.3743860721588,
+    "timestamp": 211.95182585716248
+  },
+  {
+    "client": "client1",
+    "req_id": 627,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 298.5664372444153,
+    "first_token_latency": 291.0052082538605,
+    "timestamp": 211.99657583236694
+  },
+  {
+    "client": "client1",
+    "req_id": 628,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 298.62246656417847,
+    "first_token_latency": 291.0348608493805,
+    "timestamp": 212.00320100784302
+  },
+  {
+    "client": "client1",
+    "req_id": 629,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 298.5024654865265,
+    "first_token_latency": 290.9090299606323,
+    "timestamp": 212.15385246276855
+  },
+  {
+    "client": "client1",
+    "req_id": 630,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 299.68584537506104,
+    "first_token_latency": 291.8323903083801,
+    "timestamp": 212.30156111717224
+  },
+  {
+    "client": "client1",
+    "req_id": 631,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 304.2016587257385,
+    "first_token_latency": 295.51964831352234,
+    "timestamp": 212.6253366470337
+  },
+  {
+    "client": "client2",
+    "req_id": 46,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 405.7624638080597,
+    "first_token_latency": 342.1163682937622,
+    "timestamp": 111.10394763946533
+  },
+  {
+    "client": "client1",
+    "req_id": 632,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 304.36043787002563,
+    "first_token_latency": 295.7002990245819,
+    "timestamp": 212.91523575782776
+  },
+  {
+    "client": "client1",
+    "req_id": 633,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 304.0483422279358,
+    "first_token_latency": 295.40589427948,
+    "timestamp": 213.47635889053345
+  },
+  {
+    "client": "client1",
+    "req_id": 634,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 304.4888846874237,
+    "first_token_latency": 295.87872433662415,
+    "timestamp": 213.59562468528748
+  },
+  {
+    "client": "client1",
+    "req_id": 635,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 304.5309431552887,
+    "first_token_latency": 295.93502831459045,
+    "timestamp": 213.989990234375
+  },
+  {
+    "client": "client1",
+    "req_id": 636,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 303.919469833374,
+    "first_token_latency": 295.3362877368927,
+    "timestamp": 215.22679901123047
+  },
+  {
+    "client": "client1",
+    "req_id": 637,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 303.81577491760254,
+    "first_token_latency": 295.233683347702,
+    "timestamp": 215.39216876029968
+  },
+  {
+    "client": "client1",
+    "req_id": 638,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 303.7876274585724,
+    "first_token_latency": 295.20686507225037,
+    "timestamp": 215.44993257522583
+  },
+  {
+    "client": "client1",
+    "req_id": 639,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 305.0166656970978,
+    "first_token_latency": 296.4756238460541,
+    "timestamp": 215.51196360588074
+  },
+  {
+    "client": "client1",
+    "req_id": 640,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 309.0804877281189,
+    "first_token_latency": 300.6708526611328,
+    "timestamp": 216.15625715255737
+  },
+  {
+    "client": "client2",
+    "req_id": 47,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 412.3134763240814,
+    "first_token_latency": 347.98287630081177,
+    "timestamp": 112.96234035491943
+  },
+  {
+    "client": "client1",
+    "req_id": 641,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 308.678085565567,
+    "first_token_latency": 300.2687277793884,
+    "timestamp": 216.59784126281738
+  },
+  {
+    "client": "client1",
+    "req_id": 642,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 308.2651650905609,
+    "first_token_latency": 299.88747549057007,
+    "timestamp": 217.3884084224701
+  },
+  {
+    "client": "client1",
+    "req_id": 643,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 308.4559049606323,
+    "first_token_latency": 300.09570145606995,
+    "timestamp": 217.42952060699463
+  },
+  {
+    "client": "client1",
+    "req_id": 644,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 308.8584234714508,
+    "first_token_latency": 300.54078364372253,
+    "timestamp": 217.5438973903656
+  },
+  {
+    "client": "client1",
+    "req_id": 645,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 308.8744158744812,
+    "first_token_latency": 300.5891501903534,
+    "timestamp": 217.93188667297363
+  },
+  {
+    "client": "client1",
+    "req_id": 646,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 309.3807713985443,
+    "first_token_latency": 301.1435627937317,
+    "timestamp": 218.00286746025085
+  },
+  {
+    "client": "client1",
+    "req_id": 647,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 309.3407473564148,
+    "first_token_latency": 301.10708498954773,
+    "timestamp": 218.10092902183533
+  },
+  {
+    "client": "client1",
+    "req_id": 648,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 309.092768907547,
+    "first_token_latency": 300.8612802028656,
+    "timestamp": 218.37645840644836
+  },
+  {
+    "client": "client1",
+    "req_id": 649,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 313.4478449821472,
+    "first_token_latency": 305.48399806022644,
+    "timestamp": 219.75329041481018
+  },
+  {
+    "client": "client1",
+    "req_id": 651,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 312.4033989906311,
+    "first_token_latency": 304.44122791290283,
+    "timestamp": 220.8348639011383
+  },
+  {
+    "client": "client1",
+    "req_id": 650,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 313.1785819530487,
+    "first_token_latency": 305.21636843681335,
+    "timestamp": 220.0597381591797
+  },
+  {
+    "client": "client1",
+    "req_id": 652,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 311.8031871318817,
+    "first_token_latency": 303.7591767311096,
+    "timestamp": 221.89498710632324
+  },
+  {
+    "client": "client1",
+    "req_id": 653,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 311.9628322124481,
+    "first_token_latency": 303.8688645362854,
+    "timestamp": 222.01713609695435
+  },
+  {
+    "client": "client2",
+    "req_id": 48,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 418.40509271621704,
+    "first_token_latency": 353.56563234329224,
+    "timestamp": 116.02647066116333
+  },
+  {
+    "client": "client1",
+    "req_id": 654,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 312.17274260520935,
+    "first_token_latency": 304.00682520866394,
+    "timestamp": 222.3955795764923
+  },
+  {
+    "client": "client1",
+    "req_id": 655,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 312.26640605926514,
+    "first_token_latency": 304.1324496269226,
+    "timestamp": 222.673969745636
+  },
+  {
+    "client": "client1",
+    "req_id": 656,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 312.6236255168915,
+    "first_token_latency": 304.5313911437988,
+    "timestamp": 222.85277938842773
+  },
+  {
+    "client": "client1",
+    "req_id": 657,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 312.6182723045349,
+    "first_token_latency": 304.5305380821228,
+    "timestamp": 222.91126704216003
+  },
+  {
+    "client": "client1",
+    "req_id": 658,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 312.05649757385254,
+    "first_token_latency": 303.97108244895935,
+    "timestamp": 223.49833583831787
+  },
+  {
+    "client": "client1",
+    "req_id": 659,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 316.92256140708923,
+    "first_token_latency": 309.2175371646881,
+    "timestamp": 223.98377060890198
+  },
+  {
+    "client": "client1",
+    "req_id": 660,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 316.65514373779297,
+    "first_token_latency": 308.95207023620605,
+    "timestamp": 224.28647780418396
+  },
+  {
+    "client": "client1",
+    "req_id": 661,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 316.8171672821045,
+    "first_token_latency": 309.12514996528625,
+    "timestamp": 224.5732936859131
+  },
+  {
+    "client": "client1",
+    "req_id": 662,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 316.3417475223541,
+    "first_token_latency": 308.65626215934753,
+    "timestamp": 225.32377672195435
+  },
+  {
+    "client": "client1",
+    "req_id": 663,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 315.9275093078613,
+    "first_token_latency": 308.25437355041504,
+    "timestamp": 226.17732763290405
+  },
+  {
+    "client": "client1",
+    "req_id": 664,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 315.67406034469604,
+    "first_token_latency": 307.97244477272034,
+    "timestamp": 226.59596991539001
+  },
+  {
+    "client": "client1",
+    "req_id": 665,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 315.9965937137604,
+    "first_token_latency": 308.2083764076233,
+    "timestamp": 226.73256850242615
+  },
+  {
+    "client": "client1",
+    "req_id": 666,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 316.5350432395935,
+    "first_token_latency": 308.62491369247437,
+    "timestamp": 226.85165238380432
+  },
+  {
+    "client": "client1",
+    "req_id": 667,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 315.5682370662689,
+    "first_token_latency": 307.6457087993622,
+    "timestamp": 227.8839020729065
+  },
+  {
+    "client": "client1",
+    "req_id": 668,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 315.38963651657104,
+    "first_token_latency": 307.46073293685913,
+    "timestamp": 228.09430646896362
+  },
+  {
+    "client": "client2",
+    "req_id": 49,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 425.3768792152405,
+    "first_token_latency": 360.4882128238678,
+    "timestamp": 118.26129102706909
+  },
+  {
+    "client": "client1",
+    "req_id": 669,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 320.22080063819885,
+    "first_token_latency": 312.6062157154083,
+    "timestamp": 228.3006443977356
+  },
+  {
+    "client": "client1",
+    "req_id": 670,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 320.24029541015625,
+    "first_token_latency": 312.6280255317688,
+    "timestamp": 228.31370091438293
+  },
+  {
+    "client": "client1",
+    "req_id": 671,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 320.3787908554077,
+    "first_token_latency": 312.7935709953308,
+    "timestamp": 228.5970389842987
+  },
+  {
+    "client": "client1",
+    "req_id": 672,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 320.5021450519562,
+    "first_token_latency": 312.93553161621094,
+    "timestamp": 228.73007345199585
+  },
+  {
+    "client": "client1",
+    "req_id": 673,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 320.616366147995,
+    "first_token_latency": 313.08312344551086,
+    "timestamp": 229.18703627586365
+  },
+  {
+    "client": "client1",
+    "req_id": 674,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 320.965030670166,
+    "first_token_latency": 313.439080953598,
+    "timestamp": 229.29021048545837
+  },
+  {
+    "client": "client1",
+    "req_id": 675,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 321.02899742126465,
+    "first_token_latency": 313.5165071487427,
+    "timestamp": 229.8703098297119
+  },
+  {
+    "client": "client1",
+    "req_id": 676,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 320.99474000930786,
+    "first_token_latency": 313.48439383506775,
+    "timestamp": 229.96786499023438
+  },
+  {
+    "client": "client1",
+    "req_id": 677,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 320.30518102645874,
+    "first_token_latency": 312.7959535121918,
+    "timestamp": 230.68816447257996
+  },
+  {
+    "client": "client1",
+    "req_id": 678,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 320.025607585907,
+    "first_token_latency": 312.52199125289917,
+    "timestamp": 231.11674165725708
+  },
+  {
+    "client": "client1",
+    "req_id": 679,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 325.9145200252533,
+    "first_token_latency": 317.36077404022217,
+    "timestamp": 231.1607587337494
+  },
+  {
+    "client": "client1",
+    "req_id": 680,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 325.70234417915344,
+    "first_token_latency": 317.14216113090515,
+    "timestamp": 231.41200995445251
+  },
+  {
+    "client": "client2",
+    "req_id": 50,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 434.9346170425415,
+    "first_token_latency": 370.4011209011078,
+    "timestamp": 122.2945499420166
+  },
+  {
+    "client": "client1",
+    "req_id": 681,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 325.689240694046,
+    "first_token_latency": 317.1339464187622,
+    "timestamp": 231.84205174446106
+  },
+  {
+    "client": "client1",
+    "req_id": 682,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 325.69778323173523,
+    "first_token_latency": 317.15985560417175,
+    "timestamp": 232.07255053520203
+  },
+  {
+    "client": "client1",
+    "req_id": 683,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 326.0829839706421,
+    "first_token_latency": 317.5784604549408,
+    "timestamp": 232.2249791622162
+  },
+  {
+    "client": "client1",
+    "req_id": 684,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 326.4818983078003,
+    "first_token_latency": 318.0109558105469,
+    "timestamp": 232.24436855316162
+  },
+  {
+    "client": "client1",
+    "req_id": 685,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 326.94719648361206,
+    "first_token_latency": 318.5276401042938,
+    "timestamp": 232.43509984016418
+  },
+  {
+    "client": "client1",
+    "req_id": 686,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 326.48045539855957,
+    "first_token_latency": 318.06182193756104,
+    "timestamp": 232.93164348602295
+  },
+  {
+    "client": "client1",
+    "req_id": 687,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 326.324627161026,
+    "first_token_latency": 317.9122414588928,
+    "timestamp": 233.2302267551422
+  },
+  {
+    "client": "client1",
+    "req_id": 688,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 331.9682517051697,
+    "first_token_latency": 323.6769988536835,
+    "timestamp": 233.39844179153442
+  },
+  {
+    "client": "client1",
+    "req_id": 689,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 331.9247076511383,
+    "first_token_latency": 323.6345546245575,
+    "timestamp": 233.47993731498718
+  },
+  {
+    "client": "client1",
+    "req_id": 690,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 332.0337715148926,
+    "first_token_latency": 323.7459650039673,
+    "timestamp": 233.48339319229126
+  },
+  {
+    "client": "client2",
+    "req_id": 51,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 442.2155361175537,
+    "first_token_latency": 377.07890486717224,
+    "timestamp": 123.44718146324158
+  },
+  {
+    "client": "client1",
+    "req_id": 691,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 332.24965620040894,
+    "first_token_latency": 323.9486618041992,
+    "timestamp": 233.58282852172852
+  },
+  {
+    "client": "client1",
+    "req_id": 692,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 332.443021774292,
+    "first_token_latency": 324.1602313518524,
+    "timestamp": 233.61017203330994
+  },
+  {
+    "client": "client1",
+    "req_id": 693,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 332.8987326622009,
+    "first_token_latency": 324.660329580307,
+    "timestamp": 233.64768266677856
+  },
+  {
+    "client": "client1",
+    "req_id": 694,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 332.2976944446564,
+    "first_token_latency": 324.09675550460815,
+    "timestamp": 234.62954926490784
+  },
+  {
+    "client": "client1",
+    "req_id": 695,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 332.8108398914337,
+    "first_token_latency": 324.66233134269714,
+    "timestamp": 234.72012495994568
+  },
+  {
+    "client": "client1",
+    "req_id": 696,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 332.74964714050293,
+    "first_token_latency": 324.60380363464355,
+    "timestamp": 234.80850553512573
+  },
+  {
+    "client": "client1",
+    "req_id": 697,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 332.71544551849365,
+    "first_token_latency": 324.5767228603363,
+    "timestamp": 234.97824621200562
+  },
+  {
+    "client": "client1",
+    "req_id": 698,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 337.77132391929626,
+    "first_token_latency": 330.0624063014984,
+    "timestamp": 235.34233355522156
+  },
+  {
+    "client": "client1",
+    "req_id": 699,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 337.4449381828308,
+    "first_token_latency": 329.74101090431213,
+    "timestamp": 235.7762541770935
+  },
+  {
+    "client": "client1",
+    "req_id": 700,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 337.2041380405426,
+    "first_token_latency": 329.5047814846039,
+    "timestamp": 236.15818738937378
+  },
+  {
+    "client": "client1",
+    "req_id": 701,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 337.296142578125,
+    "first_token_latency": 329.5593535900116,
+    "timestamp": 236.27325415611267
+  },
+  {
+    "client": "client1",
+    "req_id": 702,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 336.60637617111206,
+    "first_token_latency": 328.8194799423218,
+    "timestamp": 237.2342917919159
+  },
+  {
+    "client": "client1",
+    "req_id": 703,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 336.99622678756714,
+    "first_token_latency": 329.09738516807556,
+    "timestamp": 237.44929146766663
+  },
+  {
+    "client": "client2",
+    "req_id": 52,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 451.3211488723755,
+    "first_token_latency": 386.1154773235321,
+    "timestamp": 123.45887589454651
+  },
+  {
+    "client": "client1",
+    "req_id": 704,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 337.2632460594177,
+    "first_token_latency": 329.3083474636078,
+    "timestamp": 237.61894583702087
+  },
+  {
+    "client": "client1",
+    "req_id": 705,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 337.73970460891724,
+    "first_token_latency": 329.8294298648834,
+    "timestamp": 237.7016429901123
+  },
+  {
+    "client": "client1",
+    "req_id": 706,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 337.46125626564026,
+    "first_token_latency": 329.5527169704437,
+    "timestamp": 238.00548839569092
+  },
+  {
+    "client": "client1",
+    "req_id": 707,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 337.5490140914917,
+    "first_token_latency": 329.6542477607727,
+    "timestamp": 238.03955602645874
+  },
+  {
+    "client": "client1",
+    "req_id": 708,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 342.4903540611267,
+    "first_token_latency": 334.9502112865448,
+    "timestamp": 238.16365814208984
+  },
+  {
+    "client": "client1",
+    "req_id": 709,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 342.5211033821106,
+    "first_token_latency": 334.99045419692993,
+    "timestamp": 238.37239480018616
+  },
+  {
+    "client": "client1",
+    "req_id": 710,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 342.60795760154724,
+    "first_token_latency": 335.08249497413635,
+    "timestamp": 238.48708176612854
+  },
+  {
+    "client": "client1",
+    "req_id": 711,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 342.7638294696808,
+    "first_token_latency": 335.2468559741974,
+    "timestamp": 238.59403276443481
+  },
+  {
+    "client": "client1",
+    "req_id": 712,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 342.9873557090759,
+    "first_token_latency": 335.48671984672546,
+    "timestamp": 238.95895957946777
+  },
+  {
+    "client": "client1",
+    "req_id": 713,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 343.20449328422546,
+    "first_token_latency": 335.71397137641907,
+    "timestamp": 239.06621408462524
+  },
+  {
+    "client": "client1",
+    "req_id": 714,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 343.0794258117676,
+    "first_token_latency": 335.56391620635986,
+    "timestamp": 239.31836128234863
+  },
+  {
+    "client": "client1",
+    "req_id": 715,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 343.61336731910706,
+    "first_token_latency": 335.9599268436432,
+    "timestamp": 239.4815754890442
+  },
+  {
+    "client": "client1",
+    "req_id": 716,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 343.39165234565735,
+    "first_token_latency": 335.73168325424194,
+    "timestamp": 239.7351779937744
+  },
+  {
+    "client": "client1",
+    "req_id": 717,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 343.52317667007446,
+    "first_token_latency": 335.8317470550537,
+    "timestamp": 239.75697660446167
+  },
+  {
+    "client": "client2",
+    "req_id": 53,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 460.8362946510315,
+    "first_token_latency": 396.6844584941864,
+    "timestamp": 123.84461498260498
+  },
+  {
+    "client": "client1",
+    "req_id": 718,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 348.5441207885742,
+    "first_token_latency": 340.8434250354767,
+    "timestamp": 239.8107409477234
+  },
+  {
+    "client": "client1",
+    "req_id": 719,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 348.67569971084595,
+    "first_token_latency": 340.98909544944763,
+    "timestamp": 239.9044966697693
+  },
+  {
+    "client": "client1",
+    "req_id": 720,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 347.8162019252777,
+    "first_token_latency": 340.14249062538147,
+    "timestamp": 240.95280170440674
+  },
+  {
+    "client": "client1",
+    "req_id": 721,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 347.96746921539307,
+    "first_token_latency": 340.30995512008667,
+    "timestamp": 241.04802870750427
+  },
+  {
+    "client": "client1",
+    "req_id": 722,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 348.5611412525177,
+    "first_token_latency": 340.9523777961731,
+    "timestamp": 241.3185429573059
+  },
+  {
+    "client": "client1",
+    "req_id": 723,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 348.0109016895294,
+    "first_token_latency": 340.40559005737305,
+    "timestamp": 241.99231052398682
+  },
+  {
+    "client": "client1",
+    "req_id": 724,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 348.0572636127472,
+    "first_token_latency": 340.4750065803528,
+    "timestamp": 242.6204686164856
+  },
+  {
+    "client": "client1",
+    "req_id": 725,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 347.70699191093445,
+    "first_token_latency": 340.125851392746,
+    "timestamp": 243.00119137763977
+  },
+  {
+    "client": "client1",
+    "req_id": 726,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 347.6650414466858,
+    "first_token_latency": 340.08907675743103,
+    "timestamp": 243.19118189811707
+  },
+  {
+    "client": "client1",
+    "req_id": 727,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 348.6791887283325,
+    "first_token_latency": 341.1516032218933,
+    "timestamp": 243.52953028678894
+  },
+  {
+    "client": "client1",
+    "req_id": 728,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 352.6629295349121,
+    "first_token_latency": 344.35037899017334,
+    "timestamp": 244.00462698936462
+  },
+  {
+    "client": "client2",
+    "req_id": 54,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 467.09941816329956,
+    "first_token_latency": 403.40495586395264,
+    "timestamp": 129.83350944519043
+  },
+  {
+    "client": "client1",
+    "req_id": 729,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 352.28108310699463,
+    "first_token_latency": 343.9472846984863,
+    "timestamp": 244.65239548683167
+  },
+  {
+    "client": "client1",
+    "req_id": 730,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 352.1849932670593,
+    "first_token_latency": 343.84783697128296,
+    "timestamp": 244.92129588127136
+  },
+  {
+    "client": "client1",
+    "req_id": 731,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 352.3793432712555,
+    "first_token_latency": 344.0618872642517,
+    "timestamp": 244.95380020141602
+  },
+  {
+    "client": "client1",
+    "req_id": 732,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 352.5806939601898,
+    "first_token_latency": 344.32559084892273,
+    "timestamp": 245.55416679382324
+  },
+  {
+    "client": "client1",
+    "req_id": 733,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 352.48522305488586,
+    "first_token_latency": 344.2389602661133,
+    "timestamp": 245.76436758041382
+  },
+  {
+    "client": "client1",
+    "req_id": 734,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 353.03001046180725,
+    "first_token_latency": 344.83044505119324,
+    "timestamp": 245.84740209579468
+  },
+  {
+    "client": "client1",
+    "req_id": 735,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 352.83125281333923,
+    "first_token_latency": 344.63911604881287,
+    "timestamp": 246.21724319458008
+  },
+  {
+    "client": "client1",
+    "req_id": 736,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 353.8759582042694,
+    "first_token_latency": 345.7327127456665,
+    "timestamp": 246.4765284061432
+  },
+  {
+    "client": "client1",
+    "req_id": 737,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 357.40531396865845,
+    "first_token_latency": 349.3618643283844,
+    "timestamp": 247.30579900741577
+  },
+  {
+    "client": "client1",
+    "req_id": 738,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 357.2632541656494,
+    "first_token_latency": 349.2195782661438,
+    "timestamp": 247.71408128738403
+  },
+  {
+    "client": "client1",
+    "req_id": 739,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 356.9216194152832,
+    "first_token_latency": 348.8777873516083,
+    "timestamp": 248.0558578968048
+  },
+  {
+    "client": "client1",
+    "req_id": 740,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 356.9655065536499,
+    "first_token_latency": 348.87783885002136,
+    "timestamp": 248.22863364219666
+  },
+  {
+    "client": "client1",
+    "req_id": 741,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 357.22124123573303,
+    "first_token_latency": 349.0759632587433,
+    "timestamp": 248.25740885734558
+  },
+  {
+    "client": "client2",
+    "req_id": 55,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 473.6688709259033,
+    "first_token_latency": 409.5968599319458,
+    "timestamp": 132.50803303718567
+  },
+  {
+    "client": "client1",
+    "req_id": 742,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 357.7423257827759,
+    "first_token_latency": 349.4798974990845,
+    "timestamp": 248.65503811836243
+  },
+  {
+    "client": "client1",
+    "req_id": 743,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 357.7613229751587,
+    "first_token_latency": 349.5051302909851,
+    "timestamp": 248.74463152885437
+  },
+  {
+    "client": "client1",
+    "req_id": 744,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 358.2915213108063,
+    "first_token_latency": 350.0771300792694,
+    "timestamp": 248.80052208900452
+  },
+  {
+    "client": "client1",
+    "req_id": 745,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 358.412312746048,
+    "first_token_latency": 350.21009635925293,
+    "timestamp": 248.83890867233276
+  },
+  {
+    "client": "client1",
+    "req_id": 746,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 359.4936683177948,
+    "first_token_latency": 351.37959814071655,
+    "timestamp": 248.97313904762268
+  },
+  {
+    "client": "client1",
+    "req_id": 748,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 363.35433411598206,
+    "first_token_latency": 355.5594880580902,
+    "timestamp": 249.4181363582611
+  },
+  {
+    "client": "client1",
+    "req_id": 747,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 363.694372177124,
+    "first_token_latency": 355.8994598388672,
+    "timestamp": 249.07817959785461
+  },
+  {
+    "client": "client1",
+    "req_id": 749,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 363.3475601673126,
+    "first_token_latency": 355.5631456375122,
+    "timestamp": 249.6311411857605
+  },
+  {
+    "client": "client1",
+    "req_id": 750,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 363.3225665092468,
+    "first_token_latency": 355.55294370651245,
+    "timestamp": 249.92629051208496
+  },
+  {
+    "client": "client1",
+    "req_id": 751,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 363.85620975494385,
+    "first_token_latency": 356.11396980285645,
+    "timestamp": 250.06354880332947
+  },
+  {
+    "client": "client1",
+    "req_id": 752,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 362.61687302589417,
+    "first_token_latency": 354.827810049057,
+    "timestamp": 251.56968474388123
+  },
+  {
+    "client": "client1",
+    "req_id": 753,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 362.43485045433044,
+    "first_token_latency": 354.6227445602417,
+    "timestamp": 251.88340830802917
+  },
+  {
+    "client": "client1",
+    "req_id": 754,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 362.9834122657776,
+    "first_token_latency": 355.0402090549469,
+    "timestamp": 252.0519962310791
+  },
+  {
+    "client": "client2",
+    "req_id": 56,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 477.83401441574097,
+    "first_token_latency": 413.53462052345276,
+    "timestamp": 137.3648271560669
+  },
+  {
+    "client": "client1",
+    "req_id": 755,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 363.041357755661,
+    "first_token_latency": 355.06934905052185,
+    "timestamp": 252.1821312904358
+  },
+  {
+    "client": "client1",
+    "req_id": 756,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 364.0991430282593,
+    "first_token_latency": 356.2142972946167,
+    "timestamp": 252.252783536911
+  },
+  {
+    "client": "client1",
+    "req_id": 757,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 368.0214264392853,
+    "first_token_latency": 360.37341046333313,
+    "timestamp": 252.3993058204651
+  },
+  {
+    "client": "client1",
+    "req_id": 758,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 367.8206956386566,
+    "first_token_latency": 360.17221760749817,
+    "timestamp": 252.60051274299622
+  },
+  {
+    "client": "client1",
+    "req_id": 759,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 368.0756278038025,
+    "first_token_latency": 360.45137906074524,
+    "timestamp": 252.79757475852966
+  },
+  {
+    "client": "client1",
+    "req_id": 760,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 368.5074851512909,
+    "first_token_latency": 360.9039924144745,
+    "timestamp": 253.0158622264862
+  },
+  {
+    "client": "client1",
+    "req_id": 761,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 368.36609721183777,
+    "first_token_latency": 360.76714277267456,
+    "timestamp": 253.4195032119751
+  },
+  {
+    "client": "client1",
+    "req_id": 762,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 368.2129068374634,
+    "first_token_latency": 360.61709213256836,
+    "timestamp": 253.70130825042725
+  },
+  {
+    "client": "client1",
+    "req_id": 763,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 368.4363133907318,
+    "first_token_latency": 360.85602355003357,
+    "timestamp": 254.17991256713867
+  },
+  {
+    "client": "client1",
+    "req_id": 764,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 367.56386971473694,
+    "first_token_latency": 359.9886269569397,
+    "timestamp": 255.21044301986694
+  },
+  {
+    "client": "client1",
+    "req_id": 765,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 367.36708641052246,
+    "first_token_latency": 359.7855224609375,
+    "timestamp": 255.43815445899963
+  },
+  {
+    "client": "client1",
+    "req_id": 766,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 368.18431401252747,
+    "first_token_latency": 360.3310091495514,
+    "timestamp": 256.02106189727783
+  },
+  {
+    "client": "client2",
+    "req_id": 57,
+    "input_len": 2048,
+    "output_len": 2048,
+    "total_latency": 491.47423553466797,
+    "first_token_latency": 427.80688738822937,
+    "timestamp": 137.55992484092712
+  },
+  {
+    "client": "client1",
+    "req_id": 767,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 372.4008700847626,
+    "first_token_latency": 363.75586915016174,
+    "timestamp": 256.665531873703
+  },
+  {
+    "client": "client1",
+    "req_id": 768,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 372.3640866279602,
+    "first_token_latency": 363.7188813686371,
+    "timestamp": 256.70250606536865
+  },
+  {
+    "client": "client1",
+    "req_id": 769,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 372.26433634757996,
+    "first_token_latency": 363.6436529159546,
+    "timestamp": 257.2298331260681
+  },
+  {
+    "client": "client1",
+    "req_id": 770,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 371.7702958583832,
+    "first_token_latency": 363.19013142585754,
+    "timestamp": 258.33375239372253
+  },
+  {
+    "client": "client1",
+    "req_id": 771,
+    "input_len": 256,
+    "output_len": 256,
+    "total_latency": 371.8724567890167,
+    "first_token_latency": 363.3109321594238,
+    "timestamp": 258.4748613834381
+  }
+]
