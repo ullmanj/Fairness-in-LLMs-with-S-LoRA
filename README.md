@@ -1,177 +1,70 @@
-# S-LoRA: Serving Thousands of Concurrent LoRA Adapters [[paper](https://arxiv.org/abs/2311.03285)]
+# S-LoRA: Enhanced Cost Functions for Fair LLM Serving
 
-<p align="center">
-<img src="figures/serving_perf.png" alt="perf" width="700"/>
-</p>
+This codebase is a fork off of S-LoRA replicating the VTC scheduler algorithm and introducing a new quadratic cost function and corresponding service definition.
+
+## Overview
+
+LLM providers receive requests of vastly different sizes and frequencies from a diverse array of clients. To ensure that no client is starved in responding to those requests, Sheng et al. (OSDI '24) introduced the Virtual Token Counter (VTC) scheduler. This algorithm for the LLM scheduler ensures fairness without artificially causing under-utilization.
+
+"At What Cost?" presents a comprehensive replication and extension of the VTC scheduler to incorporate the needs of the present day. While the original VTC uses a linear cost function, we explore the use of a **quadratic cost function** to provide a more accurate measure of fairness, accounting for the inherent non-linearity of the attention mechanism.
+
+## Key Contributions
+
+* **VTC Replication:** Independently verified the fairness guarantees of the VTC algorithm on modern NVIDIA H100 GPUs.
+* **Quadratic Service Definition:** Proposed a new definition of "service" more closely tuned to actual compute costs as context windows grow.
+* **Modern Benchmarking:** Redefining the cost maintains a reduced service difference while being more resistant to asymmetric workloads.
 
 ---
 
-Change from initial fork:
-- The fair scheduler here VTC ([paper](https://arxiv.org/abs/2401.00588)) that was integrated into S-LoRA has been deleted and reimplemented.
-  See file `slora/server/router/vtc_req_queue.py`.
+## Background: The Cost of Attention
+
+In the prefill stage, the model processes the entire input sequence in parallel to compute the initial Key-Value (KV) cache. This operation has $O(L_{in}^2)$ computational complexity. During the decode stage, although the use of a KV cache prevents re-computing previous states, each new token still must attend to every preceding token in the sequence. Consequently, generating the $k$-th output token requires $O(L_{in} + k)$ operations, making the entire cost **quadratic** relative to the total context length.
+
+### VTC Linear vs. VTC Quadratic
+
+The original VTC paper uses a linear heuristic:
+$$Cost = w_{in} \cdot L_{in} + w_{out} \cdot L_{out}$$
+
+We argue that this fails to account for the accelerating cost of attention as context windows reach the scales used in modern applications (e.g., $10^5$ to $10^7$ tokens).
+
+We define **VTC Quadratic** by adding two additional components that scale with the square of the input and output length. The overall service $W$ received by a client $c$ for a query $q$ is:
+$$W_c(q) = w_i l_i + w_o l_o + \frac{w_i}{d} l_i^2 + \frac{w_0}{2d} (l_i)(l_i + 1)$$
+*(Note: We chose $d=1000$ so that a medium-length query receives roughly twice the service per token as a minimum-size query, matching tiered API pricing).*
 
 ---
 
-## Abstract
-The "pretrain-then-finetune" paradigm is commonly adopted in the deployment
-of large language models. Low-Rank Adaptation (LoRA), a parameter-efficient
-fine-tuning method, is often employed to adapt a base model to a multitude of
-tasks, resulting in a substantial collection of LoRA adapters derived from one
-base model. We observe that this paradigm presents significant opportunities
-for batched inference during serving. To capitalize on these opportunities, we
-present S-LoRA, a system designed for the scalable serving of many LoRA
-adapters. S-LoRA stores all adapters in the main memory and fetches the
-adapters used by the currently running queries to the GPU memory. To
-efficiently use the GPU memory and reduce fragmentation, S-LoRA proposes
-Unified Paging. Unified Paging uses a unified memory pool to manage dynamic
-adapter weights with different ranks and KV cache tensors with varying sequence
-lengths. Additionally, S-LoRA employs a novel tensor parallelism strategy and
-highly optimized custom CUDA kernels for heterogeneous batching of LoRA
-computation. Collectively, these features enable S-LoRA to serve thousands of
-LoRA adapters on a single GPU or across multiple GPUs with a small overhead.
-Compared to state-of-the-art libraries such as HuggingFace PEFT and vLLM (with
-naive support of LoRA serving), S-LoRA can improve the throughput by up to 4
-times and increase the number of served adapters by several orders of
-magnitude. As a result, S-LoRA enables scalable serving of many task-specific
-fine-tuned models and offers the potential for large-scale customized
-fine-tuning services.
+## Replication Results
 
-<p align="center">
-<img src="figures/overview.png" alt="overview" width="500"/>
-</p>
+Using NVIDIA H100 GPUs, we scaled up request rates to ensure a growing backlog, allowing us to observe VTC's prioritization logic.
 
-## Requirements
-* CUDA 11.8 compatible GPU
-  * Recommended: GPUs from the Ampere family, like the A100, which support bfloat16 operations.
-  * Note: Older GPUs from the Turing family like the T4, which do not support bfloat16, are not supported.
-* 1.13 <= PyTorch <= 2.0.1
+### Service Rate Stability
+Our independent re-implementation matched the behavior of the original paper. Due to the H100 hardware, the service received by each client was around 2 times higher and the calculated service over time was more stable.
 
-## Installation
-```bash
-conda create -n slora python=3.9
-conda activate slora 
-# Optional: Install CUDA via conda for a smoother installation experience,
-# but you may need to manually set the Anaconda path variables.
-# conda install cuda -c nvidia/label/cuda-11.8.0
-# set environment variables: export TORCH_CUDA_ARCH_LIST="8.0 8.6"
-pip install torch==2.0.1
-pip install -e .
-```
-Make sure triton==2.1.0
+| (a) Accumulated Service Difference | (b) Received Service Rate (60s window) |
+| :--- | :--- |
+| <img width="302" height="259" alt="Screenshot 2026-03-16 at 2 33 45 PM" src="https://github.com/user-attachments/assets/cacaafba-a169-433e-b3d6-448e8f43158d" /> | <img width="299" height="244" alt="Screenshot 2026-03-16 at 2 34 05 PM" src="https://github.com/user-attachments/assets/c037f47f-8548-4178-a6a8-80c4347f5c03" /> |
+| **Figure 1:** VTC maintains near-zero service difference compared to FCFS. | **Figure 1:** Received service rate for Client 1 and Client 2 using VTC. |
 
-For more details on installing CUDA via conda, refer to the [CUDA Installation Guide by NVIDIA](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#conda-installation).
+---
 
-## Example Run
-Real model weights
-```bash
-cd benchmarks
-python launch_server.py --num-adapter 100 --num-token 10000 --model-setting Real
-python run_exp.py --debug --model-setting Real
-```
+## Evaluation of Quadratic Scheduling
 
-Dummy weights
-```bash
-cd benchmarks
-python launch_server.py --num-adapter 100 --num-token 10000 --dummy
-python run_exp.py --debug
-```
+In "Experiment 2," we tested an asymmetric workload where Client 1 sends small queries (256 tokens) and Client 2 sends large queries (2048 tokens).
 
-Test
-```bash
-cd test/test_e2e
-python launch_server.py
-python run_exp.py
-```
+* **VTC Linear Issue:** Assigns constant service per token, underestimating Client 2's actual cost. This causes Client 2 to take up a majority of GPU utilization even if received service looks identical.
+* **VTC Quadratic Solution:** Ensures that the weighted sum of tokens received by a client becomes more resistant to the workloads of other clients when all are backlogged.
 
-## Methods
 
-- Unified Paging: To reduce memory fragmentation and increase batch size, S-LoRA introduces a unified memory pool. This pool manages dynamic adapter weights and KV cache tensors by a unified paging mechanism.
+<img width="337" height="284" alt="Screenshot 2026-03-16 at 2 34 35 PM" src="https://github.com/user-attachments/assets/0933948f-d429-4e82-aee7-4d93702274f0" />
 
-<p align="center">
-<img src="figures/unifiedpaging.png" alt="unifiedpaging" width="400"/>
-</p>
+> **Figure 4:** Running the VTC Quadratic scheduler results in Client 1 receiving service (as defined by VTC Linear) much closer to its performance in symmetric workloads, demonstrating improved resistance.
 
-- Heterogeneous Batching: To minimize the latency overhead when batching different adapters of varying ranks, S-LoRA employs highly optimized custom CUDA kernels. These kernels operate directly on non-contiguous memory and align with the memory pool design, facilitating efficient batched inference for added LoRA computation.
+---
 
-- S-LoRA TP: To ensure effective parallelization across multiple GPUs, S-LoRA introduces a novel tensor parallelism strategy. This approach incurs minimal communication cost for the added LoRA computation compared to that of the base model. This is realized by scheduling communications on small intermediate tensors and fusing them with the communications of the base model.
+## Implementation Details
 
-<p align="center">
-<img src="figures/slora_tp.png" alt="slora_tp" width="900"/>
-</p>
+This implementation exists on top of the **S-LORA** scheduler. To view our code, see [github.com/ullmanj/Fairness-in-LLMs-with-S-LORA](https://github.com/ullmanj/Fairness-in-LLMs-with-S-LORA).
 
-## Evaluation
-
-### Settings
-
-Model Settings:
-| Setting | Base model | Hidden size | Adapter ranks |
-|---|---|---|---|
-| S1 | Llama-7B | 4096 | {8} |
-| S2 | Llama-7B | 4096 | {64, 32, 16, 8} |
-| S4 | Llama-13B | 5120 | {64, 32, 16} |
-| S5 | Llama-30B | 7168 | {32} |
-| S6 | Llama-70B | 8192 | {64} |
-
-Baselines:
-
-PEFT stands for HuggingFace PEFT: We build a server using it that batches single adapter requests and switches adapter weights between batches.
-
-vLLM-packed: Because vLLM does not support LoRA, we merge the LoRA weights into the base model and serve the multiple versions of the merged weights separately. To serve m LoRA adapters, we run m vLLM workers on a single GPU, where multiple workers are separate processes managed by NVIDIA MPS.
-
-S-LoRA-no-unify-mem: S-LoRA without the Unified Paging.
-
-S-LoRA-bmm: S-LoRA without Unified Paging and customized kernels. It copies the adapter weights to continuous memory space and performs batched matrix multiplication with padding.
-
-Please see our paper about the trace for synthetic workloads.
-
-### Results
-
-- We compare S-LoRA with both vLLM-packed and HuggingFace PEFT for serving many LoRA adapters.
-
-<p align="center">
-<img src="figures/vllm_and_peft.png" alt="vllm_and_peft" width="400"/>
-</p>
-
-- Comparing with own variants.
-
-<p align="center">
-<img src="figures/synthetic.png" alt="synthetic" width="800"/>
-</p>
-
-- We test the scalability of our tensor parallelism strategy.
-
-<p align="center">
-<img src="figures/tp.png" alt="tp" width="600"/>
-</p>
-
-## Acknowledgment
-SLoRA is build on top of [LightLLM](https://github.com/ModelTC/lightllm.git).
-
-We also learned a lot from the following projects when developing S-LoRA.
-- [punica](https://github.com/punica-ai/punica.git)
-- [PEFT](https://github.com/huggingface/peft.git)
-- [vLLM](https://github.com/vllm-project/vllm)
-
-## Roadmap
-- [ ] Release tensor parallelism implementation
-- [ ] Clean up reproducible scripts
-- [ ] More user-friendly API/frontend
-- [ ] More model support
-
-## Citation
-```bibtex
-@article{sheng2023slora,
-  title={S-LoRA: Serving Thousands of Concurrent LoRA Adapters},
-  author={Sheng, Ying and Cao, Shiyi and Li, Dacheng and Hooper, Coleman and Lee, Nicholas and Yang, Shuo and Chou, Christopher and Zhu, Banghua and Zheng, Lianmin and Keutzer, Kurt and Gonzalez, Joseph E. and Stoica, Ion},
-  journal={arXiv preprint arXiv:2311.03285},
-  year={2023}
-}
-```
-```bibtex
-@article{sheng2023fairness,
-  title={Fairness in Serving Large Language Models},
-  author={Sheng, Ying and Cao, Shiyi and Li, Dacheng and Zhu, Banghua and Li, Zhuohan and Zhuo, Danyang and Gonzalez, Joseph E and Stoica, Ion},
-  journal={arXiv preprint arXiv:2401.00588},
-  year={2023}
-}
-```
+### Infrastructure Optimizations
+* **Connection Pool Starvation:** Removed the default limit of 100 concurrent connections in `aiohttp` (limit=0) so arrival rates accurately reflect the workload.
+* **In-Flight Request Throttling:** Introduced a per-client `asyncio.Semaphore` to maintain stable pressure on the server queue without crashing the service.
