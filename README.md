@@ -2,6 +2,8 @@
 
 This codebase is a fork off of S-LoRA replicating the VTC scheduler algorithm and introducing a new quadratic cost function and corresponding service definition.
 
+See full paper [here](https://www.scs.stanford.edu/26wi-cs244c/proj/fair_llm.pdf).
+
 ## Overview
 
 LLM providers receive requests of vastly different sizes and frequencies from a diverse array of clients. To ensure that no client is starved in responding to those requests, Sheng et al. (OSDI '24) introduced the Virtual Token Counter (VTC) scheduler. This algorithm for the LLM scheduler ensures fairness without artificially causing under-utilization.
